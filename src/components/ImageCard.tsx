@@ -74,11 +74,27 @@ export function ImageCard({
       )}
 
       <div className={`relative ${ar} bg-ink overflow-hidden`}>
-        {/* Corner notch */}
+        {/* Corner notch (top-right) */}
         <span
           aria-hidden
           className={`absolute top-0 right-0 z-10 h-6 w-6 ${a.bg} transition-transform duration-500 group-hover:scale-110`}
           style={{ clipPath: "polygon(100% 0, 0 0, 100% 100%)" }}
+        />
+        {/* Crop bracket marks on hover (cinematic frame) */}
+        <span
+          aria-hidden
+          className={`pointer-events-none absolute top-3 left-3 z-10 h-4 w-4 border-t-2 border-l-2 ${a.text} opacity-0 group-hover:opacity-70 transition-opacity duration-500`}
+          style={{ borderTopColor: "currentColor", borderLeftColor: "currentColor" }}
+        />
+        <span
+          aria-hidden
+          className={`pointer-events-none absolute bottom-3 left-3 z-10 h-4 w-4 border-b-2 border-l-2 ${a.text} opacity-0 group-hover:opacity-70 transition-opacity duration-500`}
+          style={{ borderBottomColor: "currentColor", borderLeftColor: "currentColor" }}
+        />
+        <span
+          aria-hidden
+          className={`pointer-events-none absolute bottom-3 right-3 z-10 h-4 w-4 border-b-2 border-r-2 ${a.text} opacity-0 group-hover:opacity-70 transition-opacity duration-500`}
+          style={{ borderBottomColor: "currentColor", borderRightColor: "currentColor" }}
         />
         {/* Scanline overlay */}
         <span
@@ -87,6 +103,15 @@ export function ImageCard({
           style={{
             backgroundImage:
               "repeating-linear-gradient(to bottom, rgba(255,255,255,0.6) 0 1px, transparent 1px 3px)",
+          }}
+        />
+        {/* Vignette gradient on hover */}
+        <span
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          style={{
+            background:
+              "radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.35) 100%)",
           }}
         />
         {/* Image */}

@@ -159,28 +159,59 @@ export function PullQuote({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.7 }}
-      className="my-14 md:my-20 md:-mx-12 relative"
+      className="my-16 md:my-24 md:-mx-12 relative"
     >
+      {/* Giant quote mark, slightly offset */}
       <span
         aria-hidden
-        className="absolute -top-6 -left-2 md:-left-6 font-display text-7xl md:text-8xl leading-none"
-        style={{ color: accentColor, opacity: 0.5 }}
+        className="absolute -top-8 -left-3 md:-left-10 font-display select-none leading-[0.7] pointer-events-none"
+        style={{
+          color: accentColor,
+          opacity: 0.18,
+          fontSize: "clamp(7rem, 12vw, 11rem)",
+        }}
       >
         “
       </span>
+      {/* Top hairline */}
+      <span
+        aria-hidden
+        className="block h-px mb-6 md:mb-8"
+        style={{
+          background: `linear-gradient(to right, ${accentColor} 0%, ${accentColor} 60px, transparent 100%)`,
+        }}
+      />
       <blockquote
-        className="relative font-display text-2xl md:text-3xl lg:text-4xl leading-[1.15] tracking-tight text-bone pl-6 md:pl-10"
-        style={{ borderLeft: `3px solid ${accentColor}` }}
+        className="relative font-display text-2xl md:text-3xl lg:text-[2.5rem] leading-[1.15] tracking-tight text-bone px-2 md:px-6"
       >
         {children}
       </blockquote>
-      {author && (
-        <figcaption
-          className="mt-4 md:ml-10 ml-6 font-ui text-xs uppercase tracking-[0.3em] text-fog"
+      {/* Author line + closing mark */}
+      <div className="mt-6 md:mt-8 flex items-baseline justify-between gap-6 px-2 md:px-6">
+        {author ? (
+          <figcaption className="flex items-center gap-3 font-ui text-xs uppercase tracking-[0.3em] text-fog">
+            <span
+              aria-hidden
+              className="h-px w-8"
+              style={{ background: accentColor }}
+            />
+            {author}
+          </figcaption>
+        ) : (
+          <span />
+        )}
+        <span
+          aria-hidden
+          className="font-display select-none leading-none"
+          style={{
+            color: accentColor,
+            opacity: 0.4,
+            fontSize: "2.5rem",
+          }}
         >
-          — {author}
-        </figcaption>
-      )}
+          ”
+        </span>
+      </div>
     </motion.figure>
   );
 }

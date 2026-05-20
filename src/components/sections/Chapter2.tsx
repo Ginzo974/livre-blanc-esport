@@ -312,19 +312,37 @@ function ForceLimit({ force, limite }: { force: string; limite: string }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5 }}
-      className="my-8 grid grid-cols-1 md:grid-cols-2 gap-px bg-bone/10"
+      className="my-10 grid grid-cols-1 md:grid-cols-2 gap-3"
     >
-      <div className="bg-ink-2 p-5">
-        <div className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-blood mb-2">
-          Force
+      <div className="relative bg-ink-2 border-l-2 border-blood p-5 md:p-6 overflow-hidden group">
+        <div
+          aria-hidden
+          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity"
+          style={{
+            background:
+              "linear-gradient(120deg, rgba(200,29,37,0.08), transparent 60%)",
+          }}
+        />
+        <div className="relative flex items-center gap-2 mb-3">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="text-blood">
+            <path d="M2 7l3.5 3.5L12 4" stroke="currentColor" strokeWidth="2" strokeLinecap="square" strokeLinejoin="miter" />
+          </svg>
+          <span className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-blood">
+            Force
+          </span>
         </div>
-        <p className="text-sm text-bone/90 leading-relaxed">{force}</p>
+        <p className="relative text-sm md:text-base text-bone/90 leading-relaxed">{force}</p>
       </div>
-      <div className="bg-ink-2 p-5">
-        <div className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-fog mb-2">
-          Limite
+      <div className="relative bg-ink-2 border-l-2 border-bone/15 p-5 md:p-6 overflow-hidden">
+        <div className="flex items-center gap-2 mb-3">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="text-fog">
+            <path d="M2 7h10" stroke="currentColor" strokeWidth="2" strokeLinecap="square" />
+          </svg>
+          <span className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-fog">
+            Limite
+          </span>
         </div>
-        <p className="text-sm text-fog leading-relaxed">{limite}</p>
+        <p className="text-sm md:text-base text-fog leading-relaxed">{limite}</p>
       </div>
     </motion.div>
   );
