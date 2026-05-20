@@ -1,0 +1,369 @@
+"use client";
+
+import {
+  ChapterSection,
+  Prose,
+  H3,
+  H4,
+  Lead,
+  PullQuote,
+  MethodList,
+  HorsJV,
+} from "@/components/article/Article";
+import { motion } from "motion/react";
+
+export function Chapter3() {
+  return (
+    <ChapterSection
+      id="chap-3"
+      number="04"
+      kicker="Chapitre 3 · La couleur"
+      title={
+        <>
+          La couleur,{" "}
+          <span className="text-blood">langage émotionnel.</span>
+        </>
+      }
+      subtitle="Un logo donne la silhouette de l'identité. La couleur lui donne le sang."
+    >
+      <Lead>
+        Une équipe esport choisit ses couleurs pour deux raisons à la fois.
+        Dire qui elle est et être lisible où elle joue.
+      </Lead>
+
+      <Prose>
+        <p>
+          Le premier point est émotionnel, culturel, narratif. Le second est
+          technique, broadcast, impitoyable. Une couleur qui sonne juste sur un
+          mood board peut disparaître à l&apos;écran. Une couleur lisible peut
+          être plate à l&apos;œil.{" "}
+          <strong>
+            Le métier consiste à trouver l&apos;équilibre.
+          </strong>
+        </p>
+        <p>
+          Trois équipes occupent ce chapitre. <strong>Fnatic</strong> avec un
+          orange audacieux tenu pendant vingt et un ans.{" "}
+          <strong>Karmine Corp</strong> avec un split chromatique structurel
+          introduit en 2026. <strong>NAVI</strong> avec quinze ans de palette
+          identique, par discipline plus que par paresse.
+        </p>
+      </Prose>
+
+      {/* Fnatic */}
+      <H3 accent="blood">Fnatic · L&apos;orange qui a duré vingt et un ans</H3>
+      <PaletteRow
+        team="Fnatic"
+        years="2004 → 21 ans"
+        primary={{ hex: "#ff6700", label: "Fnatic Orange" }}
+        secondary={{ hex: "#0a0a0a", label: "Noir signature" }}
+      />
+      <Prose>
+        <p>
+          Fondée à Londres en 2004 par Sam et Anne Mathews, Fnatic est
+          l&apos;une des plus vieilles structures de l&apos;esport.{" "}
+          <strong>Vingt et un ans d&apos;existence.</strong> Et pendant ces
+          vingt et un ans, deux couleurs n&apos;ont jamais bougé : orange et
+          noir.
+        </p>
+        <p>
+          C&apos;est un pari de longue durée que peu d&apos;équipes ont eu
+          l&apos;audace de tenir. L&apos;orange est une couleur risquée. Trop
+          saturée, elle vire au néon de pub des années 90. Mal contrastée, elle
+          disparaît sur fond blanc et hurle sur fond noir. Beaucoup
+          d&apos;équipes esport l&apos;évitent par sécurité.{" "}
+          <strong>Fnatic l&apos;a embrassée et tenue.</strong>
+        </p>
+        <p>
+          L&apos;orange Fnatic évoque la communication, l&apos;esprit
+          d&apos;équipe, la chaleur d&apos;une compétition. Le noir
+          contre-balance avec autorité, sophistication, confiance. Un binôme
+          classique en design, mais peu d&apos;équipes esport l&apos;appliquent
+          avec cette discipline.
+        </p>
+        <p>
+          Fnatic a fait évoluer son logo trois fois en vingt et un ans. Premier
+          logo manuscrit, dérivé phonétiquement du nom. Deuxième logo, affiné
+          vers 2015, angles durcis, orange intensifié. Troisième logo, lancé en
+          janvier 2020 : plus net, plus aiguisé, éléments décoratifs supprimés,
+          géométrie raffinée. <em>À chaque rebrand, la palette est restée
+          intacte.</em>
+        </p>
+      </Prose>
+
+      <PullQuote
+        accent="bone"
+        author="Sam Mathews · CEO de Fnatic"
+      >
+        Un rebrand doit être une itération et un pas en avant,{" "}
+        <span className="text-fog">pas une réécriture.</span>
+      </PullQuote>
+
+      <Prose>
+        <p>
+          Fnatic prouve qu&apos;une couleur audacieuse choisie tôt et tenue
+          longtemps devient un patrimoine.{" "}
+          <strong>L&apos;orange n&apos;est pas neutre, elle est risquée.</strong>{" "}
+          Mais à force d&apos;apparaître depuis 2004, elle est devenue
+          inséparable de Fnatic. Aucune autre équipe esport majeure ne peut
+          prétendre à l&apos;orange aujourd&apos;hui sans être comparée à eux.
+        </p>
+      </Prose>
+
+      {/* KC split */}
+      <H3 accent="blood">Karmine Corp · Le split chromatique structurel de 2026</H3>
+      <PaletteRow
+        team="Karmine Corp"
+        years="Janvier 2026"
+        primary={{ hex: "#e10600", label: "KC Red · LEC" }}
+        secondary={{ hex: "#0036a7", label: "KC Blue · KCB" }}
+        third={{ hex: "#f4f1ea", label: "Bone" }}
+      />
+      <Prose>
+        <p>
+          Pendant cinq ans, le K de Karmine Corp était bleu. Un bleu
+          institutionnel, presque académique, qui fonctionnait comme couleur
+          signature unique. Puis le <strong>7 janvier 2026</strong>, Kameto
+          annonce en livestream une refonte qui sort de l&apos;ordinaire.
+        </p>
+        <p>
+          KC adopte une <strong>palette double</strong>. Rouge pour
+          l&apos;équipe LEC. Bleu pour KC Blue, le roster d&apos;académie qui
+          joue en LFL et en LEC Versus.
+        </p>
+        <p>
+          Ce choix est rare dans l&apos;esport. Là où la plupart des équipes
+          utilisent une couleur primaire unique pour unifier toute la marque,{" "}
+          <strong>
+            KC utilise la couleur pour différencier ses propres rosters.
+          </strong>{" "}
+          Le rouge dit première équipe. Le bleu dit équipe satellite. Un fan
+          qui regarde un match peut savoir, par la seule couleur du jersey, à
+          quel niveau de structure il assiste.
+        </p>
+      </Prose>
+
+      <PullQuote>
+        C&apos;est de la <span className="text-blood">taxonomie chromatique</span>.
+        Comme une équipe de Formule 1 qui utiliserait deux livrées pour deux
+        écuries au sein d&apos;une même maison.
+      </PullQuote>
+
+      <Prose>
+        <p className="text-fog text-sm italic">
+          Note de prudence. Le raisonnement officiel de KC sur ce choix
+          n&apos;est pas publié. Je traite ce split comme une observation
+          structurelle, pas comme une intention déclarée.
+        </p>
+      </Prose>
+
+      {/* NAVI */}
+      <H3 accent="blood">NAVI · La constance comme stratégie</H3>
+      <PaletteRow
+        team="NAVI"
+        years="2011 → 15 ans"
+        primary={{ hex: "#ffe600", label: "NAVI Yellow" }}
+        secondary={{ hex: "#0a0a0a", label: "Black combat" }}
+      />
+      <Prose>
+        <p>
+          Depuis 2011, NAVI porte du jaune et du noir. <strong>Depuis quinze
+          ans.</strong> À travers des dizaines de rosters, deux jeux principaux
+          (Counter-Strike, Dota 2), des extensions multi-titres, des évolutions
+          de logo, des changements de slogan, la palette n&apos;a jamais bougé.
+        </p>
+        <p>
+          Dans une industrie où la moitié des équipes rebrand tous les deux
+          ans, NAVI a fait un pari opposé. Le jaune et le noir sont devenus si
+          associés à l&apos;équipe que tu peux les voir sur n&apos;importe quel
+          support et identifier NAVI sans voir le logo.{" "}
+          <em>C&apos;est ce que tu cherches quand tu construis une marque.</em>
+        </p>
+        <p>
+          NAVI décrit son jaune comme <strong>défiant et cool</strong>, montrant
+          l&apos;esprit combatif et le mood de victoire. Ce n&apos;est pas un
+          jaune solaire ou amical, c&apos;est un jaune qui ne cède pas, qui
+          surnage dans le noir, qui résiste à la compression vidéo des streams.
+        </p>
+        <p>
+          Le jersey 2026 confirme la posture. NAVI a ajouté une couche graphique
+          faite de glitch et de digital noise, construite à partir des formes
+          de leurs trophées.{" "}
+          <strong>
+            La palette reste identique, mais la texture évolue.
+          </strong>{" "}
+          Discipline chromatique, créativité dans le détail.
+        </p>
+      </Prose>
+
+      {/* Synthèse */}
+      <H3>Trois logiques, un piège à éviter</H3>
+      <Prose>
+        <p>
+          Fnatic défend un orange audacieux par vingt et un ans de constance
+          avec itération de logo. KC structure son organisation par un système
+          chromatique double. NAVI maintient une discipline qui ne change rien
+          depuis quinze ans.
+        </p>
+        <p>
+          Aucune des trois n&apos;est tombée dans le piège chromatique le plus
+          courant de l&apos;esport :{" "}
+          <strong>le noir avec un accent néon générique.</strong> Vert néon sur
+          fond noir, violet électrique sur fond noir, cyan sur fond noir. Ces
+          palettes saturent l&apos;industrie. Elles ne disent rien parce
+          qu&apos;elles disent toutes la même chose.
+        </p>
+      </Prose>
+
+      <ContrastTest />
+
+      <MethodList
+        title="Ta méthode en cinq étapes"
+        steps={[
+          {
+            title: "L'audience d'abord",
+            body: "Premium adulte, communauté locale ou niche compétitive ? Les trois appellent trois palettes différentes.",
+          },
+          {
+            title: "Deux à trois couleurs maximum",
+            body: "Une primaire forte, une secondaire de contraste, éventuellement un accent. Tout ajout au-delà dilue la mémorisation.",
+          },
+          {
+            title: "Test sur trois fonds",
+            body: "Fond noir (le stream), fond blanc (le site), fond gris (l'overlay). Si ta couleur disparaît sur l'un des trois, change-la.",
+          },
+          {
+            title: "Confronte à dix concurrents",
+            body: "Si ta palette ressemble à plus de trois équipes de ta scène, recommence. La différenciation chromatique est le premier sport de l'esport.",
+          },
+          {
+            title: "Verrouille publiquement",
+            body: "Publie ta palette dans un guide de marque. Si tu changes de couleur tous les six mois, tu n'as pas de marque, tu as une humeur.",
+          },
+        ]}
+      />
+
+      <HorsJV>
+        Toute marque digitale qui apparaît sur écran compressé (apps, broadcast,
+        intégrations vidéo) gagne à appliquer le test des trois fonds. Une
+        couleur qui ne survit pas à la compression est une couleur fragile,
+        quelle que soit sa beauté sur un mood board imprimé.
+      </HorsJV>
+    </ChapterSection>
+  );
+}
+
+/* --- Palette row : grand swatch primaire + secondaire + tertiaire optionnel --- */
+function PaletteRow({
+  team,
+  years,
+  primary,
+  secondary,
+  third,
+}: {
+  team: string;
+  years: string;
+  primary: { hex: string; label: string };
+  secondary: { hex: string; label: string };
+  third?: { hex: string; label: string };
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.7 }}
+      className="my-10 md:-mx-12 grid grid-cols-2 md:grid-cols-4 gap-px bg-bone/10 min-h-[180px]"
+    >
+      <div className="md:col-span-1 col-span-2 bg-ink-2 p-5 flex flex-col justify-between">
+        <span className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-fog">
+          {years}
+        </span>
+        <span className="font-display text-2xl text-bone leading-tight">{team}</span>
+      </div>
+      <Swatch hex={primary.hex} label={primary.label} large />
+      <Swatch hex={secondary.hex} label={secondary.label} />
+      {third ? (
+        <Swatch hex={third.hex} label={third.label} />
+      ) : (
+        <div className="hidden md:flex bg-ink-2 p-5 items-end">
+          <span className="font-ui text-[0.65rem] uppercase tracking-widest text-fog">
+            Discipline · binôme tenu
+          </span>
+        </div>
+      )}
+    </motion.div>
+  );
+}
+
+function Swatch({
+  hex,
+  label,
+  large,
+}: {
+  hex: string;
+  label: string;
+  large?: boolean;
+}) {
+  const isDark = hex.toLowerCase() === "#0a0a0a";
+  return (
+    <div
+      className={`relative p-4 md:p-5 flex flex-col justify-between ${
+        large ? "md:col-span-1 row-span-1 md:row-auto" : ""
+      }`}
+      style={{ background: hex }}
+    >
+      <span
+        className="font-ui text-[0.65rem] tracking-widest"
+        style={{ color: isDark ? "rgba(244,241,234,0.6)" : "rgba(10,10,10,0.65)" }}
+      >
+        {hex.toUpperCase()}
+      </span>
+      <span
+        className="font-display text-sm md:text-base mt-6"
+        style={{ color: isDark ? "#f4f1ea" : "#0a0a0a" }}
+      >
+        {label}
+      </span>
+    </div>
+  );
+}
+
+function ContrastTest() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.7 }}
+      className="my-14 md:-mx-12"
+    >
+      <div className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-fog mb-4">
+        Le test des 3 fonds
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-bone/10">
+        {[
+          { bg: "#0a0a0a", label: "Le stream", sub: "Fond noir" },
+          { bg: "#f4f1ea", label: "Le site", sub: "Fond clair" },
+          { bg: "#3a3a3a", label: "L'overlay", sub: "Fond gris" },
+        ].map((f) => (
+          <div
+            key={f.label}
+            className="p-10 flex flex-col items-center justify-center min-h-[160px]"
+            style={{ background: f.bg }}
+          >
+            <div className="font-display text-3xl mb-2" style={{ color: "#c81d25" }}>
+              HUNTERS
+            </div>
+            <div
+              className="font-ui text-[0.65rem] uppercase tracking-[0.25em]"
+              style={{ color: f.bg === "#f4f1ea" ? "#0a0a0a" : "#f4f1ea" }}
+            >
+              {f.label} · {f.sub}
+            </div>
+          </div>
+        ))}
+      </div>
+    </motion.div>
+  );
+}

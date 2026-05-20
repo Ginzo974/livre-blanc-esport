@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0a0a0a;
+  --color-ink-2: #111111;
+  --color-ink-3: #1a1a1a;
+  --color-bone: #f4f1ea;
+  --color-fog: #8a8a8a;
+
+  --color-blood: #c81d25;
+  --color-blood-deep: #7d0a0e;
+  --color-claw: #ff2b3d;
+
+  --color-kc-blue: #0036a7;
+  --color-kc-blue-bright: #4d8eff;
+  --color-kc-red: #e10600;
+  --color-t1-red: #e2012d;
+  --color-g2-anthracite: #1c1c1c;
+  --color-fnatic-orange: #ff6700;
+  --color-navi-yellow: #ffe600;
+  --color-vita-yellow: #ffd200;
+
+  --font-display: var(--font-russo);
+  --font-body: var(--font-inter);
+  --font-ui: var(--font-chakra);
+  --font-hunter: var(--font-rajdhani);
+
+  --shadow-glow-blood: 0 0 60px -10px rgba(200, 29, 37, 0.5);
+  --shadow-glow-blue: 0 0 60px -10px rgba(0, 54, 167, 0.5);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  background: var(--color-ink);
+  color: var(--color-bone);
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-blood);
+  color: var(--color-bone);
+}
+
+.font-display {
+  font-family: var(--font-display), system-ui, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.font-body {
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.font-ui {
+  font-family: var(--font-ui), system-ui, sans-serif;
+}
+
+/* Long-form reading typography */
+.prose-reading {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 1.0625rem; /* 17px */
+  line-height: 1.75;
+  color: rgba(244, 241, 234, 0.86);
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .prose-reading {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.78;
+  }
+}
+.prose-reading p {
+  margin-top: 1.25em;
+  margin-bottom: 0;
+}
+.prose-reading p:first-child {
+  margin-top: 0;
+}
+.prose-reading strong {
+  color: var(--color-bone);
+  font-weight: 600;
+}
+.prose-reading em {
+  font-style: italic;
+  color: var(--color-bone);
+}
+.prose-reading a {
+  color: var(--color-kc-blue-bright);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.prose-reading ul {
+  margin-top: 1.25em;
+  list-style: none;
+  padding-left: 0;
+}
+.prose-reading ul li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-top: 0.5em;
+}
+.prose-reading ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 0.6em;
+  height: 1px;
+  background: var(--color-blood);
+}
+.prose-reading blockquote {
+  border-left: 2px solid var(--color-blood);
+  padding-left: 1.5em;
+  margin: 1.5em 0;
+  font-style: italic;
+  color: var(--color-bone);
+}
+
+.font-hunter {
+  font-family: var(--font-hunter), system-ui, sans-serif;
+  letter-spacing: 0.04em;
+}
+
+/* Lenis smooth scroll requirements */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Grain texture overlay utility */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.08;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+/* Scratch/claw mask used for HUNTERS */
+.claw-mask {
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M5 95 L20 5 M35 95 L50 5 M65 95 L80 5' stroke='black' stroke-width='6' fill='none' stroke-linecap='round'/></svg>");
+          mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M5 95 L20 5 M35 95 L50 5 M65 95 L80 5' stroke='black' stroke-width='6' fill='none' stroke-linecap='round'/></svg>");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

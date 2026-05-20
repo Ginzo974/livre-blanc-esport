@@ -1,0 +1,290 @@
+"use client";
+
+import { motion } from "motion/react";
+import { ReactNode } from "react";
+
+/** Chapter wrapper — handles section ID + intersection-aware fade-in. */
+export function ChapterSection({
+  id,
+  kicker,
+  number,
+  title,
+  subtitle,
+  accent = "blood",
+  children,
+  className = "",
+}: {
+  id: string;
+  kicker: string;
+  number: string;
+  title: ReactNode;
+  subtitle?: ReactNode;
+  accent?: "blood" | "kc-blue" | "kc-blue-bright" | "bone" | "fnatic" | "navi";
+  children: ReactNode;
+  className?: string;
+}) {
+  const accentClass = {
+    blood: "text-blood",
+    "kc-blue": "text-kc-blue",
+    "kc-blue-bright": "text-[var(--color-kc-blue-bright)]",
+    bone: "text-bone",
+    fnatic: "text-fnatic-orange",
+    navi: "text-navi-yellow",
+  }[accent];
+
+  return (
+    <section
+      id={id}
+      data-chapter={id}
+      className={`relative scroll-mt-24 py-24 md:py-32 ${className}`}
+    >
+      <div className="mx-auto max-w-3xl px-6 md:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="mb-12 md:mb-16"
+        >
+          <div className="flex items-center gap-4 mb-6">
+            <span className={`font-display ${accentClass} text-sm tracking-widest`}>
+              {number}
+            </span>
+            <span className={`h-px w-16 bg-current opacity-40 ${accentClass}`} />
+            <span className="font-ui text-fog text-[0.7rem] uppercase tracking-[0.3em]">
+              {kicker}
+            </span>
+          </div>
+          <h2 className="font-display text-[clamp(2.25rem,5vw,3.75rem)] leading-[1.02] tracking-tight text-bone">
+            {title}
+          </h2>
+          {subtitle && (
+            <p className="mt-6 text-lg md:text-xl text-fog leading-snug max-w-2xl">
+              {subtitle}
+            </p>
+          )}
+        </motion.div>
+        {children}
+      </div>
+    </section>
+  );
+}
+
+/** Reading-optimized prose wrapper. */
+export function Prose({ children, className = "" }: { children: ReactNode; className?: string }) {
+  return <div className={`prose-reading ${className}`}>{children}</div>;
+}
+
+/** Sub-section heading inside a chapter. */
+export function H3({ children, accent = "bone" }: { children: ReactNode; accent?: "bone" | "blood" }) {
+  return (
+    <motion.h3
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5 }}
+      className={`font-display mt-16 mb-6 text-2xl md:text-3xl tracking-tight leading-tight ${
+        accent === "blood" ? "text-blood" : "text-bone"
+      }`}
+    >
+      {children}
+    </motion.h3>
+  );
+}
+
+/** Smaller H4 for sub-sub-sections. */
+export function H4({ children }: { children: ReactNode }) {
+  return (
+    <h4 className="font-display mt-10 mb-3 text-lg md:text-xl text-bone tracking-tight">
+      {children}
+    </h4>
+  );
+}
+
+/** Lead paragraph — bigger, fog colored. Use on first paragraph of intro. */
+export function Lead({ children }: { children: ReactNode }) {
+  return (
+    <motion.p
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.7 }}
+      className="font-display text-xl md:text-2xl leading-[1.4] text-bone tracking-tight mb-10"
+    >
+      {children}
+    </motion.p>
+  );
+}
+
+/** Drop cap on first paragraph of a chapter. Pass the first letter separately. */
+export function DropCap({
+  letter,
+  children,
+}: {
+  letter: string;
+  children: ReactNode;
+}) {
+  return (
+    <p className="relative">
+      <span
+        className="font-display float-left mr-3 text-[5.5rem] leading-[0.85] text-blood"
+        style={{ marginTop: "0.1em", marginBottom: "-0.1em" }}
+      >
+        {letter}
+      </span>
+      {children}
+    </p>
+  );
+}
+
+/** Big pull quote that breaks visually out of the column. */
+export function PullQuote({
+  children,
+  author,
+  accent = "blood",
+}: {
+  children: ReactNode;
+  author?: string;
+  accent?: "blood" | "kc-blue-bright" | "bone";
+}) {
+  const accentColor = {
+    blood: "var(--color-blood)",
+    "kc-blue-bright": "var(--color-kc-blue-bright)",
+    bone: "var(--color-bone)",
+  }[accent];
+
+  return (
+    <motion.figure
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.7 }}
+      className="my-14 md:my-20 md:-mx-12 relative"
+    >
+      <span
+        aria-hidden
+        className="absolute -top-6 -left-2 md:-left-6 font-display text-7xl md:text-8xl leading-none"
+        style={{ color: accentColor, opacity: 0.5 }}
+      >
+        “
+      </span>
+      <blockquote
+        className="relative font-display text-2xl md:text-3xl lg:text-4xl leading-[1.15] tracking-tight text-bone pl-6 md:pl-10"
+        style={{ borderLeft: `3px solid ${accentColor}` }}
+      >
+        {children}
+      </blockquote>
+      {author && (
+        <figcaption
+          className="mt-4 md:ml-10 ml-6 font-ui text-xs uppercase tracking-[0.3em] text-fog"
+        >
+          — {author}
+        </figcaption>
+      )}
+    </motion.figure>
+  );
+}
+
+/** Highlighted aside : "Particulièrement utile pour ..." */
+export function AsideNote({
+  label = "Particulièrement utile pour",
+  audience,
+}: {
+  label?: string;
+  audience: string;
+}) {
+  return (
+    <div className="my-8 flex flex-wrap items-center gap-3 border-l-2 border-bone/20 pl-4">
+      <span className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-fog">
+        {label}
+      </span>
+      <span className="font-ui text-xs text-bone/80">{audience}</span>
+    </div>
+  );
+}
+
+/** Numbered method block — for the "Ta méthode en X étapes" pattern. */
+export function MethodList({
+  title = "Ta méthode",
+  steps,
+  accent = "blood",
+}: {
+  title?: string;
+  steps: { title: string; body: string }[];
+  accent?: "blood" | "kc-blue-bright";
+}) {
+  const ringColor = accent === "blood" ? "border-blood/30" : "border-[var(--color-kc-blue-bright)]/30";
+  const numColor = accent === "blood" ? "text-blood" : "text-[var(--color-kc-blue-bright)]";
+  return (
+    <motion.aside
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.7 }}
+      className={`my-14 border ${ringColor} bg-ink-2/50 p-6 md:p-8`}
+    >
+      <div className="font-ui text-[0.7rem] uppercase tracking-[0.3em] text-fog mb-6">
+        {title}
+      </div>
+      <ol className="space-y-5">
+        {steps.map((s, i) => (
+          <li key={i} className="grid grid-cols-[2rem_1fr] gap-4 items-baseline">
+            <span className={`font-display ${numColor} text-sm`}>
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <div>
+              <div className="font-display text-bone text-base md:text-lg leading-tight mb-1">
+                {s.title}
+              </div>
+              <p className="font-body text-sm text-fog leading-relaxed">{s.body}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </motion.aside>
+  );
+}
+
+/** Warning / piège block. */
+export function WarningBlock({
+  label = "Piège à éviter",
+  children,
+}: {
+  label?: string;
+  children: ReactNode;
+}) {
+  return (
+    <motion.aside
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.6 }}
+      className="my-12 border border-blood/40 bg-blood/5 p-6 md:p-8"
+    >
+      <div className="font-display text-blood text-[0.7rem] tracking-[0.3em] mb-3">
+        ⚠ {label.toUpperCase()}
+      </div>
+      <div className="prose-reading">{children}</div>
+    </motion.aside>
+  );
+}
+
+/** Soft "leçon hors-JV" aside, italic, off to the side. */
+export function HorsJV({ children }: { children: ReactNode }) {
+  return (
+    <motion.aside
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="my-12 border-t border-bone/10 pt-6"
+    >
+      <div className="font-ui text-[0.7rem] uppercase tracking-[0.3em] text-fog mb-2">
+        Leçon hors-JV
+      </div>
+      <p className="font-body italic text-bone/80 leading-relaxed text-base md:text-lg">
+        {children}
+      </p>
+    </motion.aside>
+  );
+}

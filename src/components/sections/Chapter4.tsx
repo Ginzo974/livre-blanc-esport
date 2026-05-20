@@ -1,0 +1,288 @@
+"use client";
+
+import {
+  ChapterSection,
+  Prose,
+  H3,
+  H4,
+  Lead,
+  PullQuote,
+  MethodList,
+  HorsJV,
+} from "@/components/article/Article";
+
+export function Chapter4() {
+  return (
+    <ChapterSection
+      id="chap-4"
+      number="05"
+      kicker="Chapitre 4 · Le système 360"
+      title={
+        <>
+          Un logo seul, c&apos;est un drapeau planté dans le vide.{" "}
+          <span className="text-blood">Le système, c&apos;est le pays autour.</span>
+        </>
+      }
+      subtitle="Typographie, jersey, broadcast, social, événement live, app communautaire, merch. C'est là que la majorité des équipes échouent."
+    >
+      <Lead>
+        Un logo te donne un point d&apos;ancrage. Une palette te donne une
+        émotion. Mais une équipe esport vit dans un système visuel complet.
+      </Lead>
+
+      <Prose>
+        <p>
+          Ce système comprend la typographie, les jerseys, les overlays de
+          broadcast, les templates de réseaux sociaux, les événements live, les
+          apps communautaires et le merch.
+        </p>
+        <p>
+          C&apos;est dans le système que la majorité des équipes esport
+          échouent. Elles passent six mois à dessiner un beau logo, puis elles
+          improvisent tout le reste.{" "}
+          <strong>
+            Ce chapitre te montre comment les meilleures équipes du monde
+            évitent ce piège.
+          </strong>
+        </p>
+      </Prose>
+
+      {/* Partie A : typographie */}
+      <H3 accent="blood">Partie A · La typographie, la voix silencieuse</H3>
+      <Prose>
+        <p>
+          Tu lis la typographie d&apos;une équipe esport plus souvent que son
+          logo. Sur les jerseys, c&apos;est elle qui porte le nom du joueur et
+          son numéro. Sur le broadcast, c&apos;est elle qui affiche les scores.
+          Sur les réseaux sociaux, c&apos;est elle qui structure chaque post.
+        </p>
+        <p>
+          L&apos;esport a développé sa propre grammaire typographique.{" "}
+          <strong>Sans-serif angulaires, géométriques, modernes.</strong> Très
+          peu d&apos;équipes utilisent du serif (jugé trop classique) ou du
+          script (illisible en broadcast). Le centre de gravité est la
+          sans-serif moderne, déclinée en plusieurs personnalités.
+        </p>
+      </Prose>
+
+      <H4>T1 · La typo asiatique épurée</H4>
+      <Prose>
+        <p>
+          La sans-serif T1 a trois caractéristiques visibles.{" "}
+          <strong>Un italique léger</strong> qui suggère le mouvement.{" "}
+          <strong>Des contre-formes ouvertes</strong> qui maintiennent la
+          lisibilité à petite taille.{" "}
+          <strong>Des terminaisons droites</strong> qui durcissent le rythme.
+          C&apos;est une typo qui parle peu mais qui parle ferme.
+        </p>
+        <p>
+          Sur les jerseys Worlds 2025, en noir et or, cette typo se contente
+          d&apos;écrire les noms des joueurs en lettres capitales. Pas de
+          fioriture, pas de flag décoratif.{" "}
+          <em>
+            La force vient de l&apos;absence d&apos;effet. T1 a confiance dans
+            son palmarès, sa typo aussi.
+          </em>
+        </p>
+      </Prose>
+
+      <H4>Team Vitality · La typo française dynamique</H4>
+      <Prose>
+        <p>
+          Là où T1 retire pour donner du poids, Vitality ajoute du mouvement.
+          Les caractères Vitality tendent vers la diagonale, l&apos;inclinaison,
+          l&apos;élan. Ce sont des caractères qui semblent toujours en train de
+          partir vers l&apos;avant.
+        </p>
+        <p>
+          Cette typo dialogue avec l&apos;idée que le mot Vitality évoque.
+          L&apos;énergie, le dynamisme, la vivacité.{" "}
+          <strong>Elle prolonge le nom dans la lettre.</strong>
+        </p>
+      </Prose>
+
+      <FontComparison />
+
+      <PullQuote>
+        Beaucoup d&apos;équipes choisissent une sans-serif italique extrême,
+        agressive, type racing game des années 2000.{" "}
+        <span className="text-blood">Toutes ces typos se ressemblent.</span>
+      </PullQuote>
+
+      {/* Partie B : écosystème */}
+      <H3 accent="blood">Partie B · L&apos;écosystème 360</H3>
+
+      <H4>Le jersey, objet culturel</H4>
+      <Prose>
+        <p>
+          Le jersey d&apos;une équipe esport n&apos;est pas un uniforme
+          sportif. C&apos;est un objet culturel optimisé pour deux contraintes
+          contradictoires :{" "}
+          <strong>être lisible en broadcast et être désirable en streetwear.</strong>
+        </p>
+        <p>
+          Karmine Corp a illustré cette double contrainte en janvier 2026. Les
+          jerseys 2026, développés avec Fulllife, utilisent un polyester
+          recyclé FL NanoMatter, fabriqué au Portugal. Coupe boxy, col rond,
+          inserts oversize. Sponsor Razer sur la manche droite.{" "}
+          <em>Le résultat fonctionne en compétition et en street.</em>
+        </p>
+        <p>
+          NAVI a fait un choix différent pour son Pro Kit Jersey 2026. Design
+          intégrant glitch et digital noise construits à partir des formes de
+          leurs trophées. Une couche graphique qui transforme le jersey en
+          récit visuel sans rompre la palette jaune et noir. Vendu 90 dollars,
+          avec un message thank-you fans sur l&apos;étiquette externe.
+        </p>
+      </Prose>
+
+      <H4>Les réseaux sociaux, terrain principal</H4>
+      <Prose>
+        <p>
+          Une équipe esport vit majoritairement sur Twitter, Twitch, TikTok,
+          Instagram, Discord. Si ton identité ne se décline pas proprement sur
+          les cinq, <strong>ton équipe est invisible quatre jours sur sept</strong>.
+        </p>
+        <p>
+          Le travail consiste à concevoir des templates qui maintiennent la
+          marque sans répétition lassante.
+        </p>
+      </Prose>
+
+      <H4>Le broadcast et l&apos;événement live</H4>
+      <Prose>
+        <p>
+          Le broadcast est l&apos;événement principal d&apos;une équipe esport.
+          Overlays, commentateurs en cam, animations de score, transitions,
+          écrans de pause —{" "}
+          <em>
+            tout ce qui est entre les actions est aussi important que les
+            actions elles-mêmes.
+          </em>
+        </p>
+        <p>
+          Karmine Corp pousse cette logique plus loin en transformant ses
+          matchs domicile en spectacles physiques. Le LEC Summer Roadtrip 2026
+          se tient à l&apos;<strong>Adidas Arena de Paris</strong>, du 24 au
+          26 juillet, contre Vitality, G2 et MKOI. La salle accueille jusqu&apos;à
+          neuf mille personnes, avec stands partenaires, zones de démo,
+          meet-and-greet joueurs.
+        </p>
+      </Prose>
+
+      <H4>L&apos;app communautaire, le territoire encore vacant</H4>
+      <Prose>
+        <p>
+          Très peu d&apos;équipes esport vont jusqu&apos;à proposer une
+          application communautaire. <strong>Vitality est l&apos;exception.</strong>{" "}
+          V.Hive, lancée en novembre 2022, récompense les fans pour leur
+          engagement avec des avatars 3D personnalisables (mi-humain
+          mi-abeille), des produits en édition limitée, des accès exclusifs.
+        </p>
+        <p>
+          V.Hive 2.0, sortie en novembre 2024, a dépassé{" "}
+          <strong>100 000 téléchargements et 75 000 comptes actifs</strong>.
+        </p>
+      </Prose>
+
+      <H4>Le merch suit le modèle streetwear</H4>
+      <Prose>
+        <p>
+          Drops limités, collaborations avec des marques mode, séries capsule.
+          Gentle Mates s&apos;associe avec Lacoste, KC avec Fulllife et
+          RhinoShield, NAVI vend son Pro Kit à 90 dollars en édition limitée.
+        </p>
+        <p>
+          Un drop par saison, fort visuellement, limité dans le temps.{" "}
+          <strong>
+            La rareté manufacturée prolonge la marque dans le désir.
+          </strong>
+        </p>
+      </Prose>
+
+      <MethodList
+        title="Ta méthode 360 en cinq étapes"
+        steps={[
+          {
+            title: "Liste tes supports",
+            body: "Jersey, trois plateformes sociales, overlay broadcast, page d'accueil du site, merch. Cinq familles minimum.",
+          },
+          {
+            title: "Adapte palette et typo à chaque support",
+            body: "Le jersey demande plus de contraste, le social plus de variations, le broadcast plus de lisibilité petit format.",
+          },
+          {
+            title: "Trois templates par plateforme sociale",
+            body: "Annonce de match, score, photo joueur. Si tu publies, tu suis ces templates. Pas d'improvisation au cas par cas.",
+          },
+          {
+            title: "Crée un kit de marque téléchargeable",
+            body: "Logo, typo, couleurs, exemples d'application. Sans kit, ta marque dérive en deux mois.",
+          },
+          {
+            title: "Pense l'événement live dès le brief",
+            body: "Même si tu ne le feras pas la première année, conçois le logo et la palette pour qu'ils fonctionnent en lumière géante.",
+          },
+        ]}
+      />
+
+      <HorsJV>
+        Toute marque qui vit sur plusieurs supports simultanés gagne à concevoir
+        son identité dès le départ pour ce système intégré, plutôt que pour un
+        logo isolé qu&apos;on déclinera plus tard. Le « plus tard » arrive
+        toujours trop vite et trop mal.
+      </HorsJV>
+    </ChapterSection>
+  );
+}
+
+import { motion } from "motion/react";
+
+function FontComparison() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.7 }}
+      className="my-10 md:-mx-12 grid grid-cols-1 md:grid-cols-2 gap-px bg-bone/10"
+    >
+      <div className="bg-ink-2 p-8 flex flex-col">
+        <div className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-fog mb-6">
+          T1 · Sans-serif épurée
+        </div>
+        <div className="font-display text-6xl text-bone tracking-tight leading-none mb-2">
+          T1
+        </div>
+        <div className="font-display text-2xl text-bone tracking-tight mb-4">
+          FAKER · KERIA
+        </div>
+        <p className="text-xs text-fog leading-relaxed mt-auto">
+          Terminaisons droites. Contre-formes ouvertes. Italique léger qui
+          suggère le mouvement sans crier.
+        </p>
+      </div>
+      <div className="bg-ink-2 p-8 flex flex-col">
+        <div className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-fog mb-6">
+          Vitality · Diagonale dynamique
+        </div>
+        <div
+          className="font-display text-6xl text-bone leading-none mb-2 tracking-tight"
+          style={{ fontStyle: "italic", transform: "skewX(-10deg)" }}
+        >
+          VIT
+        </div>
+        <div
+          className="font-display text-2xl text-bone mb-4 tracking-tight"
+          style={{ fontStyle: "italic", transform: "skewX(-8deg)" }}
+        >
+          PERKZ · CARZZY
+        </div>
+        <p className="text-xs text-fog leading-relaxed mt-auto">
+          Diagonale, inclinaison, élan. Les caractères partent vers
+          l&apos;avant. Le mot prolonge le nom.
+        </p>
+      </div>
+    </motion.div>
+  );
+}

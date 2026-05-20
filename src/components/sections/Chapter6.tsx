@@ -1,0 +1,575 @@
+"use client";
+
+import {
+  Prose,
+  H3,
+  H4,
+  Lead,
+  PullQuote,
+} from "@/components/article/Article";
+import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
+
+export function Chapter6() {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const bgOpacity = useTransform(scrollYProgress, [0, 0.3, 1], [0, 1, 1]);
+  const logoY = useTransform(scrollYProgress, [0, 1], ["8%", "-10%"]);
+
+  return (
+    <section
+      id="chap-6"
+      ref={ref}
+      className="relative scroll-mt-24 overflow-hidden py-28 md:py-36"
+      style={{
+        background:
+          "linear-gradient(to bottom, #0a0a0a, #1a0303 35%, #0a0a0a 75%, #0a0a0a)",
+      }}
+    >
+      {/* Background blood vignette + claw marks */}
+      <motion.div
+        style={{ opacity: bgOpacity }}
+        className="absolute inset-0 pointer-events-none"
+        aria-hidden
+      >
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse 80% 60% at 50% 30%, rgba(200,29,37,0.16), transparent 70%)",
+          }}
+        />
+        <svg
+          className="absolute inset-0 w-full h-full opacity-[0.06]"
+          viewBox="0 0 1200 1200"
+          preserveAspectRatio="xMidYMid slice"
+          aria-hidden
+        >
+          <g stroke="#c81d25" strokeWidth="2" fill="none">
+            <path d="M -50 100 L 250 1100" />
+            <path d="M 100 50 L 400 1150" />
+            <path d="M 250 80 L 550 1120" />
+            <path d="M 700 90 L 1000 1120" />
+            <path d="M 850 50 L 1150 1100" />
+            <path d="M 1000 100 L 1300 1150" />
+          </g>
+        </svg>
+      </motion.div>
+
+      <div className="relative mx-auto max-w-3xl px-6 md:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+          className="mb-12"
+        >
+          <div className="flex items-center gap-4 mb-6">
+            <span className="font-display text-blood text-sm tracking-widest">
+              07
+            </span>
+            <span className="h-px w-16 bg-blood" />
+            <span className="font-ui text-blood text-[0.7rem] uppercase tracking-[0.3em]">
+              Chapitre 6 · La méthode en action
+            </span>
+          </div>
+          <h2 className="font-hunter font-bold text-[clamp(3.5rem,10vw,7.5rem)] leading-[0.85] tracking-tight text-bone">
+            HUNT
+            <br />
+            <span className="text-blood">ERS.</span>
+          </h2>
+          <p className="mt-6 text-lg md:text-xl text-bone/80 leading-snug max-w-2xl">
+            Une équipe que j&apos;invente — pas pour exister demain, mais pour
+            démontrer qu&apos;une identité d&apos;équipe esport peut se
+            construire avec discipline, étape par étape, sans rien copier des
+            autres.
+          </p>
+        </motion.div>
+
+        <Prose>
+          <Lead>
+            Tout le livre s&apos;arrête à la théorie si je ne te montre pas la
+            méthode en action.
+          </Lead>
+          <p>
+            Ce dernier chapitre applique la roadmap du chapitre 5 sur une
+            équipe fictive conçue de zéro. Je l&apos;appelle HUNTERS.
+          </p>
+        </Prose>
+
+        {/* HUNTERS logo big */}
+        <motion.div style={{ y: logoY }} className="my-14 flex justify-center">
+          <HuntersLogoSVG />
+        </motion.div>
+
+        <H3 accent="blood">Étape 1 · Le brief en une page</H3>
+        <Prose>
+          <ul>
+            <li>
+              <strong>Jeu principal :</strong> League of Legends, avec ambition
+              d&apos;arriver en LEC à moyen terme.
+            </li>
+            <li>
+              <strong>Valeurs centrales :</strong> la meute solidaire dans
+              l&apos;effort, mais redoutable face à l&apos;adversaire. La
+              poursuite collective de l&apos;objectif sans qu&apos;aucun joueur
+              ne soit laissé en arrière.
+            </li>
+            <li>
+              <strong>Audience cible :</strong> joueurs et spectateurs
+              francophones de 18 à 35 ans, qui veulent appartenir à un groupe
+              qui chasse ensemble plutôt qu&apos;à une équipe de solo-carries.
+            </li>
+            <li>
+              <strong>Positionnement :</strong> l&apos;esport vu comme une
+              meute, pas comme un alignement d&apos;individus. HUNTERS assume
+              une esthétique prédatrice — pas pour faire peur, pour exprimer
+              que le collectif est plus fort que la somme des joueurs.
+            </li>
+            <li>
+              <strong>Mot fondateur :</strong> hunters = chasseurs, poursuite,
+              meute. <em>Le nom est sa thèse.</em>
+            </li>
+          </ul>
+        </Prose>
+
+        <H3 accent="blood">Étape 2 · Le logo</H3>
+        <Prose>
+          <p>
+            Selon l&apos;outil de décision du chapitre 2 : le nom HUNTERS a une
+            métaphore centrale forte et documentée, l&apos;équipe peut tenir
+            la narrative sur 5 ans.{" "}
+            <strong>L&apos;approche retenue est le récit illustratif</strong>,
+            plus proche de G2 que de la simplicité radicale de KC. Le logo
+            assume sa complexité pour porter immédiatement un sens.
+          </p>
+          <p>
+            Ce qu&apos;on voit dans la version finale : au centre,{" "}
+            <strong>une lance effilée descendante</strong>, comme une déchirure
+            laissée par une griffure. Trois pointes ascendantes qui encadrent
+            la lance et forment l&apos;arête supérieure. De part et d&apos;autre,
+            des extensions latérales en griffure qui composent{" "}
+            <strong>deux H</strong> quand on prend du recul.
+          </p>
+          <p>
+            Le double H est subtil. Il apparaît seulement après que l&apos;œil
+            ait traversé l&apos;effet général de griffure. C&apos;est le même
+            type de double lecture que l&apos;aile cachée dans le T de T1, sur
+            un registre opposé. Dans les contre-formes négatives entre la lance
+            centrale et les pointes latérales, on peut deviner{" "}
+            <strong>des yeux de chasseur</strong> — pas frontaux, pas
+            explicites, plutôt suggérés par les espaces noirs entre les
+            éléments rouges. <em>Le logo te regarde autant que tu le regardes.</em>
+          </p>
+          <p>
+            La symétrie verticale parfaite équilibre l&apos;agressivité des
+            griffures. Sans cette symétrie, l&apos;ensemble serait chaotique.
+            Avec elle, le chaos prend une forme stable.
+          </p>
+        </Prose>
+
+        <div className="my-10 border border-blood/30 bg-blood/5 p-6">
+          <div className="font-display text-blood text-[0.7rem] tracking-[0.3em] mb-3">
+            CONTRAINTE DE L&apos;APPROCHE ILLUSTRATIVE
+          </div>
+          <p className="text-sm text-bone/85 leading-relaxed">
+            Le logo a des détails fins (pointes effilées, griffures étroites).
+            À 24 px, ces détails se compressent. Une{" "}
+            <strong>version simplifiée pour les petits formats</strong> est
+            obligatoire : double H et effet griffure conservés, nombre de
+            pointes réduit. C&apos;est la même discipline qu&apos;a appliquée
+            G2 avec son samurai.
+          </p>
+        </div>
+
+        <H3 accent="blood">Étape 3 · La palette</H3>
+        <Prose>
+          <p>
+            <strong>Rouge sang. Noir profond. Et c&apos;est tout, ou presque.</strong>
+          </p>
+        </Prose>
+
+        <HuntersPalette />
+
+        <Prose>
+          <p>
+            <strong>Rouge sang</strong> comme couleur primaire. Pas un rouge
+            corporate, pas un rouge ketchup. Un rouge dense qui évoque la trace
+            laissée par la griffure, la marque du prédateur. Le rouge est codé
+            « ennemi » dans le moteur de LoL — et HUNTERS l&apos;assume.{" "}
+            <em>L&apos;équipe se présente comme l&apos;adversaire à craindre.</em>
+          </p>
+          <p>
+            <strong>Noir profond</strong> comme fond et ancre. La nuit pendant
+            la chasse, l&apos;invisibilité du prédateur avant l&apos;embuscade.
+            Le noir n&apos;est pas une absence de couleur. C&apos;est le
+            contraste qui fait exister le rouge.
+          </p>
+          <p>
+            Cette palette pose un risque à reconnaître.{" "}
+            <strong>
+              Le rouge sur noir est ultra-saturé en esport (FaZe Clan,
+              Sentinels, OG).
+            </strong>{" "}
+            Pour ne pas être confondu avec eux, HUNTERS compense par la
+            singularité de son traitement graphique : la griffure rouge
+            n&apos;est pas un rouge plat, elle est déchirée, dynamique, jamais
+            lisse. <em>C&apos;est cette texture qui rend HUNTERS reconnaissable
+            au-delà de la couleur.</em>
+          </p>
+        </Prose>
+
+        <H3 accent="blood">Étape 4 · La typographie</H3>
+        <Prose>
+          <p>
+            Pour accompagner le logo, une{" "}
+            <strong>sans-serif géométrique aux angles vifs et terminaisons
+            biseautées</strong>. Les caractères doivent prolonger l&apos;effet
+            griffure du logo, pas le contredire.
+          </p>
+          <p>
+            <strong>Référence de production : Rajdhani Bold</strong> (Google
+            Fonts, licence libre). Ses terminaisons coupées à angle vif, ses
+            verticales tendues et ses contre-formes ouvertes correspondent
+            exactement au registre martial recherché. La graisse Bold pour le
+            logo et la signalétique, Medium pour les usages courants.
+          </p>
+        </Prose>
+
+        <RajdhaniDemo />
+
+        <Prose>
+          <p>
+            Concrètement : les terminaisons des lettres sont coupées droites
+            avec un biseau qui rappelle la pointe d&apos;une lame. Les
+            verticales sont fermes, presque tendues. Les contre-formes restent
+            ouvertes pour que HUNTERS reste lisible même compressé.{" "}
+            <strong>L&apos;esprit général est martial, pas accueillant.</strong>
+          </p>
+        </Prose>
+
+        <PullQuote accent="blood">
+          HUNTERS doit se lire avec le souffle court.{" "}
+          <span className="text-fog">Pas avec la voix douce.</span>
+        </PullQuote>
+
+        <H3 accent="blood">Étape 5 · L&apos;écosystème 360</H3>
+
+        <H4>Le jersey</H4>
+        <Prose>
+          <p>
+            Noir dominant, HUNTERS et logo en rouge sang sur le torse. Numéro
+            et handle du joueur dans le haut du dos, également en rouge. Un{" "}
+            <strong>patch meute</strong> discret sur la manche gauche — symbole
+            de l&apos;appartenance collective, pas du joueur individuel. Coupe
+            contemporaine, ni trop ample ni trop sportif, inspirée de la
+            collaboration Fulllife de KC en termes de matière et de
+            positionnement streetwear.
+          </p>
+        </Prose>
+
+        <H4>Réseaux sociaux · Trois templates fixes</H4>
+        <SocialTemplates />
+
+        <H4>Broadcast overlay</H4>
+        <Prose>
+          <p>
+            Noir dominant en bas, rouge pour les éléments interactifs (kills,
+            scores, objectifs). L&apos;effet griffure peut apparaître
+            discrètement dans les transitions, jamais sur l&apos;overlay
+            principal.{" "}
+            <strong>
+              La lisibilité du gameplay prime sur l&apos;esthétique de la
+              marque.
+            </strong>
+          </p>
+        </Prose>
+
+        <H4>Merch · Phase 1</H4>
+        <Prose>
+          <p>
+            Un drop par saison, en collaboration avec une marque française de
+            lifestyle à définir. Hoodies noirs avec logo rouge brodé.
+            Casquettes minimalistes. Éditions limitées, esthétique streetwear
+            premium contenu. L&apos;app communautaire arrive après la
+            troisième saison,{" "}
+            <em>si la meute l&apos;appelle.</em>
+          </p>
+        </Prose>
+
+        <H3>Ce que HUNTERS démontre</H3>
+        <Prose>
+          <p>
+            HUNTERS est une équipe qui n&apos;existe pas. Pourtant, en suivant
+            la méthode du chapitre 5, elle a :
+          </p>
+          <ul>
+            <li>un nom avec une histoire,</li>
+            <li>un logo bâti sur le récit illustratif,</li>
+            <li>une palette assumée et testée sur trois fonds,</li>
+            <li>une typographie qui dialogue avec ses valeurs (Rajdhani Bold),</li>
+            <li>un système 360 qui se décline cohéremment.</li>
+          </ul>
+          <p>
+            Ce n&apos;est pas un logo simple. Mais ce n&apos;est pas un logo
+            paresseux. Chaque trait a une intention, chaque pointe une fonction.
+            Le rouge sur noir aurait pu être générique, mais la griffure le
+            rend reconnaissable. Le double H transforme un logo de griffure en
+            logo d&apos;équipe identifiable.
+          </p>
+        </Prose>
+
+        <PullQuote accent="blood">
+          Si HUNTERS, équipe inexistante construite en quelques jours avec une
+          méthode, peut produire un système plus cohérent qu&apos;une équipe
+          réelle sans méthode,{" "}
+          <span className="text-fog">alors la méthode vaut.</span>
+        </PullQuote>
+
+        <Prose>
+          <p className="text-fog italic">
+            C&apos;est tout ce que ce livre voulait te dire.
+          </p>
+        </Prose>
+      </div>
+    </section>
+  );
+}
+
+function HuntersLogoSVG() {
+  return (
+    <svg
+      viewBox="0 0 320 360"
+      width="280"
+      height="320"
+      className="max-w-full drop-shadow-[0_0_50px_rgba(200,29,37,0.4)]"
+      aria-label="Logo HUNTERS — lance et griffure"
+    >
+      <defs>
+        <linearGradient id="bloodGrad6" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#ff2b3d" />
+          <stop offset="60%" stopColor="#c81d25" />
+          <stop offset="100%" stopColor="#7d0a0e" />
+        </linearGradient>
+      </defs>
+      <motion.path
+        initial={{ pathLength: 0, opacity: 0 }}
+        whileInView={{ pathLength: 1, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+        d="M 130 30 L 160 100 L 190 30"
+        stroke="url(#bloodGrad6)"
+        strokeWidth="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+      <motion.path
+        initial={{ pathLength: 0 }}
+        whileInView={{ pathLength: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.4, ease: "easeOut", delay: 0.6 }}
+        d="M 160 60 L 160 330"
+        stroke="url(#bloodGrad6)"
+        strokeWidth="14"
+        strokeLinecap="round"
+        fill="none"
+      />
+      <motion.path
+        initial={{ pathLength: 0, opacity: 0 }}
+        whileInView={{ pathLength: 1, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, ease: "easeOut", delay: 1.2 }}
+        d="M 70 80 L 60 290"
+        stroke="url(#bloodGrad6)"
+        strokeWidth="12"
+        strokeLinecap="round"
+        fill="none"
+      />
+      <motion.path
+        initial={{ pathLength: 0, opacity: 0 }}
+        whileInView={{ pathLength: 1, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 1.6 }}
+        d="M 65 180 L 155 175"
+        stroke="url(#bloodGrad6)"
+        strokeWidth="10"
+        strokeLinecap="round"
+        fill="none"
+      />
+      <motion.path
+        initial={{ pathLength: 0, opacity: 0 }}
+        whileInView={{ pathLength: 1, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, ease: "easeOut", delay: 1.8 }}
+        d="M 20 110 L 90 65"
+        stroke="url(#bloodGrad6)"
+        strokeWidth="8"
+        strokeLinecap="round"
+        fill="none"
+      />
+      <motion.path
+        initial={{ pathLength: 0, opacity: 0 }}
+        whileInView={{ pathLength: 1, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, ease: "easeOut", delay: 1.2 }}
+        d="M 250 80 L 260 290"
+        stroke="url(#bloodGrad6)"
+        strokeWidth="12"
+        strokeLinecap="round"
+        fill="none"
+      />
+      <motion.path
+        initial={{ pathLength: 0, opacity: 0 }}
+        whileInView={{ pathLength: 1, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 1.6 }}
+        d="M 165 175 L 255 180"
+        stroke="url(#bloodGrad6)"
+        strokeWidth="10"
+        strokeLinecap="round"
+        fill="none"
+      />
+      <motion.path
+        initial={{ pathLength: 0, opacity: 0 }}
+        whileInView={{ pathLength: 1, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, ease: "easeOut", delay: 1.8 }}
+        d="M 300 110 L 230 65"
+        stroke="url(#bloodGrad6)"
+        strokeWidth="8"
+        strokeLinecap="round"
+        fill="none"
+      />
+      <motion.circle
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 2.4 }}
+        cx="115"
+        cy="200"
+        r="4"
+        fill="#ff2b3d"
+      />
+      <motion.circle
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 2.4 }}
+        cx="205"
+        cy="200"
+        r="4"
+        fill="#ff2b3d"
+      />
+    </svg>
+  );
+}
+
+function HuntersPalette() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.7 }}
+      className="my-10 md:-mx-12 grid grid-cols-2 gap-px bg-bone/10 min-h-[200px]"
+    >
+      <div className="p-6 md:p-8 flex flex-col justify-between" style={{ background: "#c81d25" }}>
+        <span className="font-ui text-[0.65rem] uppercase tracking-widest" style={{ color: "rgba(244,241,234,0.85)" }}>
+          #C81D25
+        </span>
+        <span className="font-hunter font-bold text-2xl text-bone">ROUGE SANG</span>
+      </div>
+      <div className="p-6 md:p-8 flex flex-col justify-between bg-ink">
+        <span className="font-ui text-[0.65rem] uppercase tracking-widest text-fog">
+          #0A0A0A
+        </span>
+        <span className="font-hunter font-bold text-2xl text-bone">NOIR PROFOND</span>
+      </div>
+    </motion.div>
+  );
+}
+
+function RajdhaniDemo() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.7 }}
+      className="my-10 md:-mx-12 bg-ink-2 border border-blood/20 p-8 md:p-12"
+    >
+      <div className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-blood mb-6">
+        Rajdhani Bold · Google Fonts
+      </div>
+      <div className="font-hunter font-bold text-6xl md:text-8xl text-bone leading-[0.85] mb-4">
+        HUNTERS
+      </div>
+      <div className="font-hunter font-bold text-2xl text-fog tracking-wider mb-6">
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ
+      </div>
+      <div className="grid grid-cols-3 md:grid-cols-6 gap-3 text-xs text-fog">
+        {["VIPER", "RAVEN", "FANG", "WRAITH", "SHADE", "TALON"].map((p) => (
+          <span key={p} className="font-hunter font-bold text-base text-bone tracking-wide">
+            {p}
+          </span>
+        ))}
+      </div>
+    </motion.div>
+  );
+}
+
+function SocialTemplates() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.7 }}
+      className="my-10 md:-mx-12 grid grid-cols-1 md:grid-cols-3 gap-3"
+    >
+      <Template kicker="ANNONCE" title="LA MEUTE CHASSE CE SOIR" sub="vs. T1 · 21:00 CET" />
+      <Template kicker="SCORE" title="3 — 1" sub="HUNTERS vs. KARMINE" big />
+      <Template kicker="JOUEUR" title="VIPER" sub="ADC · Top fragger" />
+    </motion.div>
+  );
+}
+
+function Template({
+  kicker,
+  title,
+  sub,
+  big,
+}: {
+  kicker: string;
+  title: string;
+  sub: string;
+  big?: boolean;
+}) {
+  return (
+    <div className="aspect-[4/5] relative bg-ink-2 border border-blood/20 p-5 flex flex-col justify-between overflow-hidden">
+      <div
+        className="absolute inset-0 opacity-30"
+        style={{
+          background: "radial-gradient(circle at 30% 20%, rgba(200,29,37,0.4), transparent 60%)",
+        }}
+      />
+      <div className="relative font-ui text-[0.6rem] uppercase tracking-[0.3em] text-blood">
+        / {kicker}
+      </div>
+      <div className="relative">
+        <h4 className={`font-hunter font-bold text-bone leading-none mb-2 ${big ? "text-6xl" : "text-2xl"}`}>
+          {title}
+        </h4>
+        <p className="text-fog text-[0.65rem] uppercase tracking-widest">{sub}</p>
+      </div>
+      <div className="relative flex items-center justify-between text-[0.55rem] uppercase tracking-widest text-fog">
+        <span>HUNTERS · 2026</span>
+        <span className="font-hunter text-blood">/H</span>
+      </div>
+    </div>
+  );
+}
