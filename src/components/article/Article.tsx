@@ -159,58 +159,46 @@ export function PullQuote({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.7 }}
-      className="my-16 md:my-24 md:-mx-12 relative"
+      className="my-16 md:my-24 md:-mx-12 relative isolate overflow-visible"
     >
-      {/* Giant quote mark, slightly offset */}
+      {/* Giant ghost quote mark behind everything — true watermark */}
       <span
         aria-hidden
-        className="absolute -top-8 -left-3 md:-left-10 font-display select-none leading-[0.7] pointer-events-none"
+        className="absolute top-0 left-0 -translate-y-6 md:-translate-y-10 -translate-x-2 md:-translate-x-6 font-display select-none leading-[0.7] pointer-events-none -z-10"
         style={{
           color: accentColor,
-          opacity: 0.18,
-          fontSize: "clamp(7rem, 12vw, 11rem)",
+          opacity: 0.08,
+          fontSize: "clamp(10rem, 22vw, 20rem)",
+          filter: "blur(0.5px)",
         }}
       >
         “
       </span>
-      {/* Top hairline */}
-      <span
-        aria-hidden
-        className="block h-px mb-6 md:mb-8"
-        style={{
-          background: `linear-gradient(to right, ${accentColor} 0%, ${accentColor} 60px, transparent 100%)`,
-        }}
-      />
-      <blockquote
-        className="relative font-display text-2xl md:text-3xl lg:text-[2.5rem] leading-[1.15] tracking-tight text-bone px-2 md:px-6"
-      >
-        {children}
-      </blockquote>
-      {/* Author line + closing mark */}
-      <div className="mt-6 md:mt-8 flex items-baseline justify-between gap-6 px-2 md:px-6">
-        {author ? (
-          <figcaption className="flex items-center gap-3 font-ui text-xs uppercase tracking-[0.3em] text-fog">
-            <span
-              aria-hidden
-              className="h-px w-8"
-              style={{ background: accentColor }}
-            />
-            {author}
-          </figcaption>
-        ) : (
-          <span />
-        )}
+
+      {/* Left vertical accent rail */}
+      <div className="grid grid-cols-[3px_1fr] md:grid-cols-[4px_1fr] gap-5 md:gap-8">
         <span
           aria-hidden
-          className="font-display select-none leading-none"
+          className="block self-stretch"
           style={{
-            color: accentColor,
-            opacity: 0.4,
-            fontSize: "2.5rem",
+            background: `linear-gradient(to bottom, ${accentColor} 0%, ${accentColor} 70%, transparent 100%)`,
           }}
-        >
-          ”
-        </span>
+        />
+        <div>
+          <blockquote className="relative font-display text-2xl md:text-3xl lg:text-[2.5rem] leading-[1.18] tracking-tight text-bone">
+            {children}
+          </blockquote>
+          {author && (
+            <figcaption className="mt-6 md:mt-8 flex items-center gap-3 font-ui text-[0.7rem] uppercase tracking-[0.3em] text-fog">
+              <span
+                aria-hidden
+                className="h-px w-10"
+                style={{ background: accentColor }}
+              />
+              {author}
+            </figcaption>
+          )}
+        </div>
       </div>
     </motion.figure>
   );
