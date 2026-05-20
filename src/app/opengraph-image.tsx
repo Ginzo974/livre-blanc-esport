@@ -1,16 +1,10 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
 export const alt = "Du logo à la scène — Livre Blanc · Identité visuelle esport";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
-  // Russo One via Google Fonts (binary fetch — required by ImageResponse)
-  const russoOne = await fetch(
-    "https://fonts.gstatic.com/s/russoone/v16/Z9XUDmZRWg6M1LvRYsHOz8mJvLuUE7s.ttf"
-  ).then((res) => res.arrayBuffer());
-
   return new ImageResponse(
     (
       <div
@@ -24,7 +18,6 @@ export default async function Image() {
           background:
             "radial-gradient(ellipse 60% 50% at 30% 50%, rgba(0,54,167,0.4) 0%, transparent 70%), #0a0a0a",
           color: "#f4f1ea",
-          fontFamily: "Russo",
           position: "relative",
         }}
       >
@@ -37,6 +30,7 @@ export default async function Image() {
             fontSize: "20px",
             letterSpacing: "8px",
             color: "#8a8a8a",
+            fontWeight: 600,
           }}
         >
           <div style={{ width: "60px", height: "2px", background: "#4d8eff" }} />
@@ -44,13 +38,14 @@ export default async function Image() {
         </div>
 
         {/* Main title */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
           <div
             style={{
-              fontSize: "120px",
+              fontSize: "118px",
               lineHeight: 1,
-              letterSpacing: "-2px",
+              letterSpacing: "-3px",
               color: "#f4f1ea",
+              fontWeight: 800,
               display: "flex",
             }}
           >
@@ -58,10 +53,11 @@ export default async function Image() {
           </div>
           <div
             style={{
-              fontSize: "120px",
+              fontSize: "118px",
               lineHeight: 1,
-              letterSpacing: "-2px",
+              letterSpacing: "-3px",
               color: "#4d8eff",
+              fontWeight: 800,
               display: "flex",
             }}
           >
@@ -74,6 +70,7 @@ export default async function Image() {
               color: "#b5b5b5",
               maxWidth: "880px",
               letterSpacing: "0.5px",
+              fontWeight: 400,
               display: "flex",
             }}
           >
@@ -90,17 +87,12 @@ export default async function Image() {
             fontSize: "20px",
             letterSpacing: "4px",
             color: "#8a8a8a",
+            fontWeight: 600,
           }}
         >
           <div>6 CAS D&apos;ÉTUDE · 1 MÉTHODE · HUNTERS</div>
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-            <div
-              style={{
-                width: "12px",
-                height: "12px",
-                background: "#c81d25",
-              }}
-            />
+            <div style={{ width: "12px", height: "12px", background: "#c81d25" }} />
             <div style={{ color: "#f4f1ea" }}>livre-blanc-esport</div>
           </div>
         </div>
@@ -117,23 +109,13 @@ export default async function Image() {
             color: "#0036a7",
             opacity: 0.18,
             lineHeight: 0.8,
-            fontFamily: "Russo",
+            fontWeight: 900,
           }}
         >
           K
         </div>
       </div>
     ),
-    {
-      ...size,
-      fonts: [
-        {
-          name: "Russo",
-          data: russoOne,
-          weight: 400,
-          style: "normal",
-        },
-      ],
-    }
+    { ...size }
   );
 }
