@@ -46,7 +46,7 @@ export function Hero() {
           className="mb-10 flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.32em] text-fog"
         >
           <span className="h-px w-12 bg-blood" />
-          <span>Livre Blanc · Mai 2026</span>
+          <span>Quentin LOUIS</span>
           <span className="h-px w-12 bg-blood" />
         </motion.div>
 
