@@ -20,9 +20,10 @@ export function Chapter2() {
       id="chap-2"
       number="03"
       kicker="Chapitre 2 · Le logo"
+      accent="bone"
       title={
         <>
-          Le logo, <span className="text-blood">point d&apos;ancrage visuel.</span>
+          Le logo, <span className="text-bone">point d&apos;ancrage visuel.</span>
         </>
       }
       subtitle="C'est la première chose que ton fan rencontre. Si le logo rate, tout le reste rame derrière."
@@ -39,13 +40,14 @@ export function Chapter2() {
       </Prose>
 
       {/* --- Approche 1 : KC --- */}
-      <H3 accent="blood">Approche 1 · La simplicité radicale (Karmine Corp)</H3>
+      <H3 accent="auto">Approche 1 · La simplicité radicale (Karmine Corp)</H3>
 
       <LogoFigure
         src="/images/04-kc-noir.png"
         alt="Le K de Karmine Corp — version monochrome"
         kicker="Karmine Corp · 2020"
         caption="Trois lignes anguleuses, géométriques, et c'est tout. Le K se redessine de mémoire en cinq secondes."
+        accent="bone"
         invertWhite
       />
 
@@ -82,7 +84,7 @@ export function Chapter2() {
       />
 
       {/* --- Approche 2 : T1 --- */}
-      <H3 accent="blood">Approche 2 · L&apos;héritage codé (T1)</H3>
+      <H3 accent="auto">Approche 2 · L&apos;héritage codé (T1)</H3>
 
       <LogoFigure
         src="/images/05-logo-t1.webp"
@@ -138,7 +140,7 @@ export function Chapter2() {
       />
 
       {/* --- Approche 3 : G2 --- */}
-      <H3 accent="blood">Approche 3 · Le récit illustratif (G2 Esports)</H3>
+      <H3 accent="auto">Approche 3 · Le récit illustratif (G2 Esports)</H3>
 
       <Prose>
         <p>
@@ -254,25 +256,27 @@ function LogoFigure({
   alt,
   kicker,
   caption,
-  accent = "blood",
+  accent = "bone",
   invertWhite = false,
 }: {
   src: string;
   alt: string;
   kicker: string;
   caption: string;
-  accent?: "blood" | "t1" | "g2";
+  accent?: "blood" | "t1" | "g2" | "bone";
   invertWhite?: boolean;
 }) {
   const accentBorder = {
     blood: "border-blood/20",
     t1: "border-[#e2012d]/30",
     g2: "border-bone/15",
+    bone: "border-bone/15",
   }[accent];
   const accentDot = {
     blood: "bg-blood",
     t1: "bg-[#e2012d]",
     g2: "bg-bone",
+    bone: "bg-bone",
   }[accent];
   return (
     <motion.figure

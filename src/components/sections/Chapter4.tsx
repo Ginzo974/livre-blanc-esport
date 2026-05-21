@@ -17,10 +17,11 @@ export function Chapter4() {
       id="chap-4"
       number="05"
       kicker="Chapitre 4 · Le système 360"
+      accent="bone"
       title={
         <>
           Un logo seul, c&apos;est un drapeau planté dans le vide.{" "}
-          <span className="text-blood">Le système, c&apos;est le pays autour.</span>
+          <span className="text-bone">Le système, c&apos;est le pays autour.</span>
         </>
       }
       subtitle="Typographie, jersey, broadcast, social, événement live, app communautaire, merch. C'est là que la majorité des équipes échouent."
@@ -48,7 +49,7 @@ export function Chapter4() {
       </Prose>
 
       {/* Partie A : typographie */}
-      <H3 accent="blood">Partie A · La typographie, la voix silencieuse</H3>
+      <H3 accent="auto">Partie A · La typographie, la voix silencieuse</H3>
       <Prose>
         <p>
           Tu lis la typographie d&apos;une équipe esport plus souvent que son
@@ -106,11 +107,11 @@ export function Chapter4() {
       <PullQuote>
         Beaucoup d&apos;équipes choisissent une sans-serif italique extrême,
         agressive, type racing game des années 2000.{" "}
-        <span className="text-blood">Toutes ces typos se ressemblent.</span>
+        <span className="text-bone">Toutes ces typos se ressemblent.</span>
       </PullQuote>
 
       {/* Partie B : écosystème */}
-      <H3 accent="blood">Partie B · L&apos;écosystème 360</H3>
+      <H3 accent="auto">Partie B · L&apos;écosystème 360</H3>
 
       <H4>Le jersey, objet culturel</H4>
       <Prose>

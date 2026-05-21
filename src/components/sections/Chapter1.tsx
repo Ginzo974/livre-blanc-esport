@@ -17,10 +17,11 @@ export function Chapter1() {
       id="chap-1"
       number="02"
       kicker="Chapitre 1"
+      accent="kc-blue-bright"
       title={
         <>
           L&apos;esport n&apos;est pas un sport{" "}
-          <span className="text-blood">comme un autre.</span>
+          <span className="text-[var(--color-kc-blue-bright)]">comme un autre.</span>
         </>
       }
       subtitle="Le sport classique a eu un siècle pour optimiser son visuel. L'esport en a eu quinze."
@@ -67,14 +68,14 @@ export function Chapter1() {
           alt="L'équipe Karmine Corp célèbre une victoire sur la scène LEC"
           kicker="Karmine Corp · LEC 2025"
           caption="Une arène Twitch. Un overlay surchargé. Des milliers de fans répartis dans dix pays."
-          accent="blood"
+          accent="auto"
           aspect="16/10"
         />
       </div>
 
       <PullQuote>
         Deux soirées, deux sports.{" "}
-        <span className="text-blood">Surtout, deux mondes de design.</span>
+        <span className="text-[var(--color-kc-blue-bright)]">Surtout, deux mondes de design.</span>
       </PullQuote>
 
       <H3>Le sport classique a eu un siècle pour optimiser son visuel</H3>
@@ -119,7 +120,7 @@ export function Chapter1() {
         </p>
       </Prose>
 
-      <H3 accent="blood">Trois ruptures qui imposent un nouveau langage</H3>
+      <H3 accent="auto">Trois ruptures qui imposent un nouveau langage</H3>
 
       <H4>Le broadcast remplace le stade</H4>
       <Prose>

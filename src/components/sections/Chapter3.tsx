@@ -18,10 +18,11 @@ export function Chapter3() {
       id="chap-3"
       number="04"
       kicker="Chapitre 3 · La couleur"
+      accent="bone"
       title={
         <>
           La couleur,{" "}
-          <span className="text-blood">langage émotionnel.</span>
+          <span className="text-bone">langage émotionnel.</span>
         </>
       }
       subtitle="Un logo donne la silhouette de l'identité. La couleur lui donne le sang."
@@ -51,7 +52,7 @@ export function Chapter3() {
       </Prose>
 
       {/* Fnatic */}
-      <H3 accent="blood">Fnatic · L&apos;orange qui a duré vingt et un ans</H3>
+      <H3 accent="fnatic">Fnatic · L&apos;orange qui a duré vingt et un ans</H3>
       <PaletteRow
         team="Fnatic"
         years="2004 → 21 ans"
@@ -92,7 +93,7 @@ export function Chapter3() {
       </Prose>
 
       <PullQuote
-        accent="bone"
+        accent="fnatic"
         author="Sam Mathews · CEO de Fnatic"
       >
         Un rebrand doit être une itération et un pas en avant,{" "}
@@ -111,7 +112,7 @@ export function Chapter3() {
       </Prose>
 
       {/* KC split */}
-      <H3 accent="blood">Karmine Corp · Le split chromatique structurel de 2026</H3>
+      <H3 accent="kc-blue-bright">Karmine Corp · Le split chromatique structurel de 2026</H3>
       <PaletteRow
         team="Karmine Corp"
         years="Janvier 2026"
@@ -143,8 +144,8 @@ export function Chapter3() {
         </p>
       </Prose>
 
-      <PullQuote>
-        C&apos;est de la <span className="text-blood">taxonomie chromatique</span>.
+      <PullQuote accent="kc-blue-bright">
+        C&apos;est de la <span className="text-[var(--color-kc-blue-bright)]">taxonomie chromatique</span>.
         Comme une équipe de Formule 1 qui utiliserait deux livrées pour deux
         écuries au sein d&apos;une même maison.
       </PullQuote>
@@ -158,7 +159,7 @@ export function Chapter3() {
       </Prose>
 
       {/* NAVI */}
-      <H3 accent="blood">NAVI · La constance comme stratégie</H3>
+      <H3 accent="navi">NAVI · La constance comme stratégie</H3>
       <PaletteRow
         team="NAVI"
         years="2011 → 15 ans"

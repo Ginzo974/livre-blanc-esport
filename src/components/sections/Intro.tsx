@@ -233,7 +233,7 @@ function StatCell({ s, delay }: { s: (typeof STATS)[number]; delay: number }) {
     <div ref={ref} className="bg-ink-2 p-5 md:p-6">
       <div className="font-display text-3xl md:text-4xl text-bone flex items-baseline gap-1 leading-none">
         <motion.span>{rounded}</motion.span>
-        <span className="text-blood text-2xl md:text-3xl">{s.suffix}</span>
+        <span className="text-[var(--color-kc-blue-bright)] text-2xl md:text-3xl">{s.suffix}</span>
       </div>
       <div className="mt-3 text-xs text-fog leading-snug">{s.label}</div>
     </div>
@@ -257,7 +257,7 @@ function AudienceTags() {
       {items.map((it) => (
         <div key={it.label} className="border border-bone/10 bg-ink-2 p-5">
           <div className="flex items-center gap-2 mb-2">
-            <span className="text-blood font-display">{it.icon}</span>
+            <span className="text-[var(--color-kc-blue-bright)] font-display">{it.icon}</span>
             <span className="font-display text-bone text-sm tracking-widest">
               {it.label.toUpperCase()}
             </span>

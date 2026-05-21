@@ -1,7 +1,34 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ReactNode } from "react";
+import { createContext, ReactNode, useContext } from "react";
+
+/* ---------- Accent context : propagates chapter color to all children ---------- */
+
+type Accent = "blood" | "kc-blue-bright" | "bone" | "fnatic" | "navi";
+
+const AccentContext = createContext<Accent>("blood");
+export const useAccent = () => useContext(AccentContext);
+
+export const ACCENT_TOKEN: Record<Accent, { text: string; bg: string; varCss: string }> = {
+  blood: { text: "text-blood", bg: "bg-blood", varCss: "var(--color-blood)" },
+  "kc-blue-bright": {
+    text: "text-[var(--color-kc-blue-bright)]",
+    bg: "bg-[var(--color-kc-blue-bright)]",
+    varCss: "var(--color-kc-blue-bright)",
+  },
+  bone: { text: "text-bone", bg: "bg-bone", varCss: "var(--color-bone)" },
+  fnatic: {
+    text: "text-fnatic-orange",
+    bg: "bg-fnatic-orange",
+    varCss: "var(--color-fnatic-orange)",
+  },
+  navi: {
+    text: "text-navi-yellow",
+    bg: "bg-navi-yellow",
+    varCss: "var(--color-navi-yellow)",
+  },
+};
 
 /** Chapter wrapper — handles section ID + intersection-aware fade-in. */
 export function ChapterSection({
@@ -19,54 +46,52 @@ export function ChapterSection({
   number: string;
   title: ReactNode;
   subtitle?: ReactNode;
-  accent?: "blood" | "kc-blue" | "kc-blue-bright" | "bone" | "fnatic" | "navi";
+  accent?: Accent;
   children: ReactNode;
   className?: string;
 }) {
-  const accentClass = {
-    blood: "text-blood",
-    "kc-blue": "text-kc-blue",
-    "kc-blue-bright": "text-[var(--color-kc-blue-bright)]",
-    bone: "text-bone",
-    fnatic: "text-fnatic-orange",
-    navi: "text-navi-yellow",
-  }[accent];
+  const t = ACCENT_TOKEN[accent];
 
   return (
-    <section
-      id={id}
-      data-chapter={id}
-      className={`relative scroll-mt-24 py-24 md:py-32 ${className}`}
-    >
-      <div className="mx-auto max-w-3xl px-6 md:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="mb-12 md:mb-16"
-        >
-          <div className="flex items-center gap-4 mb-6">
-            <span className={`font-display ${accentClass} text-sm tracking-widest`}>
-              {number}
-            </span>
-            <span className={`h-px w-16 bg-current opacity-40 ${accentClass}`} />
-            <span className="font-ui text-fog text-[0.7rem] uppercase tracking-[0.3em]">
-              {kicker}
-            </span>
-          </div>
-          <h2 className="font-display text-[clamp(2.25rem,5vw,3.75rem)] leading-[1.02] tracking-tight text-bone">
-            {title}
-          </h2>
-          {subtitle && (
-            <p className="mt-6 text-lg md:text-xl text-fog leading-snug max-w-2xl">
-              {subtitle}
-            </p>
-          )}
-        </motion.div>
-        {children}
-      </div>
-    </section>
+    <AccentContext.Provider value={accent}>
+      <section
+        id={id}
+        data-chapter={id}
+        className={`relative scroll-mt-24 py-24 md:py-32 ${className}`}
+      >
+        <div className="mx-auto max-w-3xl px-6 md:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="mb-12 md:mb-16"
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <span className={`font-display ${t.text} text-sm tracking-widest`}>
+                {number}
+              </span>
+              <span
+                className="h-px w-16 opacity-50"
+                style={{ background: t.varCss }}
+              />
+              <span className="font-ui text-fog text-[0.7rem] uppercase tracking-[0.3em]">
+                {kicker}
+              </span>
+            </div>
+            <h2 className="font-display text-[clamp(2.25rem,5vw,3.75rem)] leading-[1.02] tracking-tight text-bone">
+              {title}
+            </h2>
+            {subtitle && (
+              <p className="mt-6 text-lg md:text-xl text-fog leading-snug max-w-2xl">
+                {subtitle}
+              </p>
+            )}
+          </motion.div>
+          {children}
+        </div>
+      </section>
+    </AccentContext.Provider>
   );
 }
 
@@ -75,17 +100,28 @@ export function Prose({ children, className = "" }: { children: ReactNode; class
   return <div className={`prose-reading ${className}`}>{children}</div>;
 }
 
-/** Sub-section heading inside a chapter. */
-export function H3({ children, accent = "bone" }: { children: ReactNode; accent?: "bone" | "blood" }) {
+/** Sub-section heading inside a chapter.
+ *  - no prop          → bone (neutral)
+ *  - accent="auto"    → uses chapter accent from context
+ *  - accent="blood"   → blood (etc.)
+ */
+export function H3({
+  children,
+  accent,
+}: {
+  children: ReactNode;
+  accent?: Accent | "auto";
+}) {
+  const ctxAccent = useAccent();
+  const finalAccent = accent === "auto" ? ctxAccent : accent;
+  const color = finalAccent ? ACCENT_TOKEN[finalAccent].text : "text-bone";
   return (
     <motion.h3
       initial={{ opacity: 0, y: 12 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5 }}
-      className={`font-display mt-16 mb-6 text-2xl md:text-3xl tracking-tight leading-tight ${
-        accent === "blood" ? "text-blood" : "text-bone"
-      }`}
+      className={`font-display mt-16 mb-6 text-2xl md:text-3xl tracking-tight leading-tight ${color}`}
     >
       {children}
     </motion.h3>
@@ -116,7 +152,9 @@ export function Lead({ children }: { children: ReactNode }) {
   );
 }
 
-/** Drop cap on first paragraph of a chapter. Pass the first letter separately. */
+/** Drop cap on first paragraph of a chapter. Pass the first letter separately.
+ *  Inherits chapter accent.
+ */
 export function DropCap({
   letter,
   children,
@@ -124,10 +162,11 @@ export function DropCap({
   letter: string;
   children: ReactNode;
 }) {
+  const accent = useAccent();
   return (
     <p className="relative">
       <span
-        className="font-display float-left mr-3 text-[5.5rem] leading-[0.85] text-blood"
+        className={`font-display float-left mr-3 text-[5.5rem] leading-[0.85] ${ACCENT_TOKEN[accent].text}`}
         style={{ marginTop: "0.1em", marginBottom: "-0.1em" }}
       >
         {letter}
@@ -137,21 +176,19 @@ export function DropCap({
   );
 }
 
-/** Big pull quote that breaks visually out of the column. */
+/** Big pull quote that breaks visually out of the column. Inherits accent from context. */
 export function PullQuote({
   children,
   author,
-  accent = "blood",
+  accent,
 }: {
   children: ReactNode;
   author?: string;
-  accent?: "blood" | "kc-blue-bright" | "bone";
+  accent?: Accent;
 }) {
-  const accentColor = {
-    blood: "var(--color-blood)",
-    "kc-blue-bright": "var(--color-kc-blue-bright)",
-    bone: "var(--color-bone)",
-  }[accent];
+  const ctxAccent = useAccent();
+  const finalAccent = accent ?? ctxAccent;
+  const accentColor = ACCENT_TOKEN[finalAccent].varCss;
 
   return (
     <motion.figure
@@ -222,18 +259,32 @@ export function AsideNote({
   );
 }
 
-/** Numbered method block — for the "Ta méthode en X étapes" pattern. */
+/** Numbered method block — for the "Ta méthode en X étapes" pattern.
+ *  Inherits chapter accent.
+ */
 export function MethodList({
   title = "Ta méthode",
   steps,
-  accent = "blood",
+  accent,
 }: {
   title?: string;
   steps: { title: string; body: string }[];
-  accent?: "blood" | "kc-blue-bright";
+  accent?: Accent;
 }) {
-  const ringColor = accent === "blood" ? "border-blood/30" : "border-[var(--color-kc-blue-bright)]/30";
-  const numColor = accent === "blood" ? "text-blood" : "text-[var(--color-kc-blue-bright)]";
+  const ctxAccent = useAccent();
+  const finalAccent = accent ?? ctxAccent;
+  const token = ACCENT_TOKEN[finalAccent];
+  const ringColor =
+    finalAccent === "blood"
+      ? "border-blood/30"
+      : finalAccent === "kc-blue-bright"
+      ? "border-[var(--color-kc-blue-bright)]/30"
+      : finalAccent === "fnatic"
+      ? "border-fnatic-orange/30"
+      : finalAccent === "navi"
+      ? "border-navi-yellow/30"
+      : "border-bone/20";
+  const numColor = token.text;
   return (
     <motion.aside
       initial={{ opacity: 0, y: 24 }}

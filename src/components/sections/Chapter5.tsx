@@ -99,10 +99,11 @@ export function Chapter5() {
       id="chap-5"
       number="06"
       kicker="Chapitre 5 · La méthode"
+      accent="kc-blue-bright"
       title={
         <>
           Sept étapes. Dans cet ordre.{" "}
-          <span className="text-blood">Sans raccourci.</span>
+          <span className="text-[var(--color-kc-blue-bright)]">Sans raccourci.</span>
         </>
       }
       subtitle="Les quatre chapitres précédents t'ont donné des leçons par fragments. Voici la chaîne complète."
@@ -125,7 +126,7 @@ export function Chapter5() {
         <div className="hidden md:block absolute left-[20px] top-0 bottom-0 w-px bg-bone/10">
           <motion.div
             style={{ scaleY: scrollYProgress }}
-            className="absolute inset-0 origin-top bg-blood"
+            className="absolute inset-0 origin-top bg-[var(--color-kc-blue-bright)]"
           />
         </div>
         <ol className="space-y-10">
@@ -137,7 +138,7 @@ export function Chapter5() {
 
       <PullQuote>
         La règle de Sam Mathews vaut comme boussole :{" "}
-        <span className="text-blood">itérer, pas réécrire.</span>
+        <span className="text-[var(--color-kc-blue-bright)]">itérer, pas réécrire.</span>
       </PullQuote>
 
       <H3>Cinq erreurs à ne pas commettre</H3>
@@ -185,7 +186,7 @@ export function Chapter5() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.08 }}
-            className="grid grid-cols-[120px_1fr] md:grid-cols-[180px_1fr] gap-4 items-baseline bg-ink-2 border-l-2 border-blood/40 p-5"
+            className="grid grid-cols-[120px_1fr] md:grid-cols-[180px_1fr] gap-4 items-baseline bg-ink-2 border-l-2 border-[var(--color-kc-blue-bright)]/40 p-5"
           >
             <span className="font-display text-bone text-sm leading-tight">
               {t.tier}
@@ -227,8 +228,8 @@ function Step({
       className="relative grid grid-cols-[40px_1fr] md:grid-cols-[60px_1fr] gap-4 md:gap-8 items-start"
     >
       <div className="relative">
-        <span className="absolute left-0 top-1 hidden md:block w-3 h-3 -translate-x-[6px] bg-blood rounded-full ring-4 ring-ink" />
-        <span className="font-display text-blood text-2xl md:text-3xl">
+        <span className="absolute left-0 top-1 hidden md:block w-3 h-3 -translate-x-[6px] bg-[var(--color-kc-blue-bright)] rounded-full ring-4 ring-ink" />
+        <span className="font-display text-[var(--color-kc-blue-bright)] text-2xl md:text-3xl">
           {step.n}
         </span>
       </div>
