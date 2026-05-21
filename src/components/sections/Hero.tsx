@@ -3,15 +3,6 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 
-const TEAM_COLORS = [
-  { hex: "#0036a7", name: "Karmine Corp" },
-  { hex: "#e2012d", name: "T1" },
-  { hex: "#f4f1ea", name: "G2 Esports" },
-  { hex: "#ff6700", name: "Fnatic" },
-  { hex: "#ffe600", name: "NAVI" },
-  { hex: "#ffd200", name: "Team Vitality" },
-];
-
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -21,7 +12,6 @@ export function Hero() {
 
   const titleY = useTransform(scrollYProgress, [0, 1], ["0%", "-12%"]);
   const fade = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
-  const linesY = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
 
   return (
     <section
@@ -48,7 +38,7 @@ export function Hero() {
         }}
       />
 
-      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col items-center justify-center px-6 pt-32 pb-20">
+      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col items-center justify-center px-6 pt-28 pb-32">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -74,65 +64,34 @@ export function Hero() {
           </span>
         </motion.h1>
 
-        {/* Six teams chromatic signature — abstract, no team favored */}
-        <motion.div
-          style={{ y: linesY, opacity: fade }}
-          className="mt-12 md:mt-16 flex flex-col items-center gap-4"
-        >
-          <div className="flex items-center gap-2 md:gap-3">
-            {TEAM_COLORS.map((t, i) => (
-              <motion.span
-                key={t.name}
-                initial={{ scaleX: 0, opacity: 0 }}
-                animate={{ scaleX: 1, opacity: 1 }}
-                transition={{
-                  duration: 0.6,
-                  delay: 0.7 + i * 0.08,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                className="block h-[3px] md:h-1 w-12 md:w-16 origin-left"
-                style={{ backgroundColor: t.hex }}
-                aria-label={t.name}
-                title={t.name}
-              />
-            ))}
-          </div>
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.4, duration: 0.6 }}
-            className="font-ui text-[0.65rem] uppercase tracking-[0.35em] text-fog"
-          >
-            Six équipes · Une méthode · Une fictive
-          </motion.span>
-        </motion.div>
-
         <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.6, duration: 0.8 }}
-          className="mt-12 max-w-xl text-center text-base text-fog md:text-lg leading-relaxed"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7, duration: 0.8 }}
+          className="mt-10 md:mt-12 max-w-xl text-center text-base md:text-lg text-fog leading-relaxed"
         >
           Décrypter et concevoir l&apos;identité visuelle d&apos;une équipe
           esport. Six cas d&apos;étude, une méthode applicable, une équipe fictive.
         </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.6 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-        >
-          <span className="text-[0.65rem] uppercase tracking-[0.3em] text-fog">
-            Scrolle
-          </span>
-          <motion.span
-            animate={{ y: [0, 8, 0] }}
-            transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
-            className="h-8 w-px bg-bone/40"
-          />
-        </motion.div>
       </div>
+
+      {/* Scroll indicator — outside the centered content, anchored to the section */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.2, duration: 0.6 }}
+        style={{ opacity: fade }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 pointer-events-none"
+      >
+        <span className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-fog">
+          Scrolle
+        </span>
+        <motion.span
+          animate={{ y: [0, 8, 0] }}
+          transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
+          className="block h-8 w-px bg-bone/40"
+        />
+      </motion.div>
     </section>
   );
 }
