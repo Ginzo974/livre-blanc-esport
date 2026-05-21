@@ -68,7 +68,7 @@ export function Chapter1() {
           alt="L'équipe Karmine Corp célèbre une victoire sur la scène LEC"
           kicker="Karmine Corp · LEC 2025"
           caption="Une arène Twitch. Un overlay surchargé. Des milliers de fans répartis dans dix pays."
-          accent="auto"
+          accent="blood"
           aspect="16/10"
         />
       </div>
