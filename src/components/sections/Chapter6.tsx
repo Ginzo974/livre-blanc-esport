@@ -357,7 +357,7 @@ function HuntersLogoSVG() {
       style={{ filter: "drop-shadow(0 0 60px rgba(200,29,37,0.45))" }}
     >
       <Image
-        src="/images/1x/hunters-rouge.png"
+        src="/images/logo-hunters/hunters-rouge.png"
         alt="Logo HUNTERS — trois lances ascendantes encadrées par des griffures formant un double H"
         fill
         sizes="(min-width: 768px) 300px, 260px"

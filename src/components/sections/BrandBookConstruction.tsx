@@ -88,7 +88,7 @@ function ConstructionFigure() {
         {/* Real logo PNG underneath */}
         <div className="absolute inset-[8.5%]">
           <Image
-            src="/images/1x/hunters-rouge.png"
+            src="/images/logo-hunters/hunters-rouge.png"
             alt="Logo HUNTERS — vue construction"
             fill
             sizes="(min-width: 1024px) 620px, 100vw"
@@ -434,7 +434,7 @@ function AnatomyCell({
         {/* Base logo, dimmed */}
         <div className="absolute inset-0 opacity-30">
           <Image
-            src="/images/1x/hunters-rouge.png"
+            src="/images/logo-hunters/hunters-rouge.png"
             alt=""
             fill
             sizes="120px"
@@ -463,7 +463,7 @@ function HighlightOverlay({
       <>
         {/* Full logo at full opacity */}
         <div className="absolute inset-0">
-          <Image src="/images/1x/hunters-rouge.png" alt="" fill sizes="120px" className="object-contain" />
+          <Image src="/images/logo-hunters/hunters-rouge.png" alt="" fill sizes="120px" className="object-contain" />
         </div>
         {/* 3 vertical bars indicating the 3 ascending lances */}
         <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full">
@@ -480,7 +480,7 @@ function HighlightOverlay({
     return (
       <>
         <div className="absolute inset-0 opacity-50">
-          <Image src="/images/1x/hunters-rouge.png" alt="" fill sizes="120px" className="object-contain" />
+          <Image src="/images/logo-hunters/hunters-rouge.png" alt="" fill sizes="120px" className="object-contain" />
         </div>
         <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full">
           {/* Two H bounding regions */}
@@ -498,7 +498,7 @@ function HighlightOverlay({
     return (
       <>
         <div className="absolute inset-0 opacity-30">
-          <Image src="/images/1x/hunters-rouge.png" alt="" fill sizes="120px" className="object-contain" />
+          <Image src="/images/logo-hunters/hunters-rouge.png" alt="" fill sizes="120px" className="object-contain" />
         </div>
         <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full">
           <g stroke="#c81d25" strokeWidth="0.6" fill="none">
@@ -512,7 +512,7 @@ function HighlightOverlay({
   return (
     <>
       <div className="absolute inset-0">
-        <Image src="/images/1x/hunters-rouge.png" alt="" fill sizes="120px" className="object-contain" />
+        <Image src="/images/logo-hunters/hunters-rouge.png" alt="" fill sizes="120px" className="object-contain" />
       </div>
       <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full">
         <g fill="none" stroke="#0a0a0a" strokeWidth="0.5">

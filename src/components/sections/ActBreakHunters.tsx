@@ -124,7 +124,7 @@ export function ActBreakHunters() {
           className="relative w-[260px] h-[300px] md:w-[400px] md:h-[460px]"
         >
           <Image
-            src="/images/1x/hunters-rouge.png"
+            src="/images/logo-hunters/hunters-rouge.png"
             alt="Logo HUNTERS — lance et griffure"
             fill
             priority
@@ -142,7 +142,7 @@ export function ActBreakHunters() {
           className="mt-8 md:mt-12 relative w-[200px] h-[40px] md:w-[280px] md:h-[56px]"
         >
           <Image
-            src="/images/1x/logo-typo-rouge.png"
+            src="/images/logo-hunters/logo-typo-rouge.png"
             alt="HUNTERS"
             fill
             sizes="(min-width: 768px) 280px, 200px"
