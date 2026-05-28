@@ -73,36 +73,37 @@ export function BrandBookConstruction() {
 /* ───────────────────────── CONSTRUCTION ───────────────────────── */
 
 function ConstructionFigure() {
-  // SVG viewBox = 120 x 120 units. The logo "lives" inside a 12x12 inner grid
-  // (each grid cell = 10 units). Construction lines are mathematically aligned.
-  const GRID_LEFT = 8;
-  const GRID_TOP = 8;
-  const GRID_W = 100; // 10 cells * 10 units, leaves room for annotations
+  // ViewBox horizontally symmetric so the grid is perfectly centered.
+  // 12x12 grid lives between (GRID_LEFT, GRID_TOP) and (GRID_LEFT+GRID_W, GRID_TOP+GRID_H).
+  // The PNG logo is embedded inside the SVG at the exact same coordinates,
+  // so logo + construction share one coordinate system → no misalignment.
+  const VB_W = 124;
+  const VB_H = 128;
+  const GRID_W = 100;
   const GRID_H = 100;
+  const GRID_LEFT = (VB_W - GRID_W) / 2; // 12 → centered horizontally
+  const GRID_TOP = 8;
   const cell = GRID_W / 10;
   const center = GRID_LEFT + GRID_W / 2;
+  const cy = GRID_TOP + GRID_H / 2;
 
   return (
     <figure>
-      <div className="relative aspect-square w-full max-w-[620px] mx-auto">
-        {/* Real logo PNG underneath */}
-        <div className="absolute inset-[8.5%]">
-          <Image
-            src="/images/logo-hunters/hunters-rouge.png"
-            alt="Logo HUNTERS — vue construction"
-            fill
-            sizes="(min-width: 1024px) 620px, 100vw"
-            className="object-contain"
-            priority
-          />
-        </div>
-
-        {/* SVG construction overlay */}
+      <div className="relative w-full max-w-[640px] mx-auto" style={{ aspectRatio: `${VB_W} / ${VB_H}` }}>
         <svg
-          viewBox="0 0 120 120"
-          className="absolute inset-0 w-full h-full pointer-events-none"
-          aria-hidden
+          viewBox={`0 0 ${VB_W} ${VB_H}`}
+          className="absolute inset-0 w-full h-full"
+          aria-label="Logo HUNTERS avec grille de construction"
         >
+          {/* Real logo PNG embedded inside the SVG, aligned with the grid */}
+          <image
+            href="/images/logo-hunters/hunters-rouge.png"
+            x={GRID_LEFT}
+            y={GRID_TOP}
+            width={GRID_W}
+            height={GRID_H}
+            preserveAspectRatio="xMidYMid meet"
+          />
           <defs>
             <pattern
               id="bbg-grid"
@@ -131,10 +132,10 @@ function ConstructionFigure() {
             fill="url(#bbg-grid)"
           />
 
-          {/* Outer construction circles */}
+          {/* Outer construction circles — centered on grid center, NOT on viewBox center */}
           <circle
             cx={center}
-            cy={center}
+            cy={cy}
             r={GRID_W / 2}
             fill="none"
             stroke="#0a0a0a"
@@ -143,7 +144,7 @@ function ConstructionFigure() {
           />
           <circle
             cx={center}
-            cy={center}
+            cy={cy}
             r={GRID_W / 2.4}
             fill="none"
             stroke="#0a0a0a"
@@ -479,17 +480,31 @@ function HighlightOverlay({
   if (variant === "h-forms") {
     return (
       <>
-        <div className="absolute inset-0 opacity-50">
+        <div className="absolute inset-0">
           <Image src="/images/logo-hunters/hunters-rouge.png" alt="" fill sizes="120px" className="object-contain" />
         </div>
         <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full">
-          {/* Two H bounding regions */}
-          <g fill="none" stroke="#c81d25" strokeWidth="0.6">
-            <rect x="10" y="22" width="28" height="55" />
-            <rect x="62" y="22" width="28" height="55" />
-            <text x="24" y="55" fontSize="9" fontFamily="ui-monospace, monospace" fontWeight="700" fill="#c81d25" textAnchor="middle">H</text>
-            <text x="76" y="55" fontSize="9" fontFamily="ui-monospace, monospace" fontWeight="700" fill="#c81d25" textAnchor="middle">H</text>
+          {/* Two H regions framed wider — they encompass the lateral lance +
+              its diagonal extension. Dashed stroke + tiny corner ticks. */}
+          <g fill="none" stroke="#0a0a0a" strokeOpacity="0.85" strokeWidth="0.6" strokeDasharray="2 1.2">
+            <rect x="6" y="18" width="36" height="62" rx="0.5" />
+            <rect x="58" y="18" width="36" height="62" rx="0.5" />
           </g>
+          {/* Corner ticks for both rectangles */}
+          <g stroke="#0a0a0a" strokeWidth="0.9" strokeLinecap="square">
+            {[
+              [6, 18], [42, 18], [6, 80], [42, 80],
+              [58, 18], [94, 18], [58, 80], [94, 80],
+            ].map(([x, y], i) => (
+              <g key={i}>
+                <line x1={x - 1.5} y1={y} x2={x + 1.5} y2={y} />
+                <line x1={x} y1={y - 1.5} x2={x} y2={y + 1.5} />
+              </g>
+            ))}
+          </g>
+          {/* Small H labels next to each box */}
+          <text x="9" y="14" fontSize="3.5" fontFamily="ui-monospace, monospace" fontWeight="700" fill="#0a0a0a">H</text>
+          <text x="91" y="14" fontSize="3.5" fontFamily="ui-monospace, monospace" fontWeight="700" fill="#0a0a0a" textAnchor="end">H</text>
         </svg>
       </>
     );
@@ -508,19 +523,23 @@ function HighlightOverlay({
       </>
     );
   }
-  // negative
+  // negative — counter-forms suggérées dans les espaces entre les lances
   return (
     <>
       <div className="absolute inset-0">
         <Image src="/images/logo-hunters/hunters-rouge.png" alt="" fill sizes="120px" className="object-contain" />
       </div>
       <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full">
-        <g fill="none" stroke="#0a0a0a" strokeWidth="0.5">
-          <circle cx="34" cy="42" r="3.5" strokeDasharray="1 0.8" />
-          <circle cx="66" cy="42" r="3.5" strokeDasharray="1 0.8" />
-          <line x1="34" y1="42" x2="20" y2="55" />
-          <line x1="66" y1="42" x2="80" y2="55" />
+        {/* Dotted "eye" markers placed in the small negative triangular gaps
+            between the central lance and the lateral structures (upper portion).
+            No diagonal pointer lines — they were misleading. */}
+        <g fill="none" stroke="#0a0a0a" strokeOpacity="0.85" strokeWidth="0.7" strokeDasharray="1 1">
+          <ellipse cx="40" cy="42" rx="3" ry="2.2" />
+          <ellipse cx="60" cy="42" rx="3" ry="2.2" />
         </g>
+        {/* Tiny center dots inside each "eye" */}
+        <circle cx="40" cy="42" r="0.6" fill="#0a0a0a" />
+        <circle cx="60" cy="42" r="0.6" fill="#0a0a0a" />
       </svg>
     </>
   );
