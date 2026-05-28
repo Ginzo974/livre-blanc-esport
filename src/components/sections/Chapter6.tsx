@@ -10,6 +10,7 @@ import {
 import { motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
 import { useRef } from "react";
+import { BrandBookConstruction } from "@/components/sections/BrandBookConstruction";
 
 export function Chapter6() {
   const ref = useRef<HTMLElement>(null);
@@ -185,7 +186,12 @@ export function Chapter6() {
             G2 avec son samurai.
           </p>
         </div>
+      </div>
 
+      {/* Full-bleed brand book : preuve de rigueur design system */}
+      <BrandBookConstruction />
+
+      <div className="relative mx-auto max-w-3xl px-6 md:px-8">
         <H3 accent="blood">Étape 3 · La palette</H3>
         <Prose>
           <p>
