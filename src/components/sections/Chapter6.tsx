@@ -8,6 +8,7 @@ import {
   PullQuote,
 } from "@/components/article/Article";
 import { motion, useScroll, useTransform } from "motion/react";
+import Image from "next/image";
 import { useRef } from "react";
 
 export function Chapter6() {
@@ -341,130 +342,22 @@ export function Chapter6() {
 
 function HuntersLogoSVG() {
   return (
-    <svg
-      viewBox="0 0 320 360"
-      width="280"
-      height="320"
-      className="max-w-full drop-shadow-[0_0_50px_rgba(200,29,37,0.4)]"
-      aria-label="Logo HUNTERS — lance et griffure"
+    <motion.div
+      initial={{ opacity: 0, scale: 0.88, filter: "blur(8px)" }}
+      whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+      className="relative w-[260px] h-[300px] md:w-[300px] md:h-[340px]"
+      style={{ filter: "drop-shadow(0 0 60px rgba(200,29,37,0.45))" }}
     >
-      <defs>
-        <linearGradient id="bloodGrad6" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#ff2b3d" />
-          <stop offset="60%" stopColor="#c81d25" />
-          <stop offset="100%" stopColor="#7d0a0e" />
-        </linearGradient>
-      </defs>
-      <motion.path
-        initial={{ pathLength: 0, opacity: 0 }}
-        whileInView={{ pathLength: 1, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
-        d="M 130 30 L 160 100 L 190 30"
-        stroke="url(#bloodGrad6)"
-        strokeWidth="10"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        fill="none"
+      <Image
+        src="/images/1x/hunters-rouge.png"
+        alt="Logo HUNTERS — trois lances ascendantes encadrées par des griffures formant un double H"
+        fill
+        sizes="(min-width: 768px) 300px, 260px"
+        className="object-contain"
       />
-      <motion.path
-        initial={{ pathLength: 0 }}
-        whileInView={{ pathLength: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1.4, ease: "easeOut", delay: 0.6 }}
-        d="M 160 60 L 160 330"
-        stroke="url(#bloodGrad6)"
-        strokeWidth="14"
-        strokeLinecap="round"
-        fill="none"
-      />
-      <motion.path
-        initial={{ pathLength: 0, opacity: 0 }}
-        whileInView={{ pathLength: 1, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, ease: "easeOut", delay: 1.2 }}
-        d="M 70 80 L 60 290"
-        stroke="url(#bloodGrad6)"
-        strokeWidth="12"
-        strokeLinecap="round"
-        fill="none"
-      />
-      <motion.path
-        initial={{ pathLength: 0, opacity: 0 }}
-        whileInView={{ pathLength: 1, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 1.6 }}
-        d="M 65 180 L 155 175"
-        stroke="url(#bloodGrad6)"
-        strokeWidth="10"
-        strokeLinecap="round"
-        fill="none"
-      />
-      <motion.path
-        initial={{ pathLength: 0, opacity: 0 }}
-        whileInView={{ pathLength: 1, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, ease: "easeOut", delay: 1.8 }}
-        d="M 20 110 L 90 65"
-        stroke="url(#bloodGrad6)"
-        strokeWidth="8"
-        strokeLinecap="round"
-        fill="none"
-      />
-      <motion.path
-        initial={{ pathLength: 0, opacity: 0 }}
-        whileInView={{ pathLength: 1, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, ease: "easeOut", delay: 1.2 }}
-        d="M 250 80 L 260 290"
-        stroke="url(#bloodGrad6)"
-        strokeWidth="12"
-        strokeLinecap="round"
-        fill="none"
-      />
-      <motion.path
-        initial={{ pathLength: 0, opacity: 0 }}
-        whileInView={{ pathLength: 1, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 1.6 }}
-        d="M 165 175 L 255 180"
-        stroke="url(#bloodGrad6)"
-        strokeWidth="10"
-        strokeLinecap="round"
-        fill="none"
-      />
-      <motion.path
-        initial={{ pathLength: 0, opacity: 0 }}
-        whileInView={{ pathLength: 1, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, ease: "easeOut", delay: 1.8 }}
-        d="M 300 110 L 230 65"
-        stroke="url(#bloodGrad6)"
-        strokeWidth="8"
-        strokeLinecap="round"
-        fill="none"
-      />
-      <motion.circle
-        initial={{ opacity: 0, scale: 0 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 2.4 }}
-        cx="115"
-        cy="200"
-        r="4"
-        fill="#ff2b3d"
-      />
-      <motion.circle
-        initial={{ opacity: 0, scale: 0 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 2.4 }}
-        cx="205"
-        cy="200"
-        r="4"
-        fill="#ff2b3d"
-      />
-    </svg>
+    </motion.div>
   );
 }
 

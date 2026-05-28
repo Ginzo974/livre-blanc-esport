@@ -7,6 +7,7 @@ import { Chapter2 } from "@/components/sections/Chapter2";
 import { Chapter3 } from "@/components/sections/Chapter3";
 import { Chapter4 } from "@/components/sections/Chapter4";
 import { Chapter5 } from "@/components/sections/Chapter5";
+import { ActBreakHunters } from "@/components/sections/ActBreakHunters";
 import { Chapter6 } from "@/components/sections/Chapter6";
 import { ConclusionLong } from "@/components/sections/ConclusionLong";
 
@@ -22,6 +23,7 @@ export default function Home() {
       <Chapter3 />
       <Chapter4 />
       <Chapter5 />
+      <ActBreakHunters />
       <Chapter6 />
       <ConclusionLong />
     </main>
