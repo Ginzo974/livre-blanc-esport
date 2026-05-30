@@ -378,8 +378,14 @@ function ContrastTest() {
             className="p-10 flex flex-col items-center justify-center min-h-[160px]"
             style={{ background: f.bg }}
           >
-            <div className="font-display text-3xl mb-2" style={{ color: "#c81d25" }}>
-              HUNTERS
+            <div className="relative w-[180px] h-[42px] mb-3">
+              <Image
+                src="/images/logo-hunters/logo-typo-rouge.png"
+                alt="Wordmark HUNTERS rouge"
+                fill
+                sizes="180px"
+                className="object-contain"
+              />
             </div>
             <div
               className="font-ui text-[0.65rem] uppercase tracking-[0.25em]"
