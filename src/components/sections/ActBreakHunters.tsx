@@ -97,15 +97,15 @@ export function ActBreakHunters() {
         aria-hidden
       />
 
-      {/* Content */}
-      <div className="relative z-10 min-h-[100svh] flex flex-col justify-center items-center px-6 pt-36 pb-24 md:pt-44 md:pb-28">
+      {/* Content — even vertical rhythm via a single gap */}
+      <div className="relative z-10 min-h-[100svh] flex flex-col justify-center items-center px-6 pt-36 pb-24 md:pt-44 md:pb-28 gap-10 md:gap-12">
         {/* Kicker */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="mb-6 flex items-center gap-3"
+          className="flex items-center gap-3"
         >
           <span className="h-px w-10 bg-blood" />
           <span className="font-ui text-blood text-[0.65rem] md:text-xs uppercase tracking-[0.4em]">
@@ -141,7 +141,7 @@ export function ActBreakHunters() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, delay: 0.35, ease: "easeOut" }}
-          className="mt-5 md:mt-6 relative w-[280px] md:w-[380px]"
+          className="relative w-[280px] md:w-[380px]"
           style={{ aspectRatio: "1131 / 148" }}
         >
           <Image
@@ -156,7 +156,7 @@ export function ActBreakHunters() {
         {/* Topline */}
         <motion.p
           style={{ y: statementY, opacity: statementOpacity }}
-          className="mt-7 md:mt-9 max-w-3xl text-center font-hunter font-bold uppercase text-[clamp(1.75rem,3.4vw,2.75rem)] leading-[1.05] tracking-tight text-bone"
+          className="max-w-3xl text-center font-hunter font-bold uppercase text-[clamp(1.75rem,3.4vw,2.75rem)] leading-[1.05] tracking-tight text-bone"
         >
           Que la chasse
           <br />
