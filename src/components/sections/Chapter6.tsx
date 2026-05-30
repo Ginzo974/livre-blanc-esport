@@ -245,17 +245,23 @@ export function Chapter6() {
         <H3 accent="blood">Étape 4 · La typographie</H3>
         <Prose>
           <p>
-            Pour accompagner le logo, une{" "}
-            <strong>sans-serif géométrique aux angles vifs et terminaisons
-            biseautées</strong>. Les caractères doivent prolonger l&apos;effet
-            griffure du logo, pas le contredire.
+            HUNTERS travaille avec <strong>deux polices</strong>, chacune avec
+            un rôle clair. Une police de titre pour la marque, une police de
+            corps pour tout le reste.
           </p>
           <p>
-            <strong>Référence de production : Rajdhani Bold</strong> (Google
-            Fonts, licence libre). Ses terminaisons coupées net, ses verticales
-            tendues et ses lettres bien ouvertes correspondent exactement au
-            style martial recherché. La graisse Bold pour le logo et la
-            signalétique, Medium pour les usages courants.
+            <strong>Quantix</strong> porte le logo et les titres. Une
+            sans-serif aux angles vifs et aux terminaisons coupées net : ses
+            verticales tendues prolongent l&apos;effet griffure du logo. C&apos;est
+            la voix forte de la marque — celle qu&apos;on lit avec le souffle
+            court.
+          </p>
+          <p>
+            <strong>Overused Grotesk</strong> prend le relais pour le corps de
+            texte. Plus neutre, très lisible à petite taille, elle laisse Quantix
+            briller sur les titres sans jamais fatiguer l&apos;œil sur les
+            paragraphes. Le duo classique : une police qui claque, une police
+            qui se lit.
           </p>
         </Prose>
 
@@ -415,7 +421,7 @@ function RajdhaniDemo() {
       className="my-10 md:-mx-12 bg-ink-2 border border-blood/20 p-8 md:p-12"
     >
       <div className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-blood mb-6">
-        Rajdhani Bold · Google Fonts
+        Quantix · Titre &nbsp;/&nbsp; Overused Grotesk · Corps
       </div>
       {/* Wordmark blanc sur fond foncé */}
       <div
