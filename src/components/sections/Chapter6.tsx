@@ -309,7 +309,7 @@ export function Chapter6() {
             kicker="Jersey · Produit"
             caption="Noir dominant, griffure rouge sang, logo brodé. Le loup hurlant en filigrane."
             accent="blood"
-            aspect="1/1"
+            aspect="4/5"
             fit="contain"
             frame="light"
           />
@@ -319,7 +319,7 @@ export function Chapter6() {
             kicker="Jersey · Streetwear"
             caption="Pensé pour la scène ET la rue. L'objet culturel, pas l'uniforme."
             accent="blood"
-            aspect="1/1"
+            aspect="4/5"
           />
         </div>
 

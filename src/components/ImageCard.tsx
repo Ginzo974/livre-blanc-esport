@@ -13,7 +13,7 @@ type Props = {
   /** Source / credit line shown at the bottom. */
   source?: string;
   /** Aspect ratio of the image frame. Default 16/10. */
-  aspect?: "16/10" | "4/3" | "1/1" | "3/4" | "21/9";
+  aspect?: "16/10" | "4/3" | "1/1" | "3/4" | "4/5" | "21/9";
   /** Color accent for the corner notch + kicker. */
   accent?: "blood" | "kc-blue" | "fnatic" | "navi" | "bone";
   /** Optional intrinsic width/height to help next/image. */
@@ -41,6 +41,7 @@ const ASPECT_MAP: Record<NonNullable<Props["aspect"]>, string> = {
   "4/3": "aspect-[4/3]",
   "1/1": "aspect-square",
   "3/4": "aspect-[3/4]",
+  "4/5": "aspect-[4/5]",
   "21/9": "aspect-[21/9]",
 };
 
