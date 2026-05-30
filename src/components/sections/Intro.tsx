@@ -178,7 +178,51 @@ export function Intro() {
       </Prose>
 
       <AudienceTags />
+
+      <AuthorPresentation />
     </ChapterSection>
+  );
+}
+
+/* --- Présentation de l'auteur --- */
+function AuthorPresentation() {
+  return (
+    <motion.aside
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.7 }}
+      className="mt-16 md:-mx-12 border border-bone/10 bg-ink-2/60 p-7 md:p-10"
+    >
+      <div className="flex items-center gap-3 mb-5">
+        <span className="h-1.5 w-1.5 bg-[var(--color-kc-blue-bright)]" />
+        <span className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-fog">
+          Qui écrit ces pages
+        </span>
+      </div>
+      <h3 className="font-display text-2xl md:text-3xl text-bone mb-5 leading-tight">
+        Quentin <span className="text-[var(--color-kc-blue-bright)]">Louis</span>
+      </h3>
+      <div className="prose-reading max-w-2xl">
+        <p>
+          Passionné de jeux vidéo depuis tout petit, j&apos;ai découvert{" "}
+          <strong>League of Legends en 2016</strong> — et je n&apos;ai jamais
+          vraiment lâché la scène esport depuis. Pas observée de loin : vécue de
+          l&apos;intérieur.
+        </p>
+        <p>
+          Côté métier, <strong>cinq ans dans le design</strong>, dont quatre
+          construits en alternance. Un parcours qui m&apos;a appris à lire un
+          logo en grille, en contre-formes et en hiérarchie de couleur.
+        </p>
+        <p>
+          Deux passions, l&apos;esport et le design, que je n&apos;avais jamais
+          vraiment réunies.{" "}
+          <em>Ce livre blanc, c&apos;est exactement ça : les faire se
+          rencontrer.</em>
+        </p>
+      </div>
+    </motion.aside>
   );
 }
 
