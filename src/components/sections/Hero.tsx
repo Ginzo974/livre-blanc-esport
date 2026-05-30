@@ -52,13 +52,12 @@ export function Hero() {
 
         <motion.h1
           style={{ y: titleY, opacity: fade }}
-          className="font-display text-center text-[clamp(3rem,9vw,8rem)] leading-[0.92] tracking-tight text-bone"
+          className="font-display text-center text-[clamp(3rem,9vw,8rem)] leading-[1.12] tracking-tight text-bone"
         >
-          DU LOGO
-          <br />
+          <span className="block">DU LOGO</span>
           <span
-            className="text-[var(--color-kc-blue-bright)]"
-            style={{ textShadow: "0 0 40px rgba(77,142,255,0.35)" }}
+            className="block text-[var(--color-kc-blue-bright)]"
+            style={{ textShadow: "0 0 45px rgba(77,142,255,0.3)" }}
           >
             À LA SCÈNE.
           </span>
@@ -71,7 +70,8 @@ export function Hero() {
           className="mt-10 md:mt-12 max-w-xl text-center text-base md:text-lg text-fog leading-relaxed"
         >
           Décrypter et concevoir l&apos;identité visuelle d&apos;une équipe
-          esport. Six cas d&apos;étude, une méthode applicable, une équipe fictive.
+          esport. Six cas d&apos;étude, une méthode applicable, et une équipe
+          créée de zéro.
         </motion.p>
       </div>
 

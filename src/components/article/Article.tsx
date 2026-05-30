@@ -57,9 +57,17 @@ export function ChapterSection({
       <section
         id={id}
         data-chapter={id}
-        className={`relative scroll-mt-24 py-24 md:py-32 ${className}`}
+        className={`relative scroll-mt-24 py-24 md:py-32 overflow-hidden ${className}`}
       >
-        <div className="mx-auto max-w-3xl px-6 md:px-8">
+        {/* Subtle accent glow tying the background to the chapter's narrative color */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-20 left-1/2 -translate-x-1/2 w-[min(900px,90vw)] h-[420px] opacity-[0.07]"
+          style={{
+            background: `radial-gradient(ellipse at center, ${t.varCss} 0%, transparent 70%)`,
+          }}
+        />
+        <div className="relative mx-auto max-w-3xl px-6 md:px-8">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
