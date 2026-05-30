@@ -10,6 +10,8 @@ import {
   HorsJV,
 } from "@/components/article/Article";
 import { ImageCard } from "@/components/ImageCard";
+import Image from "next/image";
+import { motion } from "motion/react";
 
 export function Chapter1() {
   return (
@@ -141,6 +143,34 @@ export function Chapter1() {
           </em>
         </p>
       </Prose>
+
+      <motion.figure
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.6 }}
+        className="my-8 flex items-center gap-6 border border-bone/10 bg-ink-2/50 p-5 md:p-6"
+      >
+        <div className="relative w-16 h-16 md:w-20 md:h-20 shrink-0">
+          <Image
+            src="/images/10-logo-cloud9.png"
+            alt="Logo Cloud9 — nuage à trois spirales"
+            fill
+            sizes="80px"
+            className="object-contain"
+          />
+        </div>
+        <div>
+          <div className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-[var(--color-kc-blue-bright)] mb-1">
+            Référence · 2013
+          </div>
+          <p className="text-sm text-bone/85 leading-snug">
+            Le nuage à trois spirales de Cloud9 — pensé pour rester lisible
+            à 24 px dans un overlay broadcast, treize ans avant que ça devienne
+            un standard.
+          </p>
+        </div>
+      </motion.figure>
 
       <H4>La communauté remplace le supporter local</H4>
       <Prose>

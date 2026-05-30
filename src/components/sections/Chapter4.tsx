@@ -137,6 +137,8 @@ export function Chapter4() {
         </p>
       </Prose>
 
+      <JerseysGrid />
+
       <H4>Les réseaux sociaux, terrain principal</H4>
       <Prose>
         <p>
@@ -161,6 +163,11 @@ export function Chapter4() {
             actions elles-mêmes.
           </em>
         </p>
+      </Prose>
+
+      <BroadcastShot />
+
+      <Prose>
         <p>
           Karmine Corp pousse cette logique plus loin en transformant ses
           matchs domicile en spectacles physiques. Le LEC Summer Roadtrip 2026
@@ -170,6 +177,8 @@ export function Chapter4() {
           meet-and-greet joueurs.
         </p>
       </Prose>
+
+      <ArenaShot />
 
       <H4>L&apos;app communautaire, le territoire encore vacant</H4>
       <Prose>
@@ -185,6 +194,8 @@ export function Chapter4() {
           <strong>100 000 téléchargements et 75 000 comptes actifs</strong>.
         </p>
       </Prose>
+
+      <VHiveShot />
 
       <H4>Le merch suit le modèle streetwear</H4>
       <Prose>
@@ -238,6 +249,7 @@ export function Chapter4() {
 }
 
 import { motion } from "motion/react";
+import Image from "next/image";
 
 function FontComparison() {
   return (
@@ -285,5 +297,221 @@ function FontComparison() {
         </p>
       </div>
     </motion.div>
+  );
+}
+
+/* ----------------------------- JERSEYS GRID ----------------------------- */
+
+function JerseysGrid() {
+  const jerseys = [
+    {
+      src: "/images/14-jersey-kc-fulllife.webp",
+      team: "Karmine Corp × Fulllife",
+      year: "2026",
+      accent: "#e10600",
+      note: "Polyester recyclé FL NanoMatter. Coupe boxy. Streetwear premium.",
+    },
+    {
+      src: "/images/12-jersey-navi.webp",
+      team: "NAVI Pro Kit",
+      year: "2026",
+      accent: "#ffe600",
+      note: "Glitch + digital noise construits depuis les formes des trophées.",
+    },
+    {
+      src: "/images/13-jersey-vitality.webp",
+      team: "Team Vitality",
+      year: "2026",
+      accent: "#ffd200",
+      note: "Jaune et noir français. Diagonale typographique en signature.",
+    },
+    {
+      src: "/images/11-jersey-fnatic.webp",
+      team: "Fnatic",
+      year: "2026",
+      accent: "#ff6700",
+      note: "Orange tenu depuis 2004. Itération sans réécriture.",
+    },
+  ];
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.8 }}
+      className="my-10 md:-mx-12 grid grid-cols-2 md:grid-cols-4 gap-px bg-bone/10"
+    >
+      {jerseys.map((j) => (
+        <figure key={j.team} className="bg-ink-2 group overflow-hidden">
+          <div className="relative aspect-[3/4] bg-ink">
+            <Image
+              src={j.src}
+              alt={`Jersey ${j.team} ${j.year}`}
+              fill
+              sizes="(min-width: 768px) 25vw, 50vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+            />
+          </div>
+          <figcaption className="p-3 md:p-4">
+            <div className="flex items-center gap-2 mb-1.5">
+              <span className="h-1.5 w-1.5 shrink-0" style={{ background: j.accent }} />
+              <span className="font-ui text-[0.6rem] md:text-[0.65rem] uppercase tracking-[0.25em] text-fog">
+                {j.year}
+              </span>
+            </div>
+            <div className="font-display text-bone text-sm md:text-base leading-tight mb-1">
+              {j.team}
+            </div>
+            <p className="text-[0.7rem] md:text-xs text-fog leading-snug hidden md:block">
+              {j.note}
+            </p>
+          </figcaption>
+        </figure>
+      ))}
+    </motion.div>
+  );
+}
+
+/* ----------------------------- BROADCAST SHOT ----------------------------- */
+
+function BroadcastShot() {
+  return (
+    <motion.figure
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.8 }}
+      className="my-10 md:-mx-12 relative bg-ink-2 ring-1 ring-bone/10 overflow-hidden group"
+    >
+      <div className="relative aspect-[16/9]">
+        <Image
+          src="/images/17-broadcast-overlay-lec.png"
+          alt="Overlay broadcast LEC en match"
+          fill
+          sizes="(min-width: 768px) 80vw, 100vw"
+          className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+        />
+        {/* Subtle scanline overlay for broadcast feel */}
+        <span
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-[0.05] mix-blend-overlay"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(to bottom, rgba(255,255,255,0.6) 0 1px, transparent 1px 3px)",
+          }}
+        />
+      </div>
+      <figcaption className="p-4 md:p-5 flex items-start justify-between gap-4 border-t border-bone/5">
+        <div className="flex items-start gap-3">
+          <span className="block h-1.5 w-1.5 mt-1.5 shrink-0 bg-bone" />
+          <p className="text-sm text-bone/85 leading-snug">
+            Overlay LEC en match — kill feed, scoreboard, cam joueurs.
+            Chaque pixel entre deux actions est un point de contact marque.
+          </p>
+        </div>
+        <span className="font-ui text-[0.6rem] uppercase tracking-widest text-fog whitespace-nowrap">
+          Broadcast
+        </span>
+      </figcaption>
+    </motion.figure>
+  );
+}
+
+/* ----------------------------- ARENA SHOT ----------------------------- */
+
+function ArenaShot() {
+  return (
+    <motion.figure
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.8 }}
+      className="my-10 md:-mx-12 relative bg-ink-2 ring-1 ring-bone/10 overflow-hidden group"
+    >
+      <div className="relative aspect-[21/9]">
+        <Image
+          src="/images/16-adidas-arena-kc.jpg"
+          alt="Adidas Arena Paris — LEC Summer Roadtrip Karmine Corp"
+          fill
+          sizes="(min-width: 768px) 80vw, 100vw"
+          className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+        />
+      </div>
+      <figcaption className="p-4 md:p-5 flex items-start justify-between gap-4 border-t border-bone/5">
+        <div className="flex items-start gap-3">
+          <span className="block h-1.5 w-1.5 mt-1.5 shrink-0 bg-blood" />
+          <p className="text-sm text-bone/85 leading-snug">
+            Adidas Arena · LEC Summer Roadtrip · 24-26 juillet 2026.
+            9 000 personnes physiquement présentes. La scène devient
+            cathédrale temporaire de la marque.
+          </p>
+        </div>
+        <span className="font-ui text-[0.6rem] uppercase tracking-widest text-fog whitespace-nowrap">
+          Event live
+        </span>
+      </figcaption>
+    </motion.figure>
+  );
+}
+
+/* ----------------------------- V.HIVE SHOT ----------------------------- */
+
+function VHiveShot() {
+  return (
+    <motion.figure
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.8 }}
+      className="my-10 md:-mx-12 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-10 items-center bg-ink-2 ring-1 ring-bone/10 p-6 md:p-10"
+    >
+      <div>
+        <div className="flex items-center gap-3 mb-3">
+          <div className="relative w-7 h-7 shrink-0">
+            <Image
+              src="/images/09-logo-vitality.png"
+              alt="Logo Team Vitality"
+              fill
+              sizes="28px"
+              className="object-contain"
+            />
+          </div>
+          <div className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-[#ffd200]">
+            V.Hive · Team Vitality
+          </div>
+        </div>
+        <h4 className="font-display text-2xl md:text-3xl text-bone leading-tight mb-4">
+          Le territoire que personne d&apos;autre n&apos;occupe.
+        </h4>
+        <p className="text-sm text-bone/80 leading-relaxed max-w-md">
+          Avatars 3D mi-humain mi-abeille, drops exclusifs, accès privilégiés.
+          La seule app communautaire esport qui a réellement embarqué une
+          communauté à l&apos;échelle.
+        </p>
+        <div className="mt-6 flex flex-wrap gap-x-8 gap-y-3 font-display">
+          <div>
+            <div className="text-3xl md:text-4xl text-bone leading-none">100K+</div>
+            <div className="font-ui text-[0.6rem] uppercase tracking-widest text-fog mt-1">
+              Téléchargements
+            </div>
+          </div>
+          <div>
+            <div className="text-3xl md:text-4xl text-bone leading-none">75K</div>
+            <div className="font-ui text-[0.6rem] uppercase tracking-widest text-fog mt-1">
+              Comptes actifs
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="relative w-[180px] md:w-[220px] aspect-[9/19] shrink-0 self-center justify-self-center bg-ink ring-1 ring-bone/10 overflow-hidden rounded-[24px]">
+        <Image
+          src="/images/15-vhive-app.png"
+          alt="Screenshot de l'application V.Hive"
+          fill
+          sizes="220px"
+          className="object-cover"
+        />
+      </div>
+    </motion.figure>
   );
 }

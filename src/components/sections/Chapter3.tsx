@@ -11,6 +11,7 @@ import {
   HorsJV,
 } from "@/components/article/Article";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 export function Chapter3() {
   return (
@@ -58,6 +59,8 @@ export function Chapter3() {
         years="2004 → 21 ans"
         primary={{ hex: "#ff6700", label: "Fnatic Orange" }}
         secondary={{ hex: "#0a0a0a", label: "Noir signature" }}
+        logo="/images/07-logo-fnatic.png"
+        logoAlt="Logo Fnatic — orange iconique"
       />
       <Prose>
         <p>
@@ -119,6 +122,9 @@ export function Chapter3() {
         primary={{ hex: "#e10600", label: "KC Red · LEC" }}
         secondary={{ hex: "#0036a7", label: "KC Blue · KCB" }}
         third={{ hex: "#f4f1ea", label: "Bone" }}
+        logo="/images/04-kc-noir.png"
+        logoAlt="Logo Karmine Corp"
+        logoInvert
       />
       <Prose>
         <p>
@@ -158,6 +164,8 @@ export function Chapter3() {
         </p>
       </Prose>
 
+      <KCSplitDuo />
+
       {/* NAVI */}
       <H3 accent="navi">NAVI · La constance comme stratégie</H3>
       <PaletteRow
@@ -165,6 +173,8 @@ export function Chapter3() {
         years="2011 → 15 ans"
         primary={{ hex: "#ffe600", label: "NAVI Yellow" }}
         secondary={{ hex: "#0a0a0a", label: "Black combat" }}
+        logo="/images/08-logo-navi.png"
+        logoAlt="Logo NAVI — Natus Vincere"
       />
       <Prose>
         <p>
@@ -261,12 +271,19 @@ function PaletteRow({
   primary,
   secondary,
   third,
+  logo,
+  logoAlt,
+  logoInvert = false,
 }: {
   team: string;
   years: string;
   primary: { hex: string; label: string };
   secondary: { hex: string; label: string };
   third?: { hex: string; label: string };
+  logo?: string;
+  logoAlt?: string;
+  /** Invert the logo to white (for monochrome PNGs that are black) */
+  logoInvert?: boolean;
 }) {
   return (
     <motion.div
@@ -276,10 +293,18 @@ function PaletteRow({
       transition={{ duration: 0.7 }}
       className="my-10 md:-mx-12 grid grid-cols-2 md:grid-cols-4 gap-px bg-bone/10 min-h-[180px]"
     >
-      <div className="md:col-span-1 col-span-2 bg-ink-2 p-5 flex flex-col justify-between">
+      <div className="md:col-span-1 col-span-2 bg-ink-2 p-5 flex flex-col justify-between gap-3">
         <span className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-fog">
           {years}
         </span>
+        {logo && (
+          <div
+            className="relative w-12 h-12 self-start"
+            style={logoInvert ? { filter: "brightness(0) invert(1)" } : undefined}
+          >
+            <Image src={logo} alt={logoAlt ?? team} fill sizes="48px" className="object-contain" />
+          </div>
+        )}
         <span className="font-display text-2xl text-bone leading-tight">{team}</span>
       </div>
       <Swatch hex={primary.hex} label={primary.label} large />
@@ -365,6 +390,83 @@ function ContrastTest() {
           </div>
         ))}
       </div>
+    </motion.div>
+  );
+}
+
+/* --- KC Split Duo : 2 photos rouges/bleues côte à côte = preuve visuelle de la taxonomie chromatique --- */
+function KCSplitDuo() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.8 }}
+      className="my-12 md:-mx-12 grid grid-cols-1 md:grid-cols-2 gap-px bg-bone/10"
+    >
+      {/* LEC main team — rouge */}
+      <figure className="relative bg-ink-2 overflow-hidden group">
+        <div className="relative aspect-[16/10]">
+          <Image
+            src="/images/18-kc-roster-rouge.avif"
+            alt="Roster LEC Karmine Corp 2026 en jerseys rouges"
+            fill
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+          />
+          <div
+            aria-hidden
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                "linear-gradient(180deg, transparent 50%, rgba(225,6,0,0.18) 100%)",
+            }}
+          />
+        </div>
+        <figcaption className="p-5 border-t border-bone/5 flex items-start gap-4">
+          <span className="block h-3 w-3 mt-1 shrink-0" style={{ background: "#e10600" }} />
+          <div>
+            <div className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-[#e10600] mb-1">
+              LEC Roster 2026
+            </div>
+            <p className="text-sm text-bone/85 leading-snug">
+              Équipe principale. Le rouge dit première équipe.
+            </p>
+          </div>
+        </figcaption>
+      </figure>
+
+      {/* KCB academy — bleu */}
+      <figure className="relative bg-ink-2 overflow-hidden group">
+        <div className="relative aspect-[16/10]">
+          <Image
+            src="/images/19-kc-roster-bleu.jpg"
+            alt="Roster KCB Karmine Corp Blue 2026 en jerseys bleus"
+            fill
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+          />
+          <div
+            aria-hidden
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                "linear-gradient(180deg, transparent 50%, rgba(0,54,167,0.22) 100%)",
+            }}
+          />
+        </div>
+        <figcaption className="p-5 border-t border-bone/5 flex items-start gap-4">
+          <span className="block h-3 w-3 mt-1 shrink-0" style={{ background: "#0036a7" }} />
+          <div>
+            <div className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-[var(--color-kc-blue-bright)] mb-1">
+              KCB en LEC · Académie
+            </div>
+            <p className="text-sm text-bone/85 leading-snug">
+              Roster satellite. Le bleu dit équipe d&apos;académie.
+            </p>
+          </div>
+        </figcaption>
+      </figure>
     </motion.div>
   );
 }

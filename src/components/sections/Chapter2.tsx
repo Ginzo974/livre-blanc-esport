@@ -142,6 +142,14 @@ export function Chapter2() {
       {/* --- Approche 3 : G2 --- */}
       <H3 accent="auto">Approche 3 · Le récit illustratif (G2 Esports)</H3>
 
+      <LogoFigure
+        src="/images/06-logo-g2.svg"
+        alt="Logo G2 Esports — samurai cicatrisé"
+        kicker="G2 Esports · 2014"
+        caption="Samurai stylisé avec cicatrice de bataille diagonale. Métaphore tenue sur dix ans dans tout l'écosystème de marque."
+        accent="g2"
+      />
+
       <Prose>
         <p>
           G2 Esports a fait l&apos;inverse exact de KC.{" "}
