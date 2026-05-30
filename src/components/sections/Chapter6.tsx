@@ -78,11 +78,24 @@ export function Chapter6() {
               Chapitre 6 · La méthode en action
             </span>
           </div>
-          <h2 className="font-hunter font-bold text-[clamp(3.5rem,10vw,7.5rem)] leading-[0.85] tracking-tight text-bone">
-            HUNT
-            <br />
-            <span className="text-blood">ERS.</span>
-          </h2>
+          <h2 className="sr-only">HUNTERS</h2>
+          <div
+            className="relative w-full max-w-[560px]"
+            style={{
+              aspectRatio: "1131 / 148",
+              filter: "drop-shadow(0 0 40px rgba(200,29,37,0.35))",
+            }}
+            aria-hidden
+          >
+            <Image
+              src="/images/logo-hunters/logo-typo-rouge-crop.png"
+              alt="HUNTERS"
+              fill
+              priority
+              sizes="(min-width: 768px) 560px, 100vw"
+              className="object-contain object-left"
+            />
+          </div>
           <p className="mt-6 text-lg md:text-xl text-bone/80 leading-snug max-w-2xl">
             Une équipe que j&apos;invente — pas pour exister demain, mais pour
             démontrer qu&apos;une identité d&apos;équipe esport peut se

@@ -133,19 +133,20 @@ export function ActBreakHunters() {
           />
         </motion.div>
 
-        {/* Wordmark — discreet under the logo, fixed-size */}
+        {/* Wordmark — real HUNTERS typo under the logo */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
-          className="mt-8 md:mt-12 relative w-[200px] h-[40px] md:w-[280px] md:h-[56px]"
+          className="mt-8 md:mt-12 relative w-[260px] md:w-[360px]"
+          style={{ aspectRatio: "1131 / 148" }}
         >
           <Image
-            src="/images/logo-hunters/logo-typo-rouge.png"
+            src="/images/logo-hunters/logo-typo-rouge-crop.png"
             alt="HUNTERS"
             fill
-            sizes="(min-width: 768px) 280px, 200px"
+            sizes="(min-width: 768px) 360px, 260px"
             className="object-contain"
           />
         </motion.div>
