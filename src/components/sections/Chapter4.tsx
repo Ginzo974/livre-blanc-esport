@@ -10,6 +10,7 @@ import {
   MethodList,
   HorsJV,
 } from "@/components/article/Article";
+import { AppsShowcase } from "@/components/sections/AppsShowcase";
 
 export function Chapter4() {
   return (
@@ -180,41 +181,34 @@ export function Chapter4() {
 
       <ArenaShot />
 
-      <H4>L&apos;app communautaire, le front le plus disputé</H4>
+      <H4>L&apos;app communautaire, deux philosophies françaises</H4>
       <Prose>
         <p>
           Longtemps, l&apos;app communautaire a été le territoire vacant de
-          l&apos;esport. Plus aujourd&apos;hui : trois structures s&apos;y
-          affrontent, avec trois philosophies opposées.{" "}
-          <strong>Aucune n&apos;a encore gagné.</strong>
-        </p>
-        <p>
-          <strong>Vitality</strong> a choisi le pari le plus ambitieux — et le
-          plus risqué. V.Hive est une app de gamification bâtie sur la
-          blockchain Tezos, un modèle « support-to-earn » : tu gagnes des
-          récompenses en soutenant l&apos;équipe, avec un avatar V.Hive comme
-          identité de fan. L&apos;ambition est réelle, mais la friction aussi :
+          l&apos;esport. Vitality a tenté de l&apos;ouvrir avec V.Hive, une app
+          de gamification sur blockchain — mais l&apos;onboarding reste un mur :
           en voulant créer un compte pour ce livre,{" "}
-          <em>
-            l&apos;inscription bloque dès la sélection du pays.
-          </em>{" "}
-          L&apos;onboarding blockchain reste un mur entre l&apos;app et le fan.
+          <em>l&apos;inscription bloque dès la sélection du pays.</em>{" "}
+          Aujourd&apos;hui, ce sont <strong>deux clubs français</strong> qui
+          occupent vraiment le terrain — avec deux philosophies opposées.
         </p>
         <p>
-          <strong>Karmine Corp</strong> prend le contre-pied : une app
-          companion pragmatique, sans blockchain. Calendrier de toutes les
-          compétitions du Blue Wall, résultats multi-jeux, news, challenges
-          avec lots, shop intégré. Pas d&apos;esbroufe, ça marche.
+          <strong>Karmine Corp</strong> mise sur le companion pragmatique.
+          Prochain match du Blue Wall en un coup d&apos;œil, résultats
+          multi-jeux, dernières vidéos, boutique intégrée, mini-jeu KWordle.
+          Pas de blockchain, pas d&apos;esbroufe — un outil qui sert le fan au
+          quotidien. <em>Ça marche.</em>
         </p>
         <p>
           <strong>Gentle Mates</strong> mise sur le contenu. L&apos;app
           prolonge leur ADN de créateurs : intégration YouTube (vidéos et
           replays), matchs en mode spoiler-free, calendrier personnalisable,
-          et le M8Box qui arrive en 2026. L&apos;app comme média, pas comme jeu.
+          et le M8Box qui arrive en 2026.{" "}
+          <strong>L&apos;app comme média, pas comme jeu.</strong>
         </p>
       </Prose>
 
-      <AppsComparison />
+      <AppsShowcase />
 
       <H4>Le merch suit le modèle streetwear</H4>
       <Prose>
@@ -470,104 +464,5 @@ function ArenaShot() {
         </span>
       </figcaption>
     </motion.figure>
-  );
-}
-
-/* ----------------------------- APPS COMPARISON ----------------------------- */
-
-function AppsComparison() {
-  const apps = [
-    {
-      team: "Team Vitality",
-      product: "V.Hive",
-      logo: "/images/09-logo-vitality.png",
-      logoInvert: true,
-      accent: "#ffd200",
-      philo: "Gamification blockchain",
-      desc: "Modèle support-to-earn sur Tezos. Avatar de fan, quêtes, récompenses. Ambition maximale, friction maximale.",
-      verdict: "L'onboarding wallet freine l'adoption.",
-    },
-    {
-      team: "Karmine Corp",
-      product: "KC App",
-      logo: "/images/04-kc-noir.png",
-      logoInvert: true,
-      accent: "#0036a7",
-      philo: "Companion pragmatique",
-      desc: "Calendrier, résultats multi-jeux, news, challenges avec lots, shop intégré. Sans blockchain.",
-      verdict: "Sobre, sans esbroufe — ça marche.",
-    },
-    {
-      team: "Gentle Mates",
-      product: "M8 App",
-      logo: null,
-      logoInvert: false,
-      accent: "#00e0c6",
-      philo: "Contenu d'abord",
-      desc: "Intégration YouTube, replays, matchs spoiler-free, calendrier perso. Le M8Box arrive en 2026.",
-      verdict: "L'app comme média, pas comme jeu.",
-    },
-  ];
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.8 }}
-      className="my-10 md:-mx-12 grid grid-cols-1 md:grid-cols-3 gap-px bg-bone/10"
-    >
-      {apps.map((a) => (
-        <div
-          key={a.product}
-          className="relative bg-ink-2 p-6 md:p-7 flex flex-col min-h-[280px] overflow-hidden group"
-        >
-          {/* accent glow corner */}
-          <span
-            aria-hidden
-            className="absolute -top-12 -right-12 w-32 h-32 rounded-full blur-2xl opacity-20 transition-opacity duration-500 group-hover:opacity-40"
-            style={{ background: a.accent }}
-          />
-          <div className="relative flex items-center gap-3 mb-5">
-            {a.logo ? (
-              <div
-                className="relative w-6 h-6 shrink-0"
-                style={a.logoInvert ? { filter: "brightness(0) invert(1)" } : undefined}
-              >
-                <Image src={a.logo} alt={a.team} fill sizes="24px" className="object-contain" />
-              </div>
-            ) : (
-              <span
-                className="font-display text-sm shrink-0"
-                style={{ color: a.accent }}
-              >
-                M8
-              </span>
-            )}
-            <span className="font-ui text-[0.6rem] uppercase tracking-[0.3em] text-fog">
-              {a.team}
-            </span>
-          </div>
-
-          <div className="relative font-display text-2xl text-bone leading-none mb-1">
-            {a.product}
-          </div>
-          <div
-            className="relative font-ui text-[0.65rem] uppercase tracking-[0.25em] mb-4"
-            style={{ color: a.accent }}
-          >
-            {a.philo}
-          </div>
-
-          <p className="relative text-sm text-bone/80 leading-relaxed mb-4">
-            {a.desc}
-          </p>
-
-          <p className="relative mt-auto pt-4 border-t border-bone/10 text-xs text-fog italic leading-snug">
-            {a.verdict}
-          </p>
-        </div>
-      ))}
-    </motion.div>
   );
 }

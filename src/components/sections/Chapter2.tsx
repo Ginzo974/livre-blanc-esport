@@ -306,7 +306,7 @@ function LogoFigure({
       </div>
       {lightBg ? (
         <div
-          className="relative w-[200px] h-[200px] md:w-[260px] md:h-[260px] mb-8 bg-bone p-6 md:p-8 flex items-center justify-center"
+          className="relative w-[200px] h-[200px] md:w-[260px] md:h-[260px] mb-8 bg-white p-6 md:p-8 flex items-center justify-center"
           style={{ boxShadow: "0 8px 40px rgba(0,0,0,0.35)" }}
         >
           <div className="relative w-full h-full">
