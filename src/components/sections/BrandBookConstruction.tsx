@@ -622,26 +622,28 @@ function TypographyPanel() {
   return (
     <div>
       <PanelHeading idx="03" label="Typographie" />
-      <div className="font-hunter font-bold text-3xl md:text-4xl tracking-tight leading-none mb-3">
-        Rajdhani Bold
+      <div className="font-hunter text-3xl md:text-4xl tracking-tight leading-none mb-1" style={{ fontWeight: 800 }}>
+        Quantix
       </div>
-      <div className="font-hunter font-bold text-sm md:text-base tracking-wider leading-tight mb-2">
+      <div className="font-mono text-[0.6rem] uppercase tracking-[0.2em] opacity-50 mb-3">
+        Titre / Logo
+      </div>
+      <div className="font-hunter text-sm md:text-base tracking-wider leading-tight mb-1" style={{ fontWeight: 800 }}>
         ABCDEFGHIJKLMNOPQRSTUVWXYZ
       </div>
-      <div className="font-hunter font-bold text-sm md:text-base tracking-wider leading-tight mb-4">
+      <div className="font-hunter text-sm md:text-base tracking-wider leading-tight mb-5" style={{ fontWeight: 800 }}>
         0123456789
       </div>
-      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 font-mono text-[0.6rem] md:text-[0.65rem] uppercase tracking-[0.2em]">
-        <span className="opacity-50">Light</span>
-        <span className="opacity-30">/</span>
-        <span className="opacity-50">Regular</span>
-        <span className="opacity-30">/</span>
-        <span className="opacity-50">Medium</span>
-        <span className="opacity-30">/</span>
-        <span className="font-display text-black">Bold</span>
-        <span className="opacity-30">/</span>
-        <span className="opacity-50">Semibold</span>
+
+      <div className="font-overused text-2xl leading-none mb-1" style={{ fontWeight: 600 }}>
+        Overused Grotesk
       </div>
+      <div className="font-mono text-[0.6rem] uppercase tracking-[0.2em] opacity-50 mb-3">
+        Corps de texte
+      </div>
+      <p className="font-overused text-sm leading-relaxed opacity-80">
+        La meute chasse ensemble — abcdefghijklmnopqrstuvwxyz 0123456789
+      </p>
     </div>
   );
 }

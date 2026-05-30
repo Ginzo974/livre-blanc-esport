@@ -23,7 +23,7 @@
   --font-display: var(--font-russo);
   --font-body: var(--font-inter);
   --font-ui: var(--font-chakra);
-  --font-hunter: var(--font-rajdhani);
+  --font-hunter: var(--font-quantix);
 
   --shadow-glow-blood: 0 0 60px -10px rgba(200, 29, 37, 0.5);
   --shadow-glow-blue: 0 0 60px -10px rgba(0, 54, 167, 0.5);
@@ -128,6 +128,10 @@ html, body {
 .font-hunter {
   font-family: var(--font-hunter), system-ui, sans-serif;
   letter-spacing: 0.04em;
+}
+
+.font-overused {
+  font-family: var(--font-overused), system-ui, sans-serif;
 }
 
 /* Lenis smooth scroll requirements */

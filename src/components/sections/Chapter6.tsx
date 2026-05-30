@@ -265,7 +265,7 @@ export function Chapter6() {
           </p>
         </Prose>
 
-        <RajdhaniDemo />
+        <FontSpecimen />
 
         <Prose>
           <p>
@@ -336,7 +336,7 @@ export function Chapter6() {
             <li>un nom avec une histoire,</li>
             <li>un logo bâti sur le récit illustratif,</li>
             <li>une palette assumée et testée sur trois fonds,</li>
-            <li>une typographie qui dialogue avec ses valeurs (Rajdhani Bold),</li>
+            <li>une typographie qui dialogue avec ses valeurs (Quantix pour le titre, Overused Grotesk pour le corps),</li>
             <li>un système 360 qui se décline cohéremment.</li>
           </ul>
           <p>
@@ -411,7 +411,7 @@ function HuntersPalette() {
   );
 }
 
-function RajdhaniDemo() {
+function FontSpecimen() {
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -420,12 +420,13 @@ function RajdhaniDemo() {
       transition={{ duration: 0.7 }}
       className="my-10 md:-mx-12 bg-ink-2 border border-blood/20 p-8 md:p-12"
     >
-      <div className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-blood mb-6">
-        Quantix · Titre &nbsp;/&nbsp; Overused Grotesk · Corps
+      {/* --- QUANTIX : police de titre --- */}
+      <div className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-blood mb-4">
+        Quantix · Police de titre
       </div>
-      {/* Wordmark blanc sur fond foncé */}
+      {/* Wordmark blanc (Quantix) sur fond foncé */}
       <div
-        className="relative w-full max-w-[520px] mb-6"
+        className="relative w-full max-w-[520px] mb-5"
         style={{ aspectRatio: "1131 / 148" }}
       >
         <Image
@@ -436,15 +437,33 @@ function RajdhaniDemo() {
           className="object-contain object-left"
         />
       </div>
-      <div className="font-hunter font-bold text-2xl text-fog tracking-wider mb-6">
+      <div className="font-hunter text-2xl text-fog tracking-wider mb-3" style={{ fontWeight: 800 }}>
         ABCDEFGHIJKLMNOPQRSTUVWXYZ
       </div>
-      <div className="grid grid-cols-3 md:grid-cols-6 gap-3 text-xs text-fog">
+      <div className="grid grid-cols-3 md:grid-cols-6 gap-3 mb-10">
         {["VIPER", "RAVEN", "FANG", "WRAITH", "SHADE", "TALON"].map((p) => (
-          <span key={p} className="font-hunter font-bold text-base text-bone tracking-wide">
+          <span
+            key={p}
+            className="font-hunter text-base text-bone tracking-wide"
+            style={{ fontWeight: 800 }}
+          >
             {p}
           </span>
         ))}
+      </div>
+
+      {/* --- OVERUSED GROTESK : police de corps --- */}
+      <div className="border-t border-bone/10 pt-8">
+        <div className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-fog mb-4">
+          Overused Grotesk · Police de corps
+        </div>
+        <p className="font-overused text-bone text-lg md:text-xl leading-relaxed max-w-2xl mb-3">
+          La meute chasse ensemble. Aucun joueur n&apos;est laissé en arrière.
+          Le collectif est plus fort que la somme des individus.
+        </p>
+        <p className="font-overused text-fog text-sm tracking-wide">
+          abcdefghijklmnopqrstuvwxyz — 0123456789 — &amp; ! ?
+        </p>
       </div>
     </motion.div>
   );
