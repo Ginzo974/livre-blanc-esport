@@ -180,22 +180,41 @@ export function Chapter4() {
 
       <ArenaShot />
 
-      <H4>L&apos;app communautaire, le territoire encore vacant</H4>
+      <H4>L&apos;app communautaire, le front le plus disputé</H4>
       <Prose>
         <p>
-          Très peu d&apos;équipes esport vont jusqu&apos;à proposer une
-          application communautaire. <strong>Vitality est l&apos;exception.</strong>{" "}
-          V.Hive, lancée en novembre 2022, récompense les fans pour leur
-          engagement avec des avatars 3D personnalisables (mi-humain
-          mi-abeille), des produits en édition limitée, des accès exclusifs.
+          Longtemps, l&apos;app communautaire a été le territoire vacant de
+          l&apos;esport. Plus aujourd&apos;hui : trois structures s&apos;y
+          affrontent, avec trois philosophies opposées.{" "}
+          <strong>Aucune n&apos;a encore gagné.</strong>
         </p>
         <p>
-          V.Hive 2.0, sortie en novembre 2024, a dépassé{" "}
-          <strong>100 000 téléchargements et 75 000 comptes actifs</strong>.
+          <strong>Vitality</strong> a choisi le pari le plus ambitieux — et le
+          plus risqué. V.Hive est une app de gamification bâtie sur la
+          blockchain Tezos, un modèle « support-to-earn » : tu gagnes des
+          récompenses en soutenant l&apos;équipe, avec un avatar V.Hive comme
+          identité de fan. L&apos;ambition est réelle, mais la friction aussi :
+          en voulant créer un compte pour ce livre,{" "}
+          <em>
+            l&apos;inscription bloque dès la sélection du pays.
+          </em>{" "}
+          L&apos;onboarding blockchain reste un mur entre l&apos;app et le fan.
+        </p>
+        <p>
+          <strong>Karmine Corp</strong> prend le contre-pied : une app
+          companion pragmatique, sans blockchain. Calendrier de toutes les
+          compétitions du Blue Wall, résultats multi-jeux, news, challenges
+          avec lots, shop intégré. Pas d&apos;esbroufe, ça marche.
+        </p>
+        <p>
+          <strong>Gentle Mates</strong> mise sur le contenu. L&apos;app
+          prolonge leur ADN de créateurs : intégration YouTube (vidéos et
+          replays), matchs en mode spoiler-free, calendrier personnalisable,
+          et le M8Box qui arrive en 2026. L&apos;app comme média, pas comme jeu.
         </p>
       </Prose>
 
-      <VHiveShot />
+      <AppsComparison />
 
       <H4>Le merch suit le modèle streetwear</H4>
       <Prose>
@@ -454,67 +473,101 @@ function ArenaShot() {
   );
 }
 
-/* ----------------------------- V.HIVE SHOT ----------------------------- */
+/* ----------------------------- APPS COMPARISON ----------------------------- */
 
-function VHiveShot() {
+function AppsComparison() {
+  const apps = [
+    {
+      team: "Team Vitality",
+      product: "V.Hive",
+      logo: "/images/09-logo-vitality.png",
+      logoInvert: true,
+      accent: "#ffd200",
+      philo: "Gamification blockchain",
+      desc: "Modèle support-to-earn sur Tezos. Avatar de fan, quêtes, récompenses. Ambition maximale, friction maximale.",
+      verdict: "L'onboarding wallet freine l'adoption.",
+    },
+    {
+      team: "Karmine Corp",
+      product: "KC App",
+      logo: "/images/04-kc-noir.png",
+      logoInvert: true,
+      accent: "#0036a7",
+      philo: "Companion pragmatique",
+      desc: "Calendrier, résultats multi-jeux, news, challenges avec lots, shop intégré. Sans blockchain.",
+      verdict: "Sobre, sans esbroufe — ça marche.",
+    },
+    {
+      team: "Gentle Mates",
+      product: "M8 App",
+      logo: null,
+      logoInvert: false,
+      accent: "#00e0c6",
+      philo: "Contenu d'abord",
+      desc: "Intégration YouTube, replays, matchs spoiler-free, calendrier perso. Le M8Box arrive en 2026.",
+      verdict: "L'app comme média, pas comme jeu.",
+    },
+  ];
+
   return (
-    <motion.figure
+    <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.8 }}
-      className="my-10 md:-mx-12 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-10 items-center bg-ink-2 ring-1 ring-bone/10 p-6 md:p-10"
+      className="my-10 md:-mx-12 grid grid-cols-1 md:grid-cols-3 gap-px bg-bone/10"
     >
-      <div>
-        <div className="flex items-center gap-3 mb-3">
+      {apps.map((a) => (
+        <div
+          key={a.product}
+          className="relative bg-ink-2 p-6 md:p-7 flex flex-col min-h-[280px] overflow-hidden group"
+        >
+          {/* accent glow corner */}
+          <span
+            aria-hidden
+            className="absolute -top-12 -right-12 w-32 h-32 rounded-full blur-2xl opacity-20 transition-opacity duration-500 group-hover:opacity-40"
+            style={{ background: a.accent }}
+          />
+          <div className="relative flex items-center gap-3 mb-5">
+            {a.logo ? (
+              <div
+                className="relative w-6 h-6 shrink-0"
+                style={a.logoInvert ? { filter: "brightness(0) invert(1)" } : undefined}
+              >
+                <Image src={a.logo} alt={a.team} fill sizes="24px" className="object-contain" />
+              </div>
+            ) : (
+              <span
+                className="font-display text-sm shrink-0"
+                style={{ color: a.accent }}
+              >
+                M8
+              </span>
+            )}
+            <span className="font-ui text-[0.6rem] uppercase tracking-[0.3em] text-fog">
+              {a.team}
+            </span>
+          </div>
+
+          <div className="relative font-display text-2xl text-bone leading-none mb-1">
+            {a.product}
+          </div>
           <div
-            className="relative w-7 h-7 shrink-0"
-            style={{ filter: "brightness(0) invert(1)" }}
+            className="relative font-ui text-[0.65rem] uppercase tracking-[0.25em] mb-4"
+            style={{ color: a.accent }}
           >
-            <Image
-              src="/images/09-logo-vitality.png"
-              alt="Logo Team Vitality"
-              fill
-              sizes="28px"
-              className="object-contain"
-            />
+            {a.philo}
           </div>
-          <div className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-[#ffd200]">
-            V.Hive · Team Vitality
-          </div>
+
+          <p className="relative text-sm text-bone/80 leading-relaxed mb-4">
+            {a.desc}
+          </p>
+
+          <p className="relative mt-auto pt-4 border-t border-bone/10 text-xs text-fog italic leading-snug">
+            {a.verdict}
+          </p>
         </div>
-        <h4 className="font-display text-2xl md:text-3xl text-bone leading-tight mb-4">
-          Le territoire que personne d&apos;autre n&apos;occupe.
-        </h4>
-        <p className="text-sm text-bone/80 leading-relaxed max-w-md">
-          Avatars 3D mi-humain mi-abeille, drops exclusifs, accès privilégiés.
-          La seule app communautaire esport qui a réellement embarqué une
-          communauté à l&apos;échelle.
-        </p>
-        <div className="mt-6 flex flex-wrap gap-x-8 gap-y-3 font-display">
-          <div>
-            <div className="text-3xl md:text-4xl text-bone leading-none">100K+</div>
-            <div className="font-ui text-[0.6rem] uppercase tracking-widest text-fog mt-1">
-              Téléchargements
-            </div>
-          </div>
-          <div>
-            <div className="text-3xl md:text-4xl text-bone leading-none">75K</div>
-            <div className="font-ui text-[0.6rem] uppercase tracking-widest text-fog mt-1">
-              Comptes actifs
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="relative w-[180px] md:w-[220px] aspect-[9/19] shrink-0 self-center justify-self-center bg-ink ring-1 ring-bone/10 overflow-hidden rounded-[24px]">
-        <Image
-          src="/images/15-vhive-app.png"
-          alt="Screenshot de l'application V.Hive"
-          fill
-          sizes="220px"
-          className="object-cover"
-        />
-      </div>
-    </motion.figure>
+      ))}
+    </motion.div>
   );
 }
