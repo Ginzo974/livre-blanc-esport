@@ -229,7 +229,7 @@ function Footer() {
         </div>
         <p className="text-fog leading-relaxed max-w-sm">
           Livre blanc · Master 2 Digital Design &amp; Creative Technologies ·
-          Mai 2026.
+          ESD Bordeaux · Mai 2026.
         </p>
       </div>
       <div>
@@ -237,7 +237,7 @@ function Footer() {
           Auteur
         </div>
         <p className="text-bone">
-          [Prénom Nom]
+          Quentin LOUIS
           <br />
           <span className="text-fog text-xs">
             5 ans de design · 10 ans de LoL
@@ -249,18 +249,39 @@ function Footer() {
           Contact
         </div>
         <ul className="space-y-1">
-          {["email", "Behance", "Instagram"].map((l) => (
-            <li key={l}>
-              <a href="#" className="text-bone hover:text-blood transition-colors">
-                {l} <span className="text-fog">↗</span>
-              </a>
-            </li>
-          ))}
+          <li>
+            <a
+              href="mailto:quentin.louis97400@gmail.com"
+              className="text-bone hover:text-blood transition-colors"
+            >
+              Email <span className="text-fog">↗</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.behance.net/quentin_louis"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-bone hover:text-blood transition-colors"
+            >
+              Behance <span className="text-fog">↗</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/ginzo.__/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-bone hover:text-blood transition-colors"
+            >
+              Instagram <span className="text-fog">↗</span>
+            </a>
+          </li>
         </ul>
       </div>
       <div className="md:col-span-3 pt-6 border-t border-bone/5 text-fog text-xs flex flex-col md:flex-row justify-between gap-2">
         <span>
-          © 2026 — Toute marque citée appartient à ses propriétaires
+          © 2026 · Toute marque citée appartient à ses propriétaires
           respectifs.
         </span>
         <span>Conçu avec discipline. Next.js 16 · Motion · Lenis.</span>
