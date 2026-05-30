@@ -148,6 +148,7 @@ export function Chapter2() {
         kicker="G2 Esports · 2014"
         caption="Samurai stylisé avec cicatrice de bataille diagonale. Métaphore tenue sur dix ans dans tout l'écosystème de marque."
         accent="g2"
+        lightBg
       />
 
       <Prose>
@@ -266,6 +267,7 @@ function LogoFigure({
   caption,
   accent = "bone",
   invertWhite = false,
+  lightBg = false,
 }: {
   src: string;
   alt: string;
@@ -273,6 +275,8 @@ function LogoFigure({
   caption: string;
   accent?: "blood" | "t1" | "g2" | "bone";
   invertWhite?: boolean;
+  /** Wrap the logo in a cream plate so dark/colored logos stay visible on the dark site. */
+  lightBg?: boolean;
 }) {
   const accentBorder = {
     blood: "border-blood/20",
@@ -300,16 +304,27 @@ function LogoFigure({
           {kicker}
         </span>
       </div>
-      <div
-        className="relative w-[180px] h-[180px] md:w-[240px] md:h-[240px] mb-8"
-        style={{
-          filter: invertWhite
-            ? "brightness(0) invert(1) drop-shadow(0 0 25px rgba(244,241,234,0.25))"
-            : "drop-shadow(0 0 25px rgba(0,0,0,0.4))",
-        }}
-      >
-        <Image src={src} alt={alt} fill sizes="240px" className="object-contain" />
-      </div>
+      {lightBg ? (
+        <div
+          className="relative w-[200px] h-[200px] md:w-[260px] md:h-[260px] mb-8 bg-bone p-6 md:p-8 flex items-center justify-center"
+          style={{ boxShadow: "0 8px 40px rgba(0,0,0,0.35)" }}
+        >
+          <div className="relative w-full h-full">
+            <Image src={src} alt={alt} fill sizes="260px" className="object-contain" />
+          </div>
+        </div>
+      ) : (
+        <div
+          className="relative w-[180px] h-[180px] md:w-[240px] md:h-[240px] mb-8"
+          style={{
+            filter: invertWhite
+              ? "brightness(0) invert(1) drop-shadow(0 0 25px rgba(244,241,234,0.25))"
+              : "drop-shadow(0 0 25px rgba(0,0,0,0.4))",
+          }}
+        >
+          <Image src={src} alt={alt} fill sizes="240px" className="object-contain" />
+        </div>
+      )}
       <figcaption className="font-ui text-sm text-fog text-center max-w-md leading-snug">
         {caption}
       </figcaption>

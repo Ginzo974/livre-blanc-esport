@@ -467,7 +467,10 @@ function VHiveShot() {
     >
       <div>
         <div className="flex items-center gap-3 mb-3">
-          <div className="relative w-7 h-7 shrink-0">
+          <div
+            className="relative w-7 h-7 shrink-0"
+            style={{ filter: "brightness(0) invert(1)" }}
+          >
             <Image
               src="/images/09-logo-vitality.png"
               alt="Logo Team Vitality"
