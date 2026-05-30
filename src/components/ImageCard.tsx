@@ -21,6 +21,10 @@ type Props = {
   height?: number;
   /** Use `fill` instead of width/height (parent must be position:relative). */
   fill?: boolean;
+  /** "cover" (default, crops to fill) or "contain" (shows full image, for product shots). */
+  fit?: "cover" | "contain";
+  /** Inner frame background — "dark" (default) or "light" (for product shots on white). */
+  frame?: "dark" | "light";
   className?: string;
 };
 
@@ -51,10 +55,17 @@ export function ImageCard({
   width,
   height,
   fill,
+  fit = "cover",
+  frame = "dark",
   className = "",
 }: Props) {
   const a = ACCENT_MAP[accent];
   const ar = ASPECT_MAP[aspect];
+  const isContain = fit === "contain";
+  const fitClass = isContain ? "object-contain" : "object-cover";
+  const frameBg = frame === "light" ? "bg-white" : "bg-ink";
+  // Hover scale only makes sense for cover photos, not contained product shots
+  const hoverScale = isContain ? "" : "transition-transform duration-700 group-hover:scale-[1.03]";
 
   return (
     <motion.figure
@@ -73,7 +84,7 @@ export function ImageCard({
         </figcaption>
       )}
 
-      <div className={`relative ${ar} bg-ink overflow-hidden`}>
+      <div className={`relative ${ar} ${frameBg} overflow-hidden`}>
         {/* Corner notch (top-right) */}
         <span
           aria-hidden
@@ -96,24 +107,27 @@ export function ImageCard({
           className={`pointer-events-none absolute bottom-3 right-3 z-10 h-4 w-4 border-b-2 border-r-2 ${a.text} opacity-0 group-hover:opacity-70 transition-opacity duration-500`}
           style={{ borderBottomColor: "currentColor", borderRightColor: "currentColor" }}
         />
-        {/* Scanline overlay */}
-        <span
-          aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-overlay"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(to bottom, rgba(255,255,255,0.6) 0 1px, transparent 1px 3px)",
-          }}
-        />
-        {/* Vignette gradient on hover */}
-        <span
-          aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-          style={{
-            background:
-              "radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.35) 100%)",
-          }}
-        />
+        {/* Scanline + vignette — only for cover photos (not product shots) */}
+        {!isContain && (
+          <>
+            <span
+              aria-hidden
+              className="pointer-events-none absolute inset-0 z-[5] opacity-[0.06] mix-blend-overlay"
+              style={{
+                backgroundImage:
+                  "repeating-linear-gradient(to bottom, rgba(255,255,255,0.6) 0 1px, transparent 1px 3px)",
+              }}
+            />
+            <span
+              aria-hidden
+              className="pointer-events-none absolute inset-0 z-[5] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              style={{
+                background:
+                  "radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.35) 100%)",
+              }}
+            />
+          </>
+        )}
         {/* Image */}
         {fill ? (
           <Image
@@ -121,7 +135,7 @@ export function ImageCard({
             alt={alt}
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+            className={`${fitClass} ${hoverScale}`}
           />
         ) : (
           <Image
@@ -130,7 +144,7 @@ export function ImageCard({
             width={width ?? 1600}
             height={height ?? 1000}
             sizes="(min-width: 1024px) 50vw, 100vw"
-            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+            className={`h-full w-full ${fitClass} ${hoverScale}`}
           />
         )}
       </div>

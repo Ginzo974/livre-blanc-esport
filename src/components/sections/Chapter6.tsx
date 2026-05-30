@@ -309,7 +309,9 @@ export function Chapter6() {
             kicker="Jersey · Produit"
             caption="Noir dominant, griffure rouge sang, logo brodé. Le loup hurlant en filigrane."
             accent="blood"
-            aspect="3/4"
+            aspect="1/1"
+            fit="contain"
+            frame="light"
           />
           <ImageCard
             src="/images/27-hunters-jersey-street.png"
@@ -317,7 +319,7 @@ export function Chapter6() {
             kicker="Jersey · Streetwear"
             caption="Pensé pour la scène ET la rue. L'objet culturel, pas l'uniforme."
             accent="blood"
-            aspect="3/4"
+            aspect="1/1"
           />
         </div>
 
