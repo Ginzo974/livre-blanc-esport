@@ -378,12 +378,12 @@ function ContrastTest() {
             className="p-10 flex flex-col items-center justify-center min-h-[160px]"
             style={{ background: f.bg }}
           >
-            <div className="relative w-[180px] h-[42px] mb-3">
+            <div className="relative w-full max-w-[260px] h-[64px] md:h-[72px] mb-4">
               <Image
                 src="/images/logo-hunters/logo-typo-rouge.png"
                 alt="Wordmark HUNTERS rouge"
                 fill
-                sizes="180px"
+                sizes="260px"
                 className="object-contain"
               />
             </div>
