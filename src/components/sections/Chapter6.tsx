@@ -417,8 +417,18 @@ function RajdhaniDemo() {
       <div className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-blood mb-6">
         Rajdhani Bold · Google Fonts
       </div>
-      <div className="font-hunter font-bold text-6xl md:text-8xl text-bone leading-[0.85] mb-4">
-        HUNTERS
+      {/* Wordmark blanc sur fond foncé */}
+      <div
+        className="relative w-full max-w-[520px] mb-6"
+        style={{ aspectRatio: "1131 / 148" }}
+      >
+        <Image
+          src="/images/logo-hunters/logo-typo-blanc-crop.png"
+          alt="HUNTERS"
+          fill
+          sizes="(min-width: 768px) 520px, 100vw"
+          className="object-contain object-left"
+        />
       </div>
       <div className="font-hunter font-bold text-2xl text-fog tracking-wider mb-6">
         ABCDEFGHIJKLMNOPQRSTUVWXYZ
