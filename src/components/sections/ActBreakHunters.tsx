@@ -98,7 +98,7 @@ export function ActBreakHunters() {
       />
 
       {/* Content */}
-      <div className="relative z-10 min-h-[100svh] flex flex-col justify-center items-center px-6 py-20">
+      <div className="relative z-10 min-h-[100svh] flex flex-col justify-center items-center px-6 pt-36 pb-24 md:pt-44 md:pb-28">
         {/* Kicker */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
