@@ -8,6 +8,7 @@ import {
   Lead,
   PullQuote,
   HorsJV,
+  AsideNote,
 } from "@/components/article/Article";
 import { ImageCard } from "@/components/ImageCard";
 import Image from "next/image";
@@ -209,6 +210,7 @@ export function Chapter1() {
       </Prose>
 
       <H3>Pourquoi cette grammaire compte pour toi</H3>
+      <AsideNote audiences={["curieux", "designer", "dirigeant"]} />
       <Prose>
         <p>
           Tu vas concevoir l&apos;identité visuelle d&apos;une équipe esport.

@@ -9,6 +9,7 @@ import {
   PullQuote,
   MethodList,
   HorsJV,
+  AsideNote,
 } from "@/components/article/Article";
 import { motion } from "motion/react";
 import Image from "next/image";
@@ -54,6 +55,7 @@ export function Chapter3() {
 
       {/* Fnatic */}
       <H3 accent="fnatic">Fnatic · L&apos;orange qui a duré vingt et un ans</H3>
+      <AsideNote audiences={["curieux", "designer", "dirigeant"]} />
       <PaletteRow
         team="Fnatic"
         years="2004 → 21 ans"
@@ -116,6 +118,7 @@ export function Chapter3() {
 
       {/* KC split */}
       <H3 accent="kc-blue-bright">Karmine Corp · La double palette de 2026</H3>
+      <AsideNote audiences={["curieux", "dirigeant"]} />
       <PaletteRow
         team="Karmine Corp"
         years="Janvier 2026"
@@ -168,6 +171,7 @@ export function Chapter3() {
 
       {/* NAVI */}
       <H3 accent="navi">NAVI · La constance comme stratégie</H3>
+      <AsideNote audiences={["curieux", "dirigeant"]} />
       <PaletteRow
         team="NAVI"
         years="2011 → 15 ans"

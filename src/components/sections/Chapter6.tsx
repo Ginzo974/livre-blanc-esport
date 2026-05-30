@@ -6,6 +6,7 @@ import {
   H4,
   Lead,
   PullQuote,
+  AsideNote,
 } from "@/components/article/Article";
 import { motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
@@ -152,6 +153,7 @@ export function Chapter6() {
         </Prose>
 
         <H3 accent="blood">Étape 2 · Le logo</H3>
+        <AsideNote audiences={["designer"]} />
         <Prose>
           <p>
             Selon l&apos;outil de décision du chapitre 2 : le nom HUNTERS a une
@@ -206,6 +208,7 @@ export function Chapter6() {
 
       <div className="relative mx-auto max-w-3xl px-6 md:px-8">
         <H3 accent="blood">Étape 3 · La palette</H3>
+        <AsideNote audiences={["designer", "curieux"]} />
         <Prose>
           <p>
             <strong>Rouge sang. Noir profond. Et c&apos;est tout, ou presque.</strong>
@@ -243,6 +246,7 @@ export function Chapter6() {
         </Prose>
 
         <H3 accent="blood">Étape 4 · La typographie</H3>
+        <AsideNote audiences={["designer"]} />
         <Prose>
           <p>
             HUNTERS travaille avec <strong>deux polices</strong>, chacune avec

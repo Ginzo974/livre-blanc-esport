@@ -7,6 +7,7 @@ import {
   H4,
   Lead,
   PullQuote,
+  AsideNote,
 } from "@/components/article/Article";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
@@ -122,6 +123,8 @@ export function Chapter5() {
         </p>
       </Prose>
 
+      <AsideNote audiences={["dirigeant"]} />
+
       <div ref={ref} className="relative md:-mx-12 my-14">
         <div className="hidden md:block absolute left-[20px] top-0 bottom-0 w-px bg-bone/10">
           <motion.div
@@ -166,6 +169,7 @@ export function Chapter5() {
       </div>
 
       <H3>Avec des moyens limités · Trois niveaux réalistes</H3>
+      <AsideNote audiences={["dirigeant", "curieux"]} />
       <Prose>
         <p>
           80 % des équipes qui lisent ce livre sont en Tier 3, avec un budget

@@ -10,6 +10,7 @@ import {
   WarningBlock,
   MethodList,
   HorsJV,
+  AsideNote,
 } from "@/components/article/Article";
 import { motion } from "motion/react";
 import Image from "next/image";
@@ -41,6 +42,7 @@ export function Chapter2() {
 
       {/* --- Approche 1 : KC --- */}
       <H3 accent="auto">Approche 1 · La simplicité radicale (Karmine Corp)</H3>
+      <AsideNote audiences={["curieux", "designer"]} />
 
       <LogoFigure
         src="/images/04-kc-noir.png"
@@ -85,6 +87,7 @@ export function Chapter2() {
 
       {/* --- Approche 2 : T1 --- */}
       <H3 accent="auto">Approche 2 · L&apos;héritage codé (T1)</H3>
+      <AsideNote audiences={["curieux", "designer"]} />
 
       <LogoFigure
         src="/images/05-logo-t1.webp"
@@ -141,6 +144,7 @@ export function Chapter2() {
 
       {/* --- Approche 3 : G2 --- */}
       <H3 accent="auto">Approche 3 · Le récit illustratif (G2 Esports)</H3>
+      <AsideNote audiences={["curieux", "designer"]} />
 
       <LogoFigure
         src="/images/06-logo-g2.webp"
@@ -181,6 +185,7 @@ export function Chapter2() {
 
       {/* --- Outil de décision --- */}
       <H3>Quelle approche choisir ?</H3>
+      <AsideNote audiences={["designer", "dirigeant"]} />
       <Prose>
         <p>
           Avant de dessiner quoi que ce soit, réponds à six questions. Chaque

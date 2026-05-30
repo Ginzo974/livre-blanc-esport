@@ -242,19 +242,45 @@ export function PullQuote({
 }
 
 /** Highlighted aside : "Particulièrement utile pour ..." */
+/** Audience-targeting note : "Particulièrement utile pour : Curieux · Designer · Dirigeant".
+ *  Pass the audiences that apply. Markers + colors match the intro AudienceTags.
+ */
+const AUDIENCE_META: Record<
+  "curieux" | "designer" | "dirigeant",
+  { icon: string; label: string; color: string }
+> = {
+  curieux: { icon: "◆", label: "Curieux", color: "var(--color-blood)" },
+  designer: { icon: "◇", label: "Designer", color: "var(--color-kc-blue-bright)" },
+  dirigeant: { icon: "▣", label: "Dirigeant", color: "var(--color-bone)" },
+};
+
 export function AsideNote({
   label = "Particulièrement utile pour",
-  audience,
+  audiences,
 }: {
   label?: string;
-  audience: string;
+  audiences: Array<"curieux" | "designer" | "dirigeant">;
 }) {
   return (
-    <div className="my-8 flex flex-wrap items-center gap-3 border-l-2 border-bone/20 pl-4">
-      <span className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-fog">
+    <div className="my-8 flex flex-wrap items-center gap-x-4 gap-y-2 border-l-2 border-bone/15 pl-4 py-1">
+      <span className="font-ui text-[0.6rem] uppercase tracking-[0.3em] text-fog">
         {label}
       </span>
-      <span className="font-ui text-xs text-bone/80">{audience}</span>
+      <span className="flex flex-wrap items-center gap-x-4 gap-y-1">
+        {audiences.map((a) => {
+          const m = AUDIENCE_META[a];
+          return (
+            <span key={a} className="flex items-center gap-1.5">
+              <span style={{ color: m.color }} className="text-xs leading-none">
+                {m.icon}
+              </span>
+              <span className="font-ui text-[0.7rem] uppercase tracking-[0.15em] text-bone/85">
+                {m.label}
+              </span>
+            </span>
+          );
+        })}
+      </span>
     </div>
   );
 }

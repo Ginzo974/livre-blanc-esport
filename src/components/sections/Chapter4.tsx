@@ -9,6 +9,7 @@ import {
   PullQuote,
   MethodList,
   HorsJV,
+  AsideNote,
 } from "@/components/article/Article";
 import { AppsShowcase } from "@/components/sections/AppsShowcase";
 
@@ -51,6 +52,7 @@ export function Chapter4() {
 
       {/* Partie A : typographie */}
       <H3 accent="auto">Partie A · La typographie, la voix silencieuse</H3>
+      <AsideNote audiences={["designer"]} />
       <Prose>
         <p>
           Tu lis la typographie d&apos;une équipe esport plus souvent que son
@@ -224,6 +226,7 @@ export function Chapter4() {
         </p>
       </Prose>
 
+      <AsideNote audiences={["designer", "dirigeant"]} />
       <MethodList
         title="Ta méthode 360 en cinq étapes"
         steps={[
