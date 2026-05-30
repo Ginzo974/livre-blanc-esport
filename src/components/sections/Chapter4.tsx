@@ -185,12 +185,10 @@ export function Chapter4() {
       <Prose>
         <p>
           Longtemps, l&apos;app communautaire a été le territoire vacant de
-          l&apos;esport. Vitality a tenté de l&apos;ouvrir avec V.Hive, une app
-          de gamification sur blockchain — mais l&apos;onboarding reste un mur :
-          en voulant créer un compte pour ce livre,{" "}
-          <em>l&apos;inscription bloque dès la sélection du pays.</em>{" "}
-          Aujourd&apos;hui, ce sont <strong>deux clubs français</strong> qui
-          occupent vraiment le terrain — avec deux philosophies opposées.
+          l&apos;esport. Vitality a ouvert la voie avec V.Hive, une app de
+          gamification sur blockchain. Mais ce sont aujourd&apos;hui{" "}
+          <strong>deux clubs français</strong> qui structurent le mieux le
+          terrain — avec deux philosophies opposées.
         </p>
         <p>
           <strong>Karmine Corp</strong> mise sur le companion pragmatique.

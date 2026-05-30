@@ -40,7 +40,7 @@ const APPS: App[] = [
   {
     team: "Gentle Mates",
     product: "M8 App",
-    accent: "#00e0c6",
+    accent: "#ff3d9a",
     philo: "Contenu d'abord",
     desc: "L'app prolonge l'ADN créateur de la structure. Intégration YouTube, replays, matchs en mode spoiler-free, calendrier personnalisable. Le média et l'esport dans la même poche.",
     tags: ["News", "YouTube", "Spoiler-free", "Bing'M8"],

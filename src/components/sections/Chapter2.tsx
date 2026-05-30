@@ -148,7 +148,6 @@ export function Chapter2() {
         kicker="G2 Esports · 2014"
         caption="Samurai stylisé avec cicatrice de bataille diagonale. Métaphore tenue sur dix ans dans tout l'écosystème de marque."
         accent="g2"
-        lightBg
       />
 
       <Prose>
