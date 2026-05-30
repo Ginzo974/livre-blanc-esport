@@ -72,8 +72,9 @@ export function Chapter4() {
         <p>
           La sans-serif T1 a trois caractéristiques visibles.{" "}
           <strong>Un italique léger</strong> qui suggère le mouvement.{" "}
-          <strong>Des contre-formes ouvertes</strong> qui maintiennent la
-          lisibilité à petite taille.{" "}
+          <strong>Des lettres bien ouvertes</strong> (les espaces à
+          l&apos;intérieur des lettres restent larges) qui gardent la lisibilité
+          en petit.{" "}
           <strong>Des terminaisons droites</strong> qui durcissent le rythme.
           C&apos;est une typo qui parle peu mais qui parle ferme.
         </p>

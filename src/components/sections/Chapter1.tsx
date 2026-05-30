@@ -178,7 +178,7 @@ export function Chapter1() {
           Tu peux supporter le PSG parce que tu vis à Paris. Tu peux supporter
           Karmine Corp même si tu vis à Saint-Étienne ou à Montréal.
           L&apos;identité visuelle d&apos;une équipe esport s&apos;ancre dans
-          une communauté digitale, fédérée autour d&apos;un univers visuel
+          une communauté en ligne, rassemblée autour d&apos;un univers visuel
           cohérent, pas dans un territoire géographique.
         </p>
         <p>

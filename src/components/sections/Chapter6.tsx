@@ -159,9 +159,9 @@ export function Chapter6() {
           <p>
             Le double H est subtil. Il apparaît seulement après que l&apos;œil
             ait traversé l&apos;effet général de griffure. C&apos;est le même
-            type de double lecture que l&apos;aile cachée dans le T de T1, sur
-            un registre opposé. Dans les contre-formes négatives entre la lance
-            centrale et les pointes latérales, on peut deviner{" "}
+            type de double lecture que l&apos;aile cachée dans le T de T1, mais
+            dans un autre style. Dans les espaces vides entre la lance centrale
+            et les pointes latérales, on peut deviner{" "}
             <strong>des yeux de chasseur</strong> — pas frontaux, pas
             explicites, plutôt suggérés par les espaces noirs entre les
             éléments rouges. <em>Le logo te regarde autant que tu le regardes.</em>
@@ -239,10 +239,10 @@ export function Chapter6() {
           </p>
           <p>
             <strong>Référence de production : Rajdhani Bold</strong> (Google
-            Fonts, licence libre). Ses terminaisons coupées à angle vif, ses
-            verticales tendues et ses contre-formes ouvertes correspondent
-            exactement au registre martial recherché. La graisse Bold pour le
-            logo et la signalétique, Medium pour les usages courants.
+            Fonts, licence libre). Ses terminaisons coupées net, ses verticales
+            tendues et ses lettres bien ouvertes correspondent exactement au
+            style martial recherché. La graisse Bold pour le logo et la
+            signalétique, Medium pour les usages courants.
           </p>
         </Prose>
 
@@ -252,7 +252,7 @@ export function Chapter6() {
           <p>
             Concrètement : les terminaisons des lettres sont coupées droites
             avec un biseau qui rappelle la pointe d&apos;une lame. Les
-            verticales sont fermes, presque tendues. Les contre-formes restent
+            verticales sont fermes, presque tendues. Les lettres restent bien
             ouvertes pour que HUNTERS reste lisible même compressé.{" "}
             <strong>L&apos;esprit général est martial, pas accueillant.</strong>
           </p>

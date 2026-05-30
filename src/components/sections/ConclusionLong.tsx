@@ -31,9 +31,9 @@ export function ConclusionLong() {
       <Prose>
         <p>
           Ce K n&apos;était pas un dessin. C&apos;était une décision de design
-          parfaitement maîtrisée, transposée sur tous les supports, tenue
-          pendant cinq ans, et capable de soutenir un rebrand structurel sans
-          s&apos;effacer.
+          parfaitement maîtrisée, reprise sur tous les supports, tenue pendant
+          cinq ans, et assez solide pour traverser un grand changement de marque
+          sans s&apos;effacer.
         </p>
         <p>
           <strong>

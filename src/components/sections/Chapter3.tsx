@@ -35,9 +35,9 @@ export function Chapter3() {
 
       <Prose>
         <p>
-          Le premier point est émotionnel, culturel, narratif. Le second est
-          technique, broadcast, impitoyable. Une couleur qui sonne juste sur un
-          mood board peut disparaître à l&apos;écran. Une couleur lisible peut
+          Le premier point est émotionnel, culturel, parle au cœur. Le second
+          est technique, broadcast, sans pardon. Une couleur qui sonne juste sur
+          un mood board peut disparaître à l&apos;écran. Une couleur lisible peut
           être plate à l&apos;œil.{" "}
           <strong>
             Le métier consiste à trouver l&apos;équilibre.
@@ -46,7 +46,7 @@ export function Chapter3() {
         <p>
           Trois équipes occupent ce chapitre. <strong>Fnatic</strong> avec un
           orange audacieux tenu pendant vingt et un ans.{" "}
-          <strong>Karmine Corp</strong> avec un split chromatique structurel
+          <strong>Karmine Corp</strong> avec une double palette de couleurs
           introduit en 2026. <strong>NAVI</strong> avec quinze ans de palette
           identique, par discipline plus que par paresse.
         </p>
@@ -87,7 +87,7 @@ export function Chapter3() {
         </p>
         <p>
           Fnatic a fait évoluer son logo trois fois en vingt et un ans. Premier
-          logo manuscrit, dérivé phonétiquement du nom. Deuxième logo, affiné
+          logo manuscrit, inspiré de la sonorité du nom. Deuxième logo, affiné
           vers 2015, angles durcis, orange intensifié. Troisième logo, lancé en
           janvier 2020 : plus net, plus aiguisé, éléments décoratifs supprimés,
           géométrie raffinée. <em>À chaque rebrand, la palette est restée
@@ -106,7 +106,7 @@ export function Chapter3() {
       <Prose>
         <p>
           Fnatic prouve qu&apos;une couleur audacieuse choisie tôt et tenue
-          longtemps devient un patrimoine.{" "}
+          longtemps devient un héritage.{" "}
           <strong>L&apos;orange n&apos;est pas neutre, elle est risquée.</strong>{" "}
           Mais à force d&apos;apparaître depuis 2004, elle est devenue
           inséparable de Fnatic. Aucune autre équipe esport majeure ne peut
@@ -115,7 +115,7 @@ export function Chapter3() {
       </Prose>
 
       {/* KC split */}
-      <H3 accent="kc-blue-bright">Karmine Corp · Le split chromatique structurel de 2026</H3>
+      <H3 accent="kc-blue-bright">Karmine Corp · La double palette de 2026</H3>
       <PaletteRow
         team="Karmine Corp"
         years="Janvier 2026"
@@ -128,9 +128,9 @@ export function Chapter3() {
       />
       <Prose>
         <p>
-          Pendant cinq ans, le K de Karmine Corp était bleu. Un bleu
-          institutionnel, presque académique, qui fonctionnait comme couleur
-          signature unique. Puis le <strong>7 janvier 2026</strong>, Kameto
+          Pendant cinq ans, le K de Karmine Corp était bleu. Un bleu sérieux,
+          presque officiel, qui fonctionnait comme couleur signature unique.
+          Puis le <strong>7 janvier 2026</strong>, Kameto
           annonce en livestream une refonte qui sort de l&apos;ordinaire.
         </p>
         <p>
@@ -151,16 +151,16 @@ export function Chapter3() {
       </Prose>
 
       <PullQuote accent="kc-blue-bright">
-        C&apos;est de la <span className="text-[var(--color-kc-blue-bright)]">taxonomie chromatique</span>.
-        Comme une équipe de Formule 1 qui utiliserait deux livrées pour deux
-        écuries au sein d&apos;une même maison.
+        C&apos;est un <span className="text-[var(--color-kc-blue-bright)]">code couleur qui classe les équipes</span>.
+        Comme une écurie de Formule 1 qui utiliserait deux décorations pour
+        deux voitures d&apos;une même maison.
       </PullQuote>
 
       <Prose>
         <p className="text-fog text-sm italic">
           Note de prudence. Le raisonnement officiel de KC sur ce choix
-          n&apos;est pas publié. Je traite ce split comme une observation
-          structurelle, pas comme une intention déclarée.
+          n&apos;est pas publié. Je traite ce double choix de couleur comme une
+          observation personnelle, pas comme une intention déclarée.
         </p>
       </Prose>
 
@@ -203,7 +203,7 @@ export function Chapter3() {
           <strong>
             La palette reste identique, mais la texture évolue.
           </strong>{" "}
-          Discipline chromatique, créativité dans le détail.
+          Discipline sur les couleurs, créativité dans le détail.
         </p>
       </Prose>
 
@@ -211,13 +211,13 @@ export function Chapter3() {
       <H3>Trois logiques, un piège à éviter</H3>
       <Prose>
         <p>
-          Fnatic défend un orange audacieux par vingt et un ans de constance
-          avec itération de logo. KC structure son organisation par un système
-          chromatique double. NAVI maintient une discipline qui ne change rien
-          depuis quinze ans.
+          Fnatic défend un orange audacieux par vingt et un ans de constance,
+          en faisant évoluer son logo sans toucher aux couleurs. KC range ses
+          équipes avec deux couleurs. NAVI garde la même palette depuis quinze
+          ans, sans jamais en changer.
         </p>
         <p>
-          Aucune des trois n&apos;est tombée dans le piège chromatique le plus
+          Aucune des trois n&apos;est tombée dans le piège de couleur le plus
           courant de l&apos;esport :{" "}
           <strong>le noir avec un accent néon générique.</strong> Vert néon sur
           fond noir, violet électrique sur fond noir, cyan sur fond noir. Ces
@@ -245,7 +245,7 @@ export function Chapter3() {
           },
           {
             title: "Confronte à dix concurrents",
-            body: "Si ta palette ressemble à plus de trois équipes de ta scène, recommence. La différenciation chromatique est le premier sport de l'esport.",
+            body: "Si ta palette ressemble à plus de trois équipes de ta scène, recommence. Se distinguer par la couleur est le premier sport de l'esport.",
           },
           {
             title: "Verrouille publiquement",

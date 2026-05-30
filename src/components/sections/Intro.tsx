@@ -111,7 +111,7 @@ export function Intro() {
         </p>
         <p>
           Ce n&apos;est pas un catalogue descriptif. Ce n&apos;est pas une
-          analyse marketing. <strong>C&apos;est un manuel d&apos;amorçage.</strong>{" "}
+          analyse marketing. <strong>C&apos;est un manuel pour démarrer.</strong>{" "}
           À la fin de ces vingt pages, tu comprends comment se construit une
           identité visuelle d&apos;équipe esport, et tu disposes de la méthode
           pour démarrer la tienne dans la bonne direction.
@@ -130,25 +130,24 @@ export function Intro() {
         <ul>
           <li>
             <strong>Karmine Corp.</strong> Communauté française incarnée par un
-            K minimaliste, devenu icône en cinq ans. Seul cas d&apos;un split
-            chromatique structurel (rouge LEC, bleu KCB), annoncé en janvier
-            2026.
+            K minimaliste, devenu icône en cinq ans. Seul cas d&apos;une double
+            palette de couleurs (rouge LEC, bleu KCB), annoncée en janvier 2026.
           </li>
           <li>
-            <strong>T1.</strong> Héritage coréen, aile dissimulée dans le T.
-            Vingt ans d&apos;identité SK Telecom condensés dans un logo qui
-            semble minimaliste mais porte des archives.
+            <strong>T1.</strong> Héritage coréen, aile cachée dans le T. Vingt
+            ans d&apos;identité SK Telecom résumés dans un logo qui semble
+            minimaliste mais porte tout un passé.
           </li>
           <li>
             <strong>G2 Esports.</strong> Opposé exact de la simplicité. Le
-            samurai cicatrisé fondé en 2014, un logo riche et narratif qui tient
-            une métaphore sur dix ans dans tout l&apos;écosystème de la marque.
+            samurai cicatrisé fondé en 2014, un logo riche qui raconte une
+            histoire et tient cette image sur dix ans dans toute la marque.
           </li>
           <li>
             <strong>Fnatic.</strong> L&apos;orange et le noir tenus depuis vingt
-            et un ans. L&apos;une des plus vieilles signatures chromatiques de
-            l&apos;esport, avec une philosophie d&apos;itération sans
-            réécriture.
+            et un ans. L&apos;une des plus vieilles signatures couleur de
+            l&apos;esport, avec une règle simple : faire évoluer, jamais tout
+            réécrire.
           </li>
           <li>
             <strong>NAVI.</strong> Sobriété ukrainienne en jaune et noir, quinze
