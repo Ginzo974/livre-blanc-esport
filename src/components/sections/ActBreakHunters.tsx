@@ -98,14 +98,14 @@ export function ActBreakHunters() {
       />
 
       {/* Content */}
-      <div className="relative z-10 min-h-[100svh] flex flex-col justify-center items-center px-6 py-24 md:py-32">
+      <div className="relative z-10 min-h-[100svh] flex flex-col justify-center items-center px-6 py-20">
         {/* Kicker */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="mb-10 md:mb-16 flex items-center gap-3"
+          className="mb-6 flex items-center gap-3"
         >
           <span className="h-px w-10 bg-blood" />
           <span className="font-ui text-blood text-[0.65rem] md:text-xs uppercase tracking-[0.4em]">
@@ -114,23 +114,25 @@ export function ActBreakHunters() {
           <span className="h-px w-10 bg-blood" />
         </motion.div>
 
-        {/* HUNTERS logo */}
+        {/* HUNTERS logo (symbole recadré) */}
         <motion.div
           style={{
             scale: logoScale,
             y: logoY,
-            filter: useTransform(logoBlur, (b) => `blur(${b}) drop-shadow(0 0 80px rgba(200,29,37,0.45))`),
+            filter: useTransform(logoBlur, (b) => `blur(${b}) drop-shadow(0 0 70px rgba(200,29,37,0.45))`),
           }}
-          className="relative w-[260px] h-[300px] md:w-[400px] md:h-[460px]"
+          className="relative w-[150px] md:w-[190px]"
         >
-          <Image
-            src="/images/logo-hunters/hunters-rouge.png"
-            alt="Logo HUNTERS — lance et griffure"
-            fill
-            priority
-            sizes="(min-width: 768px) 400px, 260px"
-            className="object-contain"
-          />
+          <div className="relative w-full" style={{ aspectRatio: "665 / 832" }}>
+            <Image
+              src="/images/logo-hunters/hunters-rouge-crop.png"
+              alt="Logo HUNTERS — lance et griffure"
+              fill
+              priority
+              sizes="(min-width: 768px) 190px, 150px"
+              className="object-contain"
+            />
+          </div>
         </motion.div>
 
         {/* Wordmark — real HUNTERS typo under the logo */}
@@ -138,27 +140,27 @@ export function ActBreakHunters() {
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
-          className="mt-8 md:mt-12 relative w-[260px] md:w-[360px]"
+          transition={{ duration: 0.7, delay: 0.35, ease: "easeOut" }}
+          className="mt-5 md:mt-6 relative w-[280px] md:w-[380px]"
           style={{ aspectRatio: "1131 / 148" }}
         >
           <Image
             src="/images/logo-hunters/logo-typo-rouge-crop.png"
             alt="HUNTERS"
             fill
-            sizes="(min-width: 768px) 360px, 260px"
+            sizes="(min-width: 768px) 380px, 280px"
             className="object-contain"
           />
         </motion.div>
 
-        {/* Statement */}
+        {/* Topline */}
         <motion.p
           style={{ y: statementY, opacity: statementOpacity }}
-          className="mt-14 md:mt-20 max-w-3xl text-center font-hunter font-bold uppercase text-[clamp(1.5rem,3vw,2.5rem)] leading-[1.1] tracking-tight text-bone"
+          className="mt-7 md:mt-9 max-w-3xl text-center font-hunter font-bold uppercase text-[clamp(1.75rem,3.4vw,2.75rem)] leading-[1.05] tracking-tight text-bone"
         >
-          Souffle court.
+          Que la chasse
           <br />
-          <span className="text-blood">Pas voix douce.</span>
+          <span className="text-blood">commence.</span>
         </motion.p>
 
         {/* Down indicator */}

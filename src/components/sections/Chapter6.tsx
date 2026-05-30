@@ -376,16 +376,18 @@ function HuntersLogoSVG() {
       whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-      className="relative w-[260px] h-[300px] md:w-[300px] md:h-[340px]"
+      className="relative w-[200px] md:w-[240px]"
       style={{ filter: "drop-shadow(0 0 60px rgba(200,29,37,0.45))" }}
     >
-      <Image
-        src="/images/logo-hunters/hunters-rouge.png"
-        alt="Logo HUNTERS — trois lances ascendantes encadrées par des griffures formant un double H"
-        fill
-        sizes="(min-width: 768px) 300px, 260px"
-        className="object-contain"
-      />
+      <div className="relative w-full" style={{ aspectRatio: "665 / 832" }}>
+        <Image
+          src="/images/logo-hunters/hunters-rouge-crop.png"
+          alt="Logo HUNTERS — trois lances ascendantes encadrées par des griffures formant un double H"
+          fill
+          sizes="(min-width: 768px) 240px, 200px"
+          className="object-contain"
+        />
+      </div>
     </motion.div>
   );
 }
