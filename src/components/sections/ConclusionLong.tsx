@@ -267,16 +267,6 @@ function Footer() {
               Behance <span className="text-fog">↗</span>
             </a>
           </li>
-          <li>
-            <a
-              href="https://www.instagram.com/ginzo.__/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-bone hover:text-blood transition-colors"
-            >
-              Instagram <span className="text-fog">↗</span>
-            </a>
-          </li>
         </ul>
       </div>
       <div className="md:col-span-3 pt-6 border-t border-bone/5 text-fog text-xs flex flex-col md:flex-row justify-between gap-2">
