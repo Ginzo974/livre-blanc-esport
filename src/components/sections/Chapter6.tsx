@@ -12,6 +12,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
 import { useRef } from "react";
 import { BrandBookConstruction } from "@/components/sections/BrandBookConstruction";
+import { ImageCard } from "@/components/ImageCard";
 
 export function Chapter6() {
   const ref = useRef<HTMLElement>(null);
@@ -301,6 +302,25 @@ export function Chapter6() {
           </p>
         </Prose>
 
+        <div className="my-10 md:-mx-12 grid grid-cols-1 md:grid-cols-2 gap-px bg-blood/20">
+          <ImageCard
+            src="/images/29-hunters-jersey-product.png"
+            alt="Jersey HUNTERS 2026 — vue produit"
+            kicker="Jersey · Produit"
+            caption="Noir dominant, griffure rouge sang, logo brodé. Le loup hurlant en filigrane."
+            accent="blood"
+            aspect="3/4"
+          />
+          <ImageCard
+            src="/images/27-hunters-jersey-street.png"
+            alt="Jersey HUNTERS porté en streetwear"
+            kicker="Jersey · Streetwear"
+            caption="Pensé pour la scène ET la rue. L'objet culturel, pas l'uniforme."
+            accent="blood"
+            aspect="3/4"
+          />
+        </div>
+
         <H4>Réseaux sociaux · Trois templates fixes</H4>
         <SocialTemplates />
 
@@ -318,6 +338,17 @@ export function Chapter6() {
           </p>
         </Prose>
 
+        <div className="my-10 md:-mx-12">
+          <ImageCard
+            src="/images/28-hunters-stage.png"
+            alt="L'équipe HUNTERS en compétition sur scène"
+            kicker="Broadcast · Compétition"
+            caption="La meute en match. Jerseys, fond de scène, identité cohérente jusqu'en cabine."
+            accent="blood"
+            aspect="16/10"
+          />
+        </div>
+
         <H4>Merch · Phase 1</H4>
         <Prose>
           <p>
@@ -329,7 +360,42 @@ export function Chapter6() {
             <em>si la meute l&apos;appelle.</em>
           </p>
         </Prose>
+      </div>
 
+      {/* Team shot — full-bleed climax : "voici la meute" */}
+      <motion.figure
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.9 }}
+        className="relative w-screen left-1/2 -translate-x-1/2 my-16 md:my-24"
+      >
+        <div className="relative aspect-[16/9] md:aspect-[21/9] w-full overflow-hidden">
+          <Image
+            src="/images/26-hunters-team.png"
+            alt="L'équipe HUNTERS au complet — la meute"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div
+            aria-hidden
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to top, rgba(10,10,10,0.85) 0%, transparent 45%)",
+            }}
+          />
+          <figcaption className="absolute bottom-0 left-0 right-0 p-6 md:p-10 text-center">
+            <span className="font-hunter font-bold uppercase text-bone text-[clamp(1.25rem,2.6vw,2rem)] tracking-tight leading-tight">
+              Une équipe qui n&apos;existe pas.{" "}
+              <span className="text-blood">Et qui tient debout.</span>
+            </span>
+          </figcaption>
+        </div>
+      </motion.figure>
+
+      <div className="relative mx-auto max-w-3xl px-6 md:px-8">
         <H3>Ce que HUNTERS démontre</H3>
         <Prose>
           <p>
