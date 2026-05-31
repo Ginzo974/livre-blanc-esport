@@ -10,6 +10,7 @@ import { Chapter5 } from "@/components/sections/Chapter5";
 import { ActBreakHunters } from "@/components/sections/ActBreakHunters";
 import { Chapter6 } from "@/components/sections/Chapter6";
 import { ConclusionLong } from "@/components/sections/ConclusionLong";
+import { Sources } from "@/components/sections/Sources";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <ActBreakHunters />
       <Chapter6 />
       <ConclusionLong />
+      <Sources />
     </main>
   );
 }

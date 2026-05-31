@@ -13,6 +13,7 @@ export const TOC_ITEMS = [
   { id: "chap-5", num: "05", label: "La méthode" },
   { id: "chap-6", num: "06", label: "HUNTERS" },
   { id: "conclusion", num: "✦", label: "Conclusion" },
+  { id: "sources", num: "§", label: "Sources" },
 ];
 
 export function Toc() {
