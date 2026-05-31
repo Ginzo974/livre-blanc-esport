@@ -121,9 +121,9 @@ export function ConclusionLong() {
           qui font la différence entre un livre fini et un livre bâclé.
         </p>
         <p>
-          <strong>À toi qui me lis.</strong>{" "}Si tu as parcouru ces vingt
-          pages, continue. L&apos;esport a besoin de designers qui prennent
-          ces questions au sérieux.
+          <strong>À toi qui me lis.</strong>{" "}Si tu as lu jusqu&apos;ici,
+          continue. L&apos;esport a besoin de designers qui prennent ces
+          questions au sérieux.
         </p>
       </Prose>
 
@@ -177,45 +177,58 @@ function ThreeLessons() {
 function CTABlock() {
   return (
     <motion.div
-      id="pdf"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="my-16 md:-mx-12 border border-bone/10 bg-ink-2 p-8 md:p-12 grid lg:grid-cols-[1fr_auto] gap-6 items-center"
+      className="my-16 md:-mx-12 border border-bone/10 bg-ink-2 p-8 md:p-12"
     >
-      <div>
-        <div className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-fog mb-3">
-          Le livre blanc complet
-        </div>
-        <h3 className="font-display text-2xl md:text-4xl text-bone mb-3 leading-tight">
-          20 pages.{" "}
-          <span className="text-[var(--color-blood)]">6 cas d&apos;étude.</span>{" "}
-          1 méthode.
-        </h3>
-        <p className="text-fog max-w-xl text-sm md:text-base">
-          Téléchargez la version PDF, mise en page pour impression et lecture
-          hors-ligne.
-        </p>
+      <div className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-fog mb-3">
+        Tu viens de terminer le livre blanc
       </div>
-      <a
-        href="#"
-        className="group inline-flex items-center gap-4 self-start bg-blood hover:bg-claw transition-colors px-6 py-4 font-display text-bone tracking-widest text-sm"
-      >
-        TÉLÉCHARGER LE PDF
-        <svg
-          width="20"
-          height="14"
-          viewBox="0 0 20 14"
-          className="transition-transform group-hover:translate-x-1"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="square"
+      <h3 className="font-display text-2xl md:text-4xl text-bone mb-3 leading-tight">
+        ≈ 25 min.{" "}
+        <span className="text-[var(--color-blood)]">6 cas d&apos;étude.</span>{" "}
+        1 méthode.
+      </h3>
+      <p className="text-fog max-w-xl text-sm md:text-base mb-8">
+        Ce site <strong className="text-bone">est</strong> le livre blanc, dans
+        son intégralité. Pas de version papier, pas de résumé : tout est ici.
+        S&apos;il t&apos;a servi, partage-le, ou regarde comment il a été pensé
+        et diffusé.
+      </p>
+      <div className="flex flex-wrap gap-3 font-display text-sm tracking-widest">
+        <a
+          href="#top"
+          className="group inline-flex items-center gap-3 bg-blood hover:bg-claw transition-colors px-6 py-4 text-bone"
         >
-          <path d="M0 7 H18 M12 1 L18 7 L12 13" />
-        </svg>
-      </a>
+          REVENIR AU DÉBUT
+          <svg
+            width="20"
+            height="14"
+            viewBox="0 0 20 14"
+            className="transition-transform group-hover:-translate-y-1 rotate-[-90deg]"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="square"
+          >
+            <path d="M0 7 H18 M12 1 L18 7 L12 13" />
+          </svg>
+        </a>
+        <a
+          href="/note-presentation"
+          className="inline-flex items-center px-6 py-4 border border-bone/20 text-bone hover:border-blood hover:text-blood transition-colors"
+        >
+          NOTE DE PRÉSENTATION
+        </a>
+        <a
+          href="/note-strategie"
+          className="inline-flex items-center px-6 py-4 border border-bone/20 text-bone hover:border-blood hover:text-blood transition-colors"
+        >
+          STRATÉGIE DE DIFFUSION
+        </a>
+      </div>
     </motion.div>
   );
 }

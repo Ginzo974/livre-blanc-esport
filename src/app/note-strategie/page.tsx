@@ -25,9 +25,11 @@ export default function NoteStrategie() {
 
       <Field label="Objectifs de diffusion">
         <p>
-          <strong>Quantitatif (lancement) :</strong> 3 téléchargements via
-          Twitter / X et 10 via LinkedIn. Des objectifs volontairement réalistes
-          pour un premier lancement sans budget média.
+          <strong>Quantitatif (lancement) :</strong> 3 lectures du livre issues
+          de Twitter / X et 10 de LinkedIn. Le livre se lisant directement en
+          ligne, on mesure les lecteurs qui ouvrent et parcourent le long-read,
+          pas des téléchargements. Des objectifs volontairement réalistes pour
+          un premier lancement sans budget média.
         </p>
         <p>
           <strong>Qualitatif :</strong> asseoir la crédibilité de l&apos;auteur
@@ -62,20 +64,21 @@ export default function NoteStrategie() {
 
       <Field label="Processus de conversion">
         <p>
-          Le site lui-même fait office de landing : lecture immédiate, puis CTA
-          unique et répété, <strong>« Télécharger le PDF »</strong>, présent dans
-          l&apos;en-tête et en fin de livre.
+          Pas de téléchargement, pas de formulaire : le site est à la fois la
+          landing et le livre blanc. Un clic depuis un post mène directement à la
+          lecture. Le seul appel à l&apos;action,{" "}
+          <strong>« Lire le livre blanc »</strong>, pointe vers le long-read.
         </p>
         <p>Accroches adaptées par canal :</p>
         <ul>
-          <li><strong>Twitter / X :</strong> entrée par l&apos;émotion et le visuel — « Pourquoi le K bleu de la Karmine Corp te reste en tête ? » — puis lien vers le livre.</li>
-          <li><strong>LinkedIn :</strong> entrée par la valeur et la méthode — « Comment se construit, étape par étape, l&apos;identité d&apos;une équipe esport. »</li>
+          <li><strong>Twitter / X :</strong> entrée par l&apos;émotion et le visuel. « Pourquoi le K bleu de la Karmine Corp te reste en tête ? », puis le lien vers le livre.</li>
+          <li><strong>LinkedIn :</strong> entrée par la valeur et la méthode. « Comment se construit, étape par étape, l&apos;identité d&apos;une équipe esport. »</li>
         </ul>
       </Field>
 
       <Field label="KPI à surveiller">
         <ul>
-          <li>Nombre de téléchargements du PDF, ventilé par canal (Twitter vs LinkedIn).</li>
+          <li>Nombre de lecteurs (sessions), ventilé par canal de provenance (Twitter vs LinkedIn).</li>
           <li>Taux de clic sur le lien depuis chaque publication.</li>
           <li>Profondeur de lecture et temps passé sur le long-read (scroll, durée moyenne).</li>
           <li>Impressions et engagement par post (likes, partages, commentaires).</li>

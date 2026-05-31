@@ -12,7 +12,7 @@ export default function NotePresentation() {
     <AnnexShell
       kicker="Annexe · Note de présentation"
       title="Note de présentation du livre blanc"
-      intro="« Du logo à la scène » — décrypter et concevoir l'identité visuelle d'une équipe esport."
+      intro="« Du logo à la scène » : décrypter et concevoir l'identité visuelle d'une équipe esport."
     >
       <Field label="Auteur & cadre">
         Quentin Louis, étudiant en Master 2 Digital Design &amp; Creative
@@ -34,8 +34,8 @@ export default function NotePresentation() {
       <Field label="L'objet">
         Le premier livre blanc en français à proposer une méthodologie
         applicable d&apos;identité visuelle esport. Il s&apos;appuie sur six cas
-        d&apos;étude actualisés en 2026 — Karmine Corp, T1, G2 Esports, Fnatic,
-        NAVI, Team Vitality — et sur une équipe fictive, HUNTERS, conçue de zéro
+        d&apos;étude actualisés en 2026 (Karmine Corp, T1, G2 Esports, Fnatic,
+        NAVI, Team Vitality) et sur une équipe fictive, HUNTERS, conçue de zéro
         pour démontrer la méthode en pratique, du brief au système complet.
       </Field>
 
@@ -55,10 +55,11 @@ export default function NotePresentation() {
       </Field>
 
       <Field label="Format">
-        Long-read web responsive (lecture ≈ 25 min) doublé d&apos;une version PDF
-        d&apos;une vingtaine de pages, mise en page pour l&apos;impression et la
-        lecture hors-ligne. Six chapitres qui s&apos;enchaînent, chacun fermé sur
-        une méthode applicable.
+        Un long-read web responsive, pensé pour la lecture à l&apos;écran
+        (≈ 25 min). Le site <strong>est</strong> le livre blanc dans son
+        intégralité : pas de version papier, pas de résumé, pas de PDF à
+        télécharger. Six chapitres qui s&apos;enchaînent, animations de scroll et
+        navigation latérale, chacun fermé sur une méthode applicable.
       </Field>
     </AnnexShell>
   );

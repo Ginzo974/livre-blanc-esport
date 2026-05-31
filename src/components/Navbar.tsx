@@ -27,27 +27,21 @@ export function Navbar() {
         >
           DU&nbsp;LOGO&nbsp;À&nbsp;LA&nbsp;SCÈNE
         </a>
-        <div className="hidden md:flex items-center gap-6 font-ui text-[0.7rem] uppercase tracking-[0.3em] text-fog">
+        <div className="flex items-center gap-5 md:gap-6 font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.25em] md:tracking-[0.3em] text-fog">
           <a
             href="/note-presentation"
-            className="hover:text-bone transition-colors"
+            className="hidden sm:inline hover:text-bone transition-colors"
           >
             Présentation
           </a>
           <a
             href="/note-strategie"
-            className="hover:text-bone transition-colors"
+            className="hidden sm:inline hover:text-bone transition-colors"
           >
             Stratégie
           </a>
-          <span className="text-fog/50">~ 25 min</span>
+          <span className="hidden md:inline text-fog/50">~ 25 min de lecture</span>
         </div>
-        <a
-          href="#pdf"
-          className="font-display text-xs tracking-widest text-bone border border-bone/20 px-4 py-2 hover:bg-blood hover:border-blood transition-colors"
-        >
-          PDF
-        </a>
       </div>
     </motion.nav>
   );
