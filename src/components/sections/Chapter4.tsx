@@ -17,7 +17,7 @@ export function Chapter4() {
   return (
     <ChapterSection
       id="chap-4"
-      number="05"
+      number="04"
       kicker="Chapitre 4 · Le système 360"
       accent="bone"
       title={

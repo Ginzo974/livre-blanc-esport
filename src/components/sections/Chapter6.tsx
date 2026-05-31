@@ -73,7 +73,7 @@ export function Chapter6() {
         >
           <div className="flex items-center gap-4 mb-6">
             <span className="font-display text-blood text-sm tracking-widest">
-              07
+              06
             </span>
             <span className="h-px w-16 bg-blood" />
             <span className="font-ui text-blood text-[0.7rem] uppercase tracking-[0.3em]">

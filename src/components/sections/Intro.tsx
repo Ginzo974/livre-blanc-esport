@@ -8,7 +8,7 @@ export function Intro() {
   return (
     <ChapterSection
       id="intro"
-      number="01"
+      number="00"
       kicker="Introduction"
       title={<>Quelque chose à propos d&apos;un K bleu.</>}
       accent="kc-blue-bright"

@@ -99,21 +99,6 @@ export function ActBreakHunters() {
 
       {/* Content, even vertical rhythm via a single gap */}
       <div className="relative z-10 min-h-[100svh] flex flex-col justify-center items-center px-6 pt-36 pb-24 md:pt-44 md:pb-28 gap-10 md:gap-12">
-        {/* Kicker */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="flex items-center gap-3"
-        >
-          <span className="h-px w-10 bg-blood" />
-          <span className="font-ui text-blood text-[0.65rem] md:text-xs uppercase tracking-[0.4em]">
-            Chapitre 6 · La méthode en action
-          </span>
-          <span className="h-px w-10 bg-blood" />
-        </motion.div>
-
         {/* HUNTERS logo (symbole recadré) */}
         <motion.div
           style={{

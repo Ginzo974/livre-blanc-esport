@@ -18,7 +18,7 @@ export function Chapter3() {
   return (
     <ChapterSection
       id="chap-3"
-      number="04"
+      number="03"
       kicker="Chapitre 3 · La couleur"
       accent="bone"
       title={

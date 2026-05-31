@@ -98,7 +98,7 @@ export function Chapter5() {
   return (
     <ChapterSection
       id="chap-5"
-      number="06"
+      number="05"
       kicker="Chapitre 5 · La méthode"
       accent="kc-blue-bright"
       title={

@@ -13,7 +13,7 @@ export function ConclusionLong() {
   return (
     <ChapterSection
       id="conclusion"
-      number="08"
+      number="✦"
       kicker="Conclusion"
       title={
         <>

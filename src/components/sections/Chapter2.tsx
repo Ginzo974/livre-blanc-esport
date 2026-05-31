@@ -19,7 +19,7 @@ export function Chapter2() {
   return (
     <ChapterSection
       id="chap-2"
-      number="03"
+      number="02"
       kicker="Chapitre 2 · Le logo"
       accent="bone"
       title={
