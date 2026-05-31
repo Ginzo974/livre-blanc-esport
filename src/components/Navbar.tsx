@@ -28,7 +28,19 @@ export function Navbar() {
           DU&nbsp;LOGO&nbsp;À&nbsp;LA&nbsp;SCÈNE
         </a>
         <div className="hidden md:flex items-center gap-6 font-ui text-[0.7rem] uppercase tracking-[0.3em] text-fog">
-          <span>~ 25 min de lecture</span>
+          <a
+            href="/note-presentation"
+            className="hover:text-bone transition-colors"
+          >
+            Présentation
+          </a>
+          <a
+            href="/note-strategie"
+            className="hover:text-bone transition-colors"
+          >
+            Stratégie
+          </a>
+          <span className="text-fog/50">~ 25 min</span>
         </div>
         <a
           href="#pdf"
