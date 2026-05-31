@@ -34,7 +34,7 @@ export default async function Image() {
           }}
         >
           <div style={{ width: "60px", height: "2px", background: "#4d8eff" }} />
-          <div>LIVRE BLANC · MAI 2026</div>
+          <div>LIVRE BLANC</div>
         </div>
 
         {/* Main title */}

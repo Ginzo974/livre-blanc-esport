@@ -229,7 +229,7 @@ function Footer() {
         </div>
         <p className="text-fog leading-relaxed max-w-sm">
           Livre blanc · Master 2 Digital Design &amp; Creative Technologies ·
-          ESD Bordeaux · Mai 2026.
+          ESD Bordeaux · 2026.
         </p>
       </div>
       <div>

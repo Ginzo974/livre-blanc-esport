@@ -29,8 +29,6 @@ export function Navbar() {
         </a>
         <div className="hidden md:flex items-center gap-6 font-ui text-[0.7rem] uppercase tracking-[0.3em] text-fog">
           <span>~ 25 min de lecture</span>
-          <span className="h-3 w-px bg-bone/20" />
-          <span>Mai 2026</span>
         </div>
         <a
           href="#conclusion"
