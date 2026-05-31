@@ -111,7 +111,7 @@ export function Intro() {
         </p>
         <p>
           Ni catalogue descriptif, ni analyse marketing :{" "}
-          <strong>c&apos;est un manuel d&apos;action.</strong> À la fin de ta
+          <strong>c&apos;est un manuel d&apos;action.</strong>{" "}À la fin de ta
           lecture, tu comprends comment se construit une identité visuelle
           d&apos;équipe esport, et tu as la méthode pour lancer la tienne dans
           la bonne direction.

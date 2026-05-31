@@ -192,9 +192,10 @@ function CTABlock() {
         1 méthode.
       </h3>
       <p className="text-fog max-w-xl text-sm md:text-base mb-8">
-        Ce site <strong className="text-bone">est</strong> le livre blanc, dans
-        son intégralité. Pas de version papier, pas de résumé : tout est ici.
-        S&apos;il t&apos;a servi, partage-le.
+        J&apos;espère que ce livre blanc a pu t&apos;être utile. Si c&apos;est le
+        cas,{" "}
+        <strong className="text-[var(--color-blood)]">partage-le autour de toi</strong>{" "}:
+        ça m&apos;aiderait beaucoup pour mon étude.
       </p>
       <div className="flex flex-wrap gap-3 font-display text-sm tracking-widest">
         <a
