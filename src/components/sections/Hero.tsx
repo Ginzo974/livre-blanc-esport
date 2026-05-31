@@ -24,7 +24,7 @@ export function Hero() {
         className="absolute inset-0 opacity-50"
         style={{
           background:
-            "radial-gradient(ellipse 60% 40% at 20% 30%, rgba(0,54,167,0.18) 0%, transparent 70%), radial-gradient(ellipse 50% 35% at 80% 70%, rgba(200,29,37,0.16) 0%, transparent 70%)",
+            "radial-gradient(ellipse 60% 45% at 30% 32%, rgba(200,29,37,0.20) 0%, transparent 70%), radial-gradient(ellipse 50% 35% at 78% 70%, rgba(200,29,37,0.12) 0%, transparent 70%)",
         }}
       />
       {/* grid noise floor */}
@@ -32,7 +32,7 @@ export function Hero() {
         className="absolute inset-x-0 bottom-0 h-1/2 opacity-30"
         style={{
           background:
-            "linear-gradient(to top, rgba(0,54,167,0.25), transparent), repeating-linear-gradient(to right, rgba(255,255,255,0.04) 0 1px, transparent 1px 80px), repeating-linear-gradient(to bottom, rgba(255,255,255,0.04) 0 1px, transparent 1px 80px)",
+            "linear-gradient(to top, rgba(200,29,37,0.20), transparent), repeating-linear-gradient(to right, rgba(255,255,255,0.04) 0 1px, transparent 1px 80px), repeating-linear-gradient(to bottom, rgba(255,255,255,0.04) 0 1px, transparent 1px 80px)",
           maskImage:
             "linear-gradient(to top, black 20%, transparent 100%)",
         }}
@@ -56,8 +56,8 @@ export function Hero() {
         >
           <span className="block">DU LOGO</span>
           <span
-            className="block text-[var(--color-kc-blue-bright)]"
-            style={{ textShadow: "0 0 45px rgba(77,142,255,0.3)" }}
+            className="block text-[var(--color-blood)]"
+            style={{ textShadow: "0 0 45px rgba(200,29,37,0.3)" }}
           >
             À LA SCÈNE.
           </span>

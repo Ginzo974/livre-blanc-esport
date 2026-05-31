@@ -11,7 +11,7 @@ export function Intro() {
       number="00"
       kicker="Introduction"
       title={<>Quelque chose à propos d&apos;un K bleu.</>}
-      accent="kc-blue-bright"
+      accent="blood"
     >
       <Prose>
         <Lead>
@@ -45,7 +45,7 @@ export function Intro() {
         </p>
       </Prose>
 
-      <PullQuote accent="kc-blue-bright">
+      <PullQuote accent="blood">
         Quand tu regardes les équipes esport autour de toi,{" "}
         <span className="text-fog">tu vois deux mondes coexister.</span>
       </PullQuote>
@@ -195,13 +195,13 @@ function AuthorPresentation() {
       className="mt-16 md:-mx-12 border border-bone/10 bg-ink-2/60 p-7 md:p-10"
     >
       <div className="flex items-center gap-3 mb-5">
-        <span className="h-1.5 w-1.5 bg-[var(--color-kc-blue-bright)]" />
+        <span className="h-1.5 w-1.5 bg-[var(--color-blood)]" />
         <span className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-fog">
           Qui écrit ces pages
         </span>
       </div>
       <h3 className="font-display text-2xl md:text-3xl text-bone mb-5 leading-tight">
-        Quentin <span className="text-[var(--color-kc-blue-bright)]">Louis</span>
+        Quentin <span className="text-[var(--color-blood)]">Louis</span>
       </h3>
       <div className="prose-reading max-w-2xl">
         <p>
@@ -278,7 +278,7 @@ function StatCell({ s, delay }: { s: (typeof STATS)[number]; delay: number }) {
     <div ref={ref} className="bg-ink-2 p-5 md:p-6">
       <div className="font-display text-3xl md:text-4xl text-bone flex items-baseline gap-1 leading-none">
         <motion.span>{rounded}</motion.span>
-        <span className="text-[var(--color-kc-blue-bright)] text-2xl md:text-3xl">{s.suffix}</span>
+        <span className="text-[var(--color-blood)] text-2xl md:text-3xl">{s.suffix}</span>
       </div>
       <div className="mt-3 text-xs text-fog leading-snug">{s.label}</div>
     </div>
@@ -302,7 +302,7 @@ function AudienceTags() {
       {items.map((it) => (
         <div key={it.label} className="border border-bone/10 bg-ink-2 p-5">
           <div className="flex items-center gap-2 mb-2">
-            <span className="text-[var(--color-kc-blue-bright)] font-display">{it.icon}</span>
+            <span className="text-[var(--color-blood)] font-display">{it.icon}</span>
             <span className="font-display text-bone text-sm tracking-widest">
               {it.label.toUpperCase()}
             </span>

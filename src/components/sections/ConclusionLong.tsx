@@ -18,10 +18,10 @@ export function ConclusionLong() {
       title={
         <>
           Retour au{" "}
-          <span className="text-[var(--color-kc-blue-bright)]">K bleu.</span>
+          <span className="text-[var(--color-blood)]">K bleu.</span>
         </>
       }
-      accent="kc-blue-bright"
+      accent="blood"
     >
       <Lead>
         J&apos;ai ouvert ce livre par un K bleu vu sur Twitch en 2021. Je le
@@ -49,7 +49,7 @@ export function ConclusionLong() {
         </p>
       </Prose>
 
-      <PullQuote accent="kc-blue-bright">
+      <PullQuote accent="blood">
         C&apos;est ça, la différence entre une équipe esport qui existe et{" "}
         <span className="text-fog">une équipe esport qu&apos;on retient.</span>
       </PullQuote>
@@ -161,7 +161,7 @@ function ThreeLessons() {
           transition={{ duration: 0.6, delay: i * 0.08 }}
           className="bg-ink-2 p-6 md:p-7"
         >
-          <div className="font-display text-[var(--color-kc-blue-bright)] text-3xl mb-4">
+          <div className="font-display text-[var(--color-blood)] text-3xl mb-4">
             {l.n}
           </div>
           <h4 className="font-display text-base md:text-lg text-bone mb-2 leading-tight">
@@ -190,7 +190,7 @@ function CTABlock() {
         </div>
         <h3 className="font-display text-2xl md:text-4xl text-bone mb-3 leading-tight">
           20 pages.{" "}
-          <span className="text-[var(--color-kc-blue-bright)]">6 cas d&apos;étude.</span>{" "}
+          <span className="text-[var(--color-blood)]">6 cas d&apos;étude.</span>{" "}
           1 méthode.
         </h3>
         <p className="text-fog max-w-xl text-sm md:text-base">

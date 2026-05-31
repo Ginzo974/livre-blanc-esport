@@ -19,11 +19,11 @@ export function Chapter4() {
       id="chap-4"
       number="04"
       kicker="Chapitre 4 · Le système 360"
-      accent="bone"
+      accent="blood"
       title={
         <>
           Un logo seul, c&apos;est un drapeau planté dans le vide.{" "}
-          <span className="text-bone">Le système, c&apos;est le pays autour.</span>
+          <span className="text-[var(--color-blood)]">Le système, c&apos;est le pays autour.</span>
         </>
       }
       subtitle="Typographie, jersey, broadcast, social, événement live, app communautaire, merch. C'est là que la majorité des équipes échouent."

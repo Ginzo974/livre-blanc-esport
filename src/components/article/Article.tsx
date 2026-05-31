@@ -258,8 +258,8 @@ const AUDIENCE_META: Record<
   { icon: string; label: string; color: string }
 > = {
   curieux: { icon: "◆", label: "Curieux", color: "var(--color-blood)" },
-  designer: { icon: "◇", label: "Designer", color: "var(--color-kc-blue-bright)" },
-  dirigeant: { icon: "▣", label: "Dirigeant", color: "var(--color-bone)" },
+  designer: { icon: "◇", label: "Designer", color: "var(--color-blood)" },
+  dirigeant: { icon: "▣", label: "Dirigeant", color: "var(--color-blood)" },
 };
 
 export function AsideNote({

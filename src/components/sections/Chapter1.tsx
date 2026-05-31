@@ -20,11 +20,11 @@ export function Chapter1() {
       id="chap-1"
       number="01"
       kicker="Chapitre 1"
-      accent="kc-blue-bright"
+      accent="blood"
       title={
         <>
           L&apos;esport n&apos;est pas un sport{" "}
-          <span className="text-[var(--color-kc-blue-bright)]">comme un autre.</span>
+          <span className="text-[var(--color-blood)]">comme un autre.</span>
         </>
       }
       subtitle="Le sport classique a eu un siècle pour optimiser son visuel. L'esport en a eu quinze."
@@ -49,7 +49,7 @@ export function Chapter1() {
           alt="Le Parc des Princes, stade du Paris Saint-Germain"
           kicker="Parc des Princes · 1970"
           caption="50 000 personnes physiquement présentes. Le logo lu à trente mètres. Un siècle de codes éprouvés."
-          accent="kc-blue"
+          accent="blood"
           aspect="16/10"
         />
       </div>
@@ -78,7 +78,7 @@ export function Chapter1() {
 
       <PullQuote>
         Deux soirées, deux sports.{" "}
-        <span className="text-[var(--color-kc-blue-bright)]">Surtout, deux mondes de design.</span>
+        <span className="text-[var(--color-blood)]">Surtout, deux mondes de design.</span>
       </PullQuote>
 
       <H3>Le sport classique a eu un siècle pour optimiser son visuel</H3>
@@ -162,7 +162,7 @@ export function Chapter1() {
           />
         </div>
         <div>
-          <div className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-[var(--color-kc-blue-bright)] mb-1">
+          <div className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-[var(--color-blood)] mb-1">
             Référence · 2013
           </div>
           <p className="text-sm text-bone/85 leading-snug">

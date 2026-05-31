@@ -21,10 +21,11 @@ export function Chapter2() {
       id="chap-2"
       number="02"
       kicker="Chapitre 2 · Le logo"
-      accent="bone"
+      accent="blood"
       title={
         <>
-          Le logo, <span className="text-bone">point d&apos;ancrage visuel.</span>
+          Le logo,{" "}
+          <span className="text-[var(--color-blood)]">point d&apos;ancrage visuel.</span>
         </>
       }
       subtitle="C'est la première chose que ton fan rencontre. Si le logo rate, tout le reste rame derrière."

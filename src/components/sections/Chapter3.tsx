@@ -20,11 +20,11 @@ export function Chapter3() {
       id="chap-3"
       number="03"
       kicker="Chapitre 3 · La couleur"
-      accent="bone"
+      accent="blood"
       title={
         <>
           La couleur,{" "}
-          <span className="text-bone">langage émotionnel.</span>
+          <span className="text-[var(--color-blood)]">langage émotionnel.</span>
         </>
       }
       subtitle="Un logo donne la silhouette de l'identité. La couleur lui donne le sang."
@@ -54,7 +54,7 @@ export function Chapter3() {
       </Prose>
 
       {/* Fnatic */}
-      <H3 accent="fnatic">Fnatic · L&apos;orange qui a duré vingt et un ans</H3>
+      <H3 accent="blood">Fnatic · L&apos;orange qui a duré vingt et un ans</H3>
       <AsideNote audiences={["curieux", "designer", "dirigeant"]} />
       <PaletteRow
         team="Fnatic"
@@ -98,7 +98,7 @@ export function Chapter3() {
       </Prose>
 
       <PullQuote
-        accent="fnatic"
+        accent="blood"
         author="Sam Mathews · CEO de Fnatic"
       >
         Un rebrand doit être une itération et un pas en avant,{" "}
@@ -117,7 +117,7 @@ export function Chapter3() {
       </Prose>
 
       {/* KC split */}
-      <H3 accent="kc-blue-bright">Karmine Corp · La double palette de 2026</H3>
+      <H3 accent="blood">Karmine Corp · La double palette de 2026</H3>
       <AsideNote audiences={["curieux", "dirigeant"]} />
       <PaletteRow
         team="Karmine Corp"
@@ -153,8 +153,8 @@ export function Chapter3() {
         </p>
       </Prose>
 
-      <PullQuote accent="kc-blue-bright">
-        C&apos;est un <span className="text-[var(--color-kc-blue-bright)]">code couleur qui classe les équipes</span>.
+      <PullQuote accent="blood">
+        C&apos;est un <span className="text-[var(--color-blood)]">code couleur qui classe les équipes</span>.
         Comme une écurie de Formule 1 qui utiliserait deux décorations pour
         deux voitures d&apos;une même maison.
       </PullQuote>
@@ -170,7 +170,7 @@ export function Chapter3() {
       <KCSplitDuo />
 
       {/* NAVI */}
-      <H3 accent="navi">NAVI · La constance comme stratégie</H3>
+      <H3 accent="blood">NAVI · La constance comme stratégie</H3>
       <AsideNote audiences={["curieux", "dirigeant"]} />
       <PaletteRow
         team="NAVI"
@@ -471,7 +471,7 @@ function KCSplitDuo() {
         <figcaption className="p-5 border-t border-bone/5 flex items-start gap-4">
           <span className="block h-3 w-3 mt-1 shrink-0" style={{ background: "#0036a7" }} />
           <div>
-            <div className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-[var(--color-kc-blue-bright)] mb-1">
+            <div className="font-ui text-[0.65rem] uppercase tracking-[0.3em] text-[var(--color-blood)] mb-1">
               KCB en LEC · Académie
             </div>
             <p className="text-sm text-bone/85 leading-snug">
