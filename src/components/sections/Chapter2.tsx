@@ -56,7 +56,7 @@ export function Chapter2() {
       <Prose>
         <p>
           Karmine Corp a fait le choix le plus radical possible.{" "}
-          <strong>Un seul caractère, le K.</strong> Pas de mascotte, pas
+          <strong>Un seul caractère, le K.</strong>{" "}Pas de mascotte, pas
           d&apos;animal, pas de symbole exotique. Trois lignes anguleuses,
           géométriques, et c&apos;est tout.
         </p>
@@ -105,7 +105,7 @@ export function Chapter2() {
         </p>
         <p>
           Si tu regardes attentivement le T, tu verras{" "}
-          <strong>trois lignes diagonales ascendantes</strong> intégrées dans
+          <strong>trois lignes diagonales ascendantes</strong>{" "}intégrées dans
           la lettre. Ce ne sont pas des décorations. Ce sont des ailes. Et ces
           ailes racontent une histoire de vingt ans.
         </p>
@@ -114,7 +114,7 @@ export function Chapter2() {
           <em>Wings of Happiness</em>, introduite par SK Telecom en 2005. Quand
           SK Telecom T1 est devenu simplement T1 en octobre 2019, les
           designers ont fait un choix précis :{" "}
-          <strong>garder l&apos;aile, supprimer le cercle.</strong> Le nom
+          <strong>garder l&apos;aile, supprimer le cercle.</strong>{" "}Le nom
           raccourcit, l&apos;héritage reste.
         </p>
       </Prose>
@@ -131,7 +131,7 @@ export function Chapter2() {
       <Prose>
         <p>
           T1 démontre une approche que peu d&apos;équipes osent.{" "}
-          <strong>Le minimalisme chargé d&apos;archives.</strong> Le palmarès
+          <strong>Le minimalisme chargé d&apos;archives.</strong>{" "}Le palmarès
           de T1 — six titres Worlds, dont les deux derniers en 2024 et 2025 —
           légitime ce logo qui semble simple mais qui porte un legs.
         </p>
@@ -157,13 +157,13 @@ export function Chapter2() {
       <Prose>
         <p>
           G2 Esports a fait l&apos;inverse exact de KC.{" "}
-          <strong>Pas du tout la simplicité.</strong> Un logo riche, narratif,
+          <strong>Pas du tout la simplicité.</strong>{" "}Un logo riche, narratif,
           illustratif, qui raconte tout immédiatement.
         </p>
         <p>
           Quand Carlos « Ocelote » Rodriguez a fondé l&apos;équipe en 2014, il
           cherchait un symbole qui incarne ce qu&apos;il voulait construire. Il
-          a choisi <strong>le samurai. Patient, fort, sage.</strong> Le logo G2
+          a choisi <strong>le samurai. Patient, fort, sage.</strong>{" "}Le logo G2
           mélange une silhouette de samurai avec une typographie dessinée à la
           main, et porte une cicatrice de bataille diagonale qui symbolise le
           combat mené pour arriver au sommet.
@@ -220,7 +220,7 @@ export function Chapter2() {
           <li>Dragon en vol, tracé en lignes fines, avec une orbite de particules autour de lui.</li>
         </ul>
         <p>
-          <strong>La règle :</strong> si tu peux remplacer le nom de ton équipe
+          <strong>La règle :</strong>{" "}si tu peux remplacer le nom de ton équipe
           par n&apos;importe quel autre nom d&apos;équipe esport sans que le
           logo paraisse incohérent, le logo est générique. Recommence.
         </p>

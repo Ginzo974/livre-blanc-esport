@@ -62,7 +62,7 @@ export function Chapter4() {
         </p>
         <p>
           L&apos;esport a développé sa propre grammaire typographique.{" "}
-          <strong>Sans-serif angulaires, géométriques, modernes.</strong> Très
+          <strong>Sans-serif angulaires, géométriques, modernes.</strong>{" "}Très
           peu d&apos;équipes utilisent du serif (jugé trop classique) ou du
           script (illisible en broadcast). Le centre de gravité est la
           sans-serif moderne, déclinée en plusieurs personnalités.
@@ -73,11 +73,11 @@ export function Chapter4() {
       <Prose>
         <p>
           La sans-serif T1 a trois caractéristiques visibles.{" "}
-          <strong>Un italique léger</strong> qui suggère le mouvement.{" "}
-          <strong>Des lettres bien ouvertes</strong> (les espaces à
+          <strong>Un italique léger</strong>{" "}qui suggère le mouvement.{" "}
+          <strong>Des lettres bien ouvertes</strong>{" "}(les espaces à
           l&apos;intérieur des lettres restent larges) qui gardent la lisibilité
           en petit.{" "}
-          <strong>Des terminaisons droites</strong> qui durcissent le rythme.
+          <strong>Des terminaisons droites</strong>{" "}qui durcissent le rythme.
           C&apos;est une typo qui parle peu mais qui parle ferme.
         </p>
         <p>
@@ -190,18 +190,18 @@ export function Chapter4() {
           Longtemps, l&apos;app communautaire a été le territoire vacant de
           l&apos;esport. Vitality a ouvert la voie avec V.Hive, une app de
           gamification sur blockchain. Mais ce sont aujourd&apos;hui{" "}
-          <strong>deux clubs français</strong> qui structurent le mieux le
+          <strong>deux clubs français</strong>{" "}qui structurent le mieux le
           terrain — avec deux philosophies opposées.
         </p>
         <p>
-          <strong>Karmine Corp</strong> mise sur le companion pragmatique.
+          <strong>Karmine Corp</strong>{" "}mise sur le companion pragmatique.
           Prochain match du Blue Wall en un coup d&apos;œil, résultats
           multi-jeux, dernières vidéos, boutique intégrée, mini-jeu KWordle.
           Pas de blockchain, pas d&apos;esbroufe — un outil qui sert le fan au
           quotidien. <em>Ça marche.</em>
         </p>
         <p>
-          <strong>Gentle Mates</strong> mise sur le contenu. L&apos;app
+          <strong>Gentle Mates</strong>{" "}mise sur le contenu. L&apos;app
           prolonge leur ADN de créateurs : intégration YouTube (vidéos et
           replays), matchs en mode spoiler-free, calendrier personnalisable,
           et le M8Box qui arrive en 2026.{" "}

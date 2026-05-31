@@ -59,7 +59,7 @@ export function ConclusionLong() {
         <p>
           Une équipe esport, ce n&apos;est pas un logo posé sur un fond noir
           avec un nom anglo-saxon vaguement agressif. C&apos;est un{" "}
-          <strong>système visuel cohérent</strong> qui vit sur des écrans qui
+          <strong>système visuel cohérent</strong>{" "}qui vit sur des écrans qui
           ne s&apos;éteignent jamais, devant une communauté qui n&apos;a pas
           de stade, à travers des supports qui changent toutes les saisons.
         </p>
@@ -121,7 +121,7 @@ export function ConclusionLong() {
           qui font la différence entre un livre fini et un livre bâclé.
         </p>
         <p>
-          <strong>À toi qui me lis.</strong> Si tu as parcouru ces vingt
+          <strong>À toi qui me lis.</strong>{" "}Si tu as parcouru ces vingt
           pages, continue. L&apos;esport a besoin de designers qui prennent
           ces questions au sérieux.
         </p>

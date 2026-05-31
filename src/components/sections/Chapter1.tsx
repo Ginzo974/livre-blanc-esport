@@ -135,7 +135,7 @@ export function Chapter1() {
           coin d&apos;un overlay déjà surchargé.
         </p>
         <p>
-          <strong>Cloud9</strong> a conçu son logo en 2013 avec ces contraintes
+          <strong>Cloud9</strong>{" "}a conçu son logo en 2013 avec ces contraintes
           en tête. Le nuage à trois spirales est aussi lisible à vingt-quatre
           pixels que sur un mur de stade.{" "}
           <em>
@@ -197,10 +197,10 @@ export function Chapter1() {
           Le merch esport ressemble plus à du streetwear qu&apos;à des produits
           dérivés sportifs. Drops limités, collections capsule, collaborations
           avec des marques de mode.{" "}
-          <strong>Karmine Corp</strong> dévoile ses jerseys 2026 lors
+          <strong>Karmine Corp</strong>{" "}dévoile ses jerseys 2026 lors
           d&apos;un livestream en collaboration avec Fulllife.{" "}
-          <strong>Gentle Mates</strong> s&apos;associe avec Lacoste.{" "}
-          <strong>NAVI</strong> vend son Pro Kit Jersey 2026 à 90 dollars en
+          <strong>Gentle Mates</strong>{" "}s&apos;associe avec Lacoste.{" "}
+          <strong>NAVI</strong>{" "}vend son Pro Kit Jersey 2026 à 90 dollars en
           édition limitée.
         </p>
         <blockquote>

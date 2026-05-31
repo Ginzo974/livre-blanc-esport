@@ -129,33 +129,33 @@ export function Intro() {
         </p>
         <ul>
           <li>
-            <strong>Karmine Corp.</strong> Communauté française incarnée par un
+            <strong>Karmine Corp.</strong>{" "}Communauté française incarnée par un
             K minimaliste, devenu icône en cinq ans. Seul cas d&apos;une double
             palette de couleurs (rouge LEC, bleu KCB), annoncée en janvier 2026.
           </li>
           <li>
-            <strong>T1.</strong> Héritage coréen, aile cachée dans le T. Vingt
+            <strong>T1.</strong>{" "}Héritage coréen, aile cachée dans le T. Vingt
             ans d&apos;identité SK Telecom résumés dans un logo qui semble
             minimaliste mais porte tout un passé.
           </li>
           <li>
-            <strong>G2 Esports.</strong> Opposé exact de la simplicité. Le
+            <strong>G2 Esports.</strong>{" "}Opposé exact de la simplicité. Le
             samurai cicatrisé fondé en 2014, un logo riche qui raconte une
             histoire et tient cette image sur dix ans dans toute la marque.
           </li>
           <li>
-            <strong>Fnatic.</strong> L&apos;orange et le noir tenus depuis vingt
+            <strong>Fnatic.</strong>{" "}L&apos;orange et le noir tenus depuis vingt
             et un ans. L&apos;une des plus vieilles signatures couleur de
             l&apos;esport, avec une règle simple : faire évoluer, jamais tout
             réécrire.
           </li>
           <li>
-            <strong>NAVI.</strong> Sobriété ukrainienne en jaune et noir, quinze
+            <strong>NAVI.</strong>{" "}Sobriété ukrainienne en jaune et noir, quinze
             ans de palette identique. Exception de constance dans une industrie
             qui rebrand tous les deux ans.
           </li>
           <li>
-            <strong>Team Vitality.</strong> Le jaune et noir français. Dix
+            <strong>Team Vitality.</strong>{" "}Le jaune et noir français. Dix
             disciplines compétitives, une app communautaire (V.Hive) et un
             partenariat avec le PSG en EAFC.
           </li>
@@ -206,7 +206,7 @@ function AuthorPresentation() {
       <div className="prose-reading max-w-2xl">
         <p>
           Passionné de jeux vidéo depuis tout petit, j&apos;ai découvert{" "}
-          <strong>League of Legends en 2016</strong> — et je n&apos;ai jamais
+          <strong>League of Legends en 2016</strong>{" "}— et je n&apos;ai jamais
           vraiment lâché la scène esport depuis. Pas observée de loin : vécue de
           l&apos;intérieur.
         </p>

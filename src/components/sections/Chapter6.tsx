@@ -126,28 +126,28 @@ export function Chapter6() {
         <Prose>
           <ul>
             <li>
-              <strong>Jeu principal :</strong> League of Legends, avec ambition
+              <strong>Jeu principal :</strong>{" "}League of Legends, avec ambition
               d&apos;arriver en LEC à moyen terme.
             </li>
             <li>
-              <strong>Valeurs centrales :</strong> la meute solidaire dans
+              <strong>Valeurs centrales :</strong>{" "}la meute solidaire dans
               l&apos;effort, mais redoutable face à l&apos;adversaire. La
               poursuite collective de l&apos;objectif sans qu&apos;aucun joueur
               ne soit laissé en arrière.
             </li>
             <li>
-              <strong>Audience cible :</strong> joueurs et spectateurs
+              <strong>Audience cible :</strong>{" "}joueurs et spectateurs
               francophones de 18 à 35 ans, qui veulent appartenir à un groupe
               qui chasse ensemble plutôt qu&apos;à une équipe de solo-carries.
             </li>
             <li>
-              <strong>Positionnement :</strong> l&apos;esport vu comme une
+              <strong>Positionnement :</strong>{" "}l&apos;esport vu comme une
               meute, pas comme un alignement d&apos;individus. HUNTERS assume
               une esthétique prédatrice — pas pour faire peur, pour exprimer
               que le collectif est plus fort que la somme des joueurs.
             </li>
             <li>
-              <strong>Mot fondateur :</strong> hunters = chasseurs, poursuite,
+              <strong>Mot fondateur :</strong>{" "}hunters = chasseurs, poursuite,
               meute. <em>Le nom est sa thèse.</em>
             </li>
           </ul>
@@ -170,7 +170,7 @@ export function Chapter6() {
             laissée par une griffure. Trois pointes ascendantes qui encadrent
             la lance et forment l&apos;arête supérieure. De part et d&apos;autre,
             des extensions latérales en griffure qui composent{" "}
-            <strong>deux H</strong> quand on prend du recul.
+            <strong>deux H</strong>{" "}quand on prend du recul.
           </p>
           <p>
             Le double H est subtil. Il apparaît seulement après que l&apos;œil
@@ -178,7 +178,7 @@ export function Chapter6() {
             type de double lecture que l&apos;aile cachée dans le T de T1, mais
             dans un autre style. Dans les espaces vides entre la lance centrale
             et les pointes latérales, on peut deviner{" "}
-            <strong>des yeux de chasseur</strong> — pas frontaux, pas
+            <strong>des yeux de chasseur</strong>{" "}— pas frontaux, pas
             explicites, plutôt suggérés par les espaces noirs entre les
             éléments rouges. <em>Le logo te regarde autant que tu le regardes.</em>
           </p>
@@ -196,7 +196,7 @@ export function Chapter6() {
           <p className="text-sm text-bone/85 leading-relaxed">
             Le logo a des détails fins (pointes effilées, griffures étroites).
             À 24 px, ces détails se compressent. Une{" "}
-            <strong>version simplifiée pour les petits formats</strong> est
+            <strong>version simplifiée pour les petits formats</strong>{" "}est
             obligatoire : double H et effet griffure conservés, nombre de
             pointes réduit. C&apos;est la même discipline qu&apos;a appliquée
             G2 avec son samurai.
@@ -220,14 +220,14 @@ export function Chapter6() {
 
         <Prose>
           <p>
-            <strong>Rouge sang</strong> comme couleur primaire. Pas un rouge
+            <strong>Rouge sang</strong>{" "}comme couleur primaire. Pas un rouge
             corporate, pas un rouge ketchup. Un rouge dense qui évoque la trace
             laissée par la griffure, la marque du prédateur. Le rouge est codé
             « ennemi » dans le moteur de LoL — et HUNTERS l&apos;assume.{" "}
             <em>L&apos;équipe se présente comme l&apos;adversaire à craindre.</em>
           </p>
           <p>
-            <strong>Noir profond</strong> comme fond et ancre. La nuit pendant
+            <strong>Noir profond</strong>{" "}comme fond et ancre. La nuit pendant
             la chasse, l&apos;invisibilité du prédateur avant l&apos;embuscade.
             Le noir n&apos;est pas une absence de couleur. C&apos;est le
             contraste qui fait exister le rouge.
@@ -255,14 +255,14 @@ export function Chapter6() {
             corps pour tout le reste.
           </p>
           <p>
-            <strong>Quantix</strong> porte le logo et les titres. Une
+            <strong>Quantix</strong>{" "}porte le logo et les titres. Une
             sans-serif aux angles vifs et aux terminaisons coupées net : ses
             verticales tendues prolongent l&apos;effet griffure du logo. C&apos;est
             la voix forte de la marque — celle qu&apos;on lit avec le souffle
             court.
           </p>
           <p>
-            <strong>Overused Grotesk</strong> prend le relais pour le corps de
+            <strong>Overused Grotesk</strong>{" "}prend le relais pour le corps de
             texte. Plus neutre, très lisible à petite taille, elle laisse Quantix
             briller sur les titres sans jamais fatiguer l&apos;œil sur les
             paragraphes. Le duo classique : une police qui claque, une police
@@ -294,7 +294,7 @@ export function Chapter6() {
           <p>
             Noir dominant, HUNTERS et logo en rouge sang sur le torse. Numéro
             et handle du joueur dans le haut du dos, également en rouge. Un{" "}
-            <strong>patch meute</strong> discret sur la manche gauche — symbole
+            <strong>patch meute</strong>{" "}discret sur la manche gauche — symbole
             de l&apos;appartenance collective, pas du joueur individuel. Coupe
             contemporaine, ni trop ample ni trop sportif, inspirée de la
             collaboration Fulllife de KC en termes de matière et de

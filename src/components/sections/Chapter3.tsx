@@ -45,10 +45,10 @@ export function Chapter3() {
           </strong>
         </p>
         <p>
-          Trois équipes occupent ce chapitre. <strong>Fnatic</strong> avec un
+          Trois équipes occupent ce chapitre. <strong>Fnatic</strong>{" "}avec un
           orange audacieux tenu pendant vingt et un ans.{" "}
-          <strong>Karmine Corp</strong> avec une double palette de couleurs
-          introduit en 2026. <strong>NAVI</strong> avec quinze ans de palette
+          <strong>Karmine Corp</strong>{" "}avec une double palette de couleurs
+          introduit en 2026. <strong>NAVI</strong>{" "}avec quinze ans de palette
           identique, par discipline plus que par paresse.
         </p>
       </Prose>
@@ -68,7 +68,7 @@ export function Chapter3() {
         <p>
           Fondée à Londres en 2004 par Sam et Anne Mathews, Fnatic est
           l&apos;une des plus vieilles structures de l&apos;esport.{" "}
-          <strong>Vingt et un ans d&apos;existence.</strong> Et pendant ces
+          <strong>Vingt et un ans d&apos;existence.</strong>{" "}Et pendant ces
           vingt et un ans, deux couleurs n&apos;ont jamais bougé : orange et
           noir.
         </p>
@@ -183,7 +183,7 @@ export function Chapter3() {
       <Prose>
         <p>
           Depuis 2011, NAVI porte du jaune et du noir. <strong>Depuis quinze
-          ans.</strong> À travers des dizaines de rosters, deux jeux principaux
+          ans.</strong>{" "}À travers des dizaines de rosters, deux jeux principaux
           (Counter-Strike, Dota 2), des extensions multi-titres, des évolutions
           de logo, des changements de slogan, la palette n&apos;a jamais bougé.
         </p>
@@ -223,7 +223,7 @@ export function Chapter3() {
         <p>
           Aucune des trois n&apos;est tombée dans le piège de couleur le plus
           courant de l&apos;esport :{" "}
-          <strong>le noir avec un accent néon générique.</strong> Vert néon sur
+          <strong>le noir avec un accent néon générique.</strong>{" "}Vert néon sur
           fond noir, violet électrique sur fond noir, cyan sur fond noir. Ces
           palettes saturent l&apos;industrie. Elles ne disent rien parce
           qu&apos;elles disent toutes la même chose.

@@ -202,7 +202,7 @@ export function Chapter5() {
 
       <Prose>
         <p>
-          <strong>Règle clé pour les budgets serrés :</strong> investis sur le
+          <strong>Règle clé pour les budgets serrés :</strong>{" "}investis sur le
           logo et la palette. Tu peux improviser le merch au Tier 1. Tu ne peux
           pas improviser le logo sans perdre la lisibilité de toute la marque.
         </p>
