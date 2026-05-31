@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Accès au livre blanc — Du logo à la scène</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  @page { size: A4; margin: 0; }
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  :root {
+    --ink: #0c0c0e;
+    --bone: #f1ede4;
+    --fog: #8f8980;
+    --blood: #d11f27;
+    --line: rgba(241,237,228,0.13);
+    --line-strong: rgba(241,237,228,0.32);
+  }
+  html, body { background: var(--ink); }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--bone);
+    width: 210mm;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    position: relative;
+    width: 210mm;
+    height: 297mm;
+    padding: 16mm 18mm 13mm;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .topbar { position: absolute; top: 0; left: 0; right: 0; height: 3mm; background: var(--blood); }
+  .glow {
+    position: absolute; top: 10mm; left: 50%; transform: translateX(-50%);
+    width: 180mm; height: 120mm; pointer-events: none;
+    background: radial-gradient(ellipse at center, rgba(209,31,39,0.18) 0%, transparent 70%);
+  }
+
+  .masthead {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    border-bottom: 1px solid var(--line-strong); padding-bottom: 7px;
+  }
+  .wordmark { font-family: 'Russo One', sans-serif; font-size: 11pt; letter-spacing: 0.05em; color: var(--bone); }
+  .masthead .meta {
+    font-family: 'Chakra Petch', monospace; font-size: 7pt; text-transform: uppercase;
+    letter-spacing: 0.22em; color: var(--fog); text-align: right; line-height: 1.7;
+  }
+
+  .center {
+    flex: 1; display: flex; flex-direction: column; align-items: center;
+    justify-content: center; text-align: center; position: relative; z-index: 1;
+  }
+  .eyebrow {
+    display: flex; align-items: center; gap: 10px;
+    font-family: 'Chakra Petch', monospace; font-size: 8.5pt; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.32em; color: var(--blood);
+    margin-bottom: 14px;
+  }
+  .eyebrow::before, .eyebrow::after { content: ''; width: 26px; height: 2px; background: var(--blood); display: inline-block; }
+  h1 {
+    font-family: 'Russo One', sans-serif; font-weight: 400;
+    font-size: 40pt; line-height: 1.02; letter-spacing: -0.01em; color: var(--bone);
+  }
+  h1 .red { color: var(--blood); }
+  .subtitle {
+    font-size: 12pt; line-height: 1.45; color: var(--fog);
+    margin-top: 16px; max-width: 135mm;
+  }
+
+  .access {
+    margin-top: 16mm; display: flex; align-items: center; gap: 12mm;
+  }
+  .qr {
+    background: #ffffff; padding: 5mm; border-radius: 6px;
+    box-shadow: 0 0 0 1px var(--line-strong);
+  }
+  .qr img { display: block; width: 36mm; height: 36mm; }
+  .access-text { text-align: left; }
+  .access-label {
+    font-family: 'Chakra Petch', monospace; font-size: 8pt; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.28em; color: var(--blood); margin-bottom: 8px;
+  }
+  .access-text p { font-size: 10.5pt; color: var(--fog); line-height: 1.5; max-width: 75mm; margin-bottom: 12px; }
+  .url {
+    display: inline-block; font-family: 'Chakra Petch', monospace; font-weight: 600;
+    font-size: 13pt; letter-spacing: 0.01em; color: var(--bone);
+    text-decoration: none; padding: 9px 16px;
+    border: 1px solid var(--line-strong); border-radius: 4px;
+    background: rgba(241,237,228,0.04);
+  }
+  .url .arrow { color: var(--blood); margin-left: 8px; }
+
+  .foot {
+    margin-top: auto; padding-top: 6mm; border-top: 1px solid var(--line-strong);
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-family: 'Chakra Petch', monospace; font-size: 7.5pt;
+    text-transform: uppercase; letter-spacing: 0.2em; color: var(--fog);
+  }
+  .foot .accent { color: var(--blood); }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="topbar"></div>
+    <div class="glow"></div>
+
+    <header class="masthead">
+      <div class="wordmark">DU&nbsp;LOGO&nbsp;À&nbsp;LA&nbsp;SCÈNE</div>
+      <div class="meta">
+        Livre blanc · Identité visuelle esport<br />
+        Page d'accès — Réf. DLS·WEB·2026
+      </div>
+    </header>
+
+    <div class="center">
+      <div class="eyebrow">Le livre blanc en ligne</div>
+      <h1>Du logo<br />à la <span class="red">scène.</span></h1>
+      <p class="subtitle">
+        Le livre blanc est un long-read web. Le site <strong>est</strong> le
+        livre blanc dans son intégralité, à lire directement en ligne.
+      </p>
+
+      <div class="access">
+        <div class="qr">
+          <img src="_qr.png" alt="QR code vers le livre blanc" />
+        </div>
+        <div class="access-text">
+          <div class="access-label">Accéder au livre</div>
+          <p>Clique le lien ci-dessous, ou scanne le QR code avec ton téléphone.</p>
+          <a class="url" href="https://du-logo-a-la-scene.vercel.app">
+            du-logo-a-la-scene.vercel.app<span class="arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="foot">
+      <span>Quentin LOUIS · ESD Bordeaux · 2026</span>
+      <span class="accent">Master Design graphique</span>
+    </footer>
+  </div>
+</body>
+</html>
