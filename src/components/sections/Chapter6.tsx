@@ -165,22 +165,21 @@ export function Chapter6() {
             assume sa complexité pour porter immédiatement un sens.
           </p>
           <p>
-            Ce qu&apos;on voit dans la version finale : au centre,{" "}
-            <strong>une lance effilée descendante</strong>, comme une déchirure
-            laissée par une griffure. Trois pointes ascendantes qui encadrent
-            la lance et forment l&apos;arête supérieure. De part et d&apos;autre,
-            des extensions latérales en griffure qui composent{" "}
-            <strong>deux H</strong>{" "}quand on prend du recul.
+            Ce qu&apos;on voit dans la version finale :{" "}
+            <strong>un H</strong>, assumé dans un style sauvage et
+            néo-brutaliste. Pas un H sage : des montants taillés comme des
+            griffures, une séparation nette en son centre, des pointes
+            ascendantes qui en cassent la régularité. La lettre est là, mais
+            elle griffe.
           </p>
           <p>
-            Le double H est subtil. Il apparaît seulement après que l&apos;œil
-            ait traversé l&apos;effet général de griffure. C&apos;est le même
-            type de double lecture que l&apos;aile cachée dans le T de T1, mais
-            dans un autre style. Dans les espaces vides entre la lance centrale
-            et les pointes latérales, on peut deviner{" "}
-            <strong>des yeux de chasseur</strong>,{" "}pas frontaux, pas
-            explicites, plutôt suggérés par les espaces noirs entre les
-            éléments rouges. <em>Le logo te regarde autant que tu le regardes.</em>
+            Et au cœur de ce H, dans la séparation centrale, deux fentes se
+            répondent : <strong>les yeux du chasseur</strong>. Pas frontaux,
+            pas explicites, juste suggérés par les espaces noirs entre les
+            éléments rouges. C&apos;est la même idée de double lecture que
+            l&apos;aile cachée dans le T de T1, mais dans un autre registre :
+            un fauve à l&apos;affût de sa proie.{" "}
+            <em>Le logo te regarde autant que tu le regardes.</em>
           </p>
           <p>
             La symétrie verticale parfaite équilibre l&apos;agressivité des
@@ -197,7 +196,7 @@ export function Chapter6() {
             Le logo a des détails fins (pointes effilées, griffures étroites).
             À 24 px, ces détails se compressent. Une{" "}
             <strong>version simplifiée pour les petits formats</strong>{" "}est
-            obligatoire : double H et effet griffure conservés, nombre de
+            obligatoire : le H et son effet griffure conservés, nombre de
             pointes réduit. C&apos;est la même discipline qu&apos;a appliquée
             G2 avec son samurai.
           </p>
@@ -415,8 +414,8 @@ export function Chapter6() {
             Le logo n&apos;est pas simple, mais il n&apos;est jamais gratuit :
             chaque trait a une intention, chaque pointe une fonction. Le rouge
             sur noir aurait pu se fondre dans la masse ; la texture de griffure
-            le rend reconnaissable, et le double H ancre l&apos;équipe dans le
-            symbole.
+            le rend reconnaissable, et les yeux du chasseur cachés dans le H
+            lui donnent une âme.
           </p>
         </Prose>
 
@@ -449,7 +448,7 @@ function HuntersLogoSVG() {
       <div className="relative w-full" style={{ aspectRatio: "665 / 832" }}>
         <Image
           src="/images/logo-hunters/hunters-rouge-crop.png"
-          alt="Logo HUNTERS · trois lances ascendantes encadrées par des griffures formant un double H"
+          alt="Logo HUNTERS · un H néo-brutaliste en griffures, avec les yeux du chasseur suggérés au centre"
           fill
           sizes="(min-width: 768px) 240px, 200px"
           className="object-contain"

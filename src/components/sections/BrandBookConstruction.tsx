@@ -404,10 +404,10 @@ function AnatomyPanel() {
     label: string;
     highlight: "lances" | "h-forms" | "center" | "negative";
   }> = [
-    { label: "Ascending lances", highlight: "lances" },
-    { label: "Lateral H forms", highlight: "h-forms" },
-    { label: "Center lance", highlight: "center" },
-    { label: "Negative counter-forms", highlight: "negative" },
+    { label: "Le H sauvage", highlight: "h-forms" },
+    { label: "Griffures montantes", highlight: "lances" },
+    { label: "Séparation centrale", highlight: "center" },
+    { label: "Yeux du chasseur", highlight: "negative" },
   ];
 
   return (
@@ -484,17 +484,14 @@ function HighlightOverlay({
           <Image src="/images/logo-hunters/hunters-rouge.png" alt="" fill sizes="120px" className="object-contain" />
         </div>
         <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full">
-          {/* Two H regions framed wider, they encompass the lateral lance +
-              its diagonal extension. Dashed stroke + tiny corner ticks. */}
+          {/* Single H bounding box around the whole letterform */}
           <g fill="none" stroke="#0a0a0a" strokeOpacity="0.85" strokeWidth="0.6" strokeDasharray="2 1.2">
-            <rect x="6" y="18" width="36" height="62" rx="0.5" />
-            <rect x="58" y="18" width="36" height="62" rx="0.5" />
+            <rect x="10" y="16" width="80" height="68" rx="0.5" />
           </g>
-          {/* Corner ticks for both rectangles */}
+          {/* Corner ticks */}
           <g stroke="#0a0a0a" strokeWidth="0.9" strokeLinecap="square">
             {[
-              [6, 18], [42, 18], [6, 80], [42, 80],
-              [58, 18], [94, 18], [58, 80], [94, 80],
+              [10, 16], [90, 16], [10, 84], [90, 84],
             ].map(([x, y], i) => (
               <g key={i}>
                 <line x1={x - 1.5} y1={y} x2={x + 1.5} y2={y} />
@@ -502,9 +499,7 @@ function HighlightOverlay({
               </g>
             ))}
           </g>
-          {/* Small H labels next to each box */}
-          <text x="9" y="14" fontSize="3.5" fontFamily="ui-monospace, monospace" fontWeight="700" fill="#0a0a0a">H</text>
-          <text x="91" y="14" fontSize="3.5" fontFamily="ui-monospace, monospace" fontWeight="700" fill="#0a0a0a" textAnchor="end">H</text>
+          <text x="13" y="13" fontSize="3.5" fontFamily="ui-monospace, monospace" fontWeight="700" fill="#0a0a0a">H</text>
         </svg>
       </>
     );
