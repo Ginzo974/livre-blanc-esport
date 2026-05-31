@@ -4,15 +4,15 @@ import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useState } from "react";
 
 export const TOC_ITEMS = [
-  { id: "top", num: "00", label: "Ouverture" },
-  { id: "intro", num: "01", label: "Introduction" },
-  { id: "chap-1", num: "02", label: "L'esport, un sport à part" },
-  { id: "chap-2", num: "03", label: "Le logo" },
-  { id: "chap-3", num: "04", label: "La couleur" },
-  { id: "chap-4", num: "05", label: "Le système 360" },
-  { id: "chap-5", num: "06", label: "La méthode" },
-  { id: "chap-6", num: "07", label: "HUNTERS" },
-  { id: "conclusion", num: "08", label: "Conclusion" },
+  { id: "top", num: "", label: "Ouverture" },
+  { id: "intro", num: "00", label: "Introduction" },
+  { id: "chap-1", num: "01", label: "L'esport, un sport à part" },
+  { id: "chap-2", num: "02", label: "Le logo" },
+  { id: "chap-3", num: "03", label: "La couleur" },
+  { id: "chap-4", num: "04", label: "Le système 360" },
+  { id: "chap-5", num: "05", label: "La méthode" },
+  { id: "chap-6", num: "06", label: "HUNTERS" },
+  { id: "conclusion", num: "✦", label: "Conclusion" },
 ];
 
 export function Toc() {
@@ -71,8 +71,10 @@ export function Toc() {
           <span className="block h-px w-4 bg-bone" />
         </span>
         <span className="font-display text-bone text-[0.7rem] tracking-widest">
-          {TOC_ITEMS.find((i) => i.id === active)?.num ?? "00"} ·{" "}
-          {TOC_ITEMS.find((i) => i.id === active)?.label?.toUpperCase() ?? "OUVERTURE"}
+          {(() => {
+            const it = TOC_ITEMS.find((i) => i.id === active) ?? TOC_ITEMS[0];
+            return `${it.num ? it.num + " · " : ""}${it.label.toUpperCase()}`;
+          })()}
         </span>
       </button>
 
