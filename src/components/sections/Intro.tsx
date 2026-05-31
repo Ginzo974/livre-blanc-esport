@@ -39,9 +39,9 @@ export function Intro() {
           League of Legends depuis dix ans. Et je sais que ce K n&apos;est pas
           un accident. Derrière, il y a des choix précis : la forme géométrique,
           la couleur, l&apos;angle, la simplicité, la décision de ne pas mettre
-          un animal ou un casque de gamer. Des choix qui ont fait que ce logo me
-          marque encore. Et qui font marquer des milliers d&apos;autres
-          spectateurs toutes les semaines.
+          un animal ou un casque de gamer. Des choix qui font que ce logo me
+          marque encore, et qu&apos;il reste gravé chez des milliers de
+          spectateurs chaque semaine.
         </p>
       </Prose>
 
@@ -110,11 +110,11 @@ export function Intro() {
           pratique.
         </p>
         <p>
-          Ce n&apos;est pas un catalogue descriptif. Ce n&apos;est pas une
-          analyse marketing. <strong>C&apos;est un manuel pour démarrer.</strong>{" "}
-          À la fin de ces vingt pages, tu comprends comment se construit une
-          identité visuelle d&apos;équipe esport, et tu disposes de la méthode
-          pour démarrer la tienne dans la bonne direction.
+          Ni catalogue descriptif, ni analyse marketing :{" "}
+          <strong>c&apos;est un manuel d&apos;action.</strong> À la fin de ta
+          lecture, tu comprends comment se construit une identité visuelle
+          d&apos;équipe esport, et tu as la méthode pour lancer la tienne dans
+          la bonne direction.
         </p>
       </Prose>
 
