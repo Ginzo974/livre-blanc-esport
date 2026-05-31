@@ -218,10 +218,10 @@ function AuthorPresentation() {
           s&apos;apprend en continu — mais j&apos;ai de quoi en parler.
         </p>
         <p>
-          Ce livre blanc est né de la rencontre de mes deux passions :{" "}
-          <strong>le design et le jeu vidéo</strong>, qui m&apos;anime depuis
-          aussi loin que je me souvienne.{" "}
-          <em>Deux mondes que je n&apos;avais encore jamais vraiment réunis.</em>
+          Ce livre blanc est né de la rencontre de mes passions :{" "}
+          <strong>le design, le jeu vidéo et le monde de l&apos;esport</strong>,
+          qui m&apos;animent depuis aussi loin que je me souvienne.{" "}
+          <em>Des mondes que je n&apos;avais encore jamais vraiment réunis.</em>
         </p>
       </div>
     </motion.aside>
