@@ -212,14 +212,16 @@ function AuthorPresentation() {
         </p>
         <p>
           Côté métier, <strong>cinq ans dans le design</strong>, dont quatre
-          construits en alternance. Un parcours qui m&apos;a appris à lire un
-          logo en grille, en contre-formes et en hiérarchie de couleur.
+          en alternance. Au fil des années, j&apos;ai construit une patte
+          graphique qui me ressemble, et appris à analyser comme à créer des
+          logos qui fonctionnent. Je ne prétends pas tout maîtriser — ce métier
+          s&apos;apprend en continu — mais j&apos;ai de quoi en parler.
         </p>
         <p>
-          Deux passions, l&apos;esport et le design, que je n&apos;avais jamais
-          vraiment réunies.{" "}
-          <em>Ce livre blanc, c&apos;est exactement ça : les faire se
-          rencontrer.</em>
+          Ce livre blanc est né de la rencontre de mes deux passions :{" "}
+          <strong>le design et le jeu vidéo</strong>, qui m&apos;anime depuis
+          aussi loin que je me souvienne.{" "}
+          <em>Deux mondes que je n&apos;avais encore jamais vraiment réunis.</em>
         </p>
       </div>
     </motion.aside>
