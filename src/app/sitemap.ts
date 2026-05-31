@@ -15,19 +15,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "#chap-6",
     "#conclusion",
   ];
-  const pages: MetadataRoute.Sitemap = anchors.map((a) => ({
+  return anchors.map((a) => ({
     url: `${BASE}/${a}`,
     lastModified,
     changeFrequency: "monthly" as const,
     priority: a === "" ? 1 : 0.7,
   }));
-
-  const annexes = ["note-presentation", "note-strategie"].map((slug) => ({
-    url: `${BASE}/${slug}`,
-    lastModified,
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }));
-
-  return [...pages, ...annexes];
 }

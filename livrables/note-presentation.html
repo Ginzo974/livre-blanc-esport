@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Note de présentation — Du logo à la scène</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  @page { size: A4; margin: 0; }
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  :root {
+    --ink: #0c0c0e;
+    --ink2: #131316;
+    --bone: #f1ede4;
+    --fog: #8f8980;
+    --blood: #d11f27;
+    --line: rgba(241,237,228,0.13);
+    --line-strong: rgba(241,237,228,0.32);
+  }
+  html, body { background: var(--ink); }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--bone);
+    width: 210mm;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    position: relative;
+    width: 210mm;
+    height: 297mm;
+    padding: 16mm 18mm 13mm;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .topbar { position: absolute; top: 0; left: 0; right: 0; height: 3mm; background: var(--blood); }
+  .glow {
+    position: absolute; top: -30mm; left: 50%; transform: translateX(-50%);
+    width: 160mm; height: 80mm; pointer-events: none;
+    background: radial-gradient(ellipse at center, rgba(209,31,39,0.16) 0%, transparent 70%);
+  }
+
+  /* Masthead */
+  .masthead {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    border-bottom: 1px solid var(--line-strong); padding-bottom: 7px;
+  }
+  .wordmark { font-family: 'Russo One', sans-serif; font-size: 11pt; letter-spacing: 0.05em; color: var(--bone); }
+  .masthead .meta {
+    font-family: 'Chakra Petch', monospace; font-size: 7pt; text-transform: uppercase;
+    letter-spacing: 0.22em; color: var(--fog); text-align: right; line-height: 1.7;
+  }
+
+  /* Title block */
+  .eyebrow {
+    display: flex; align-items: center; gap: 9px; margin-top: 13mm;
+    font-family: 'Chakra Petch', monospace; font-size: 8pt; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.3em; color: var(--blood);
+  }
+  .eyebrow::before { content: ''; width: 24px; height: 2px; background: var(--blood); display: inline-block; }
+  h1 {
+    font-family: 'Russo One', sans-serif; font-weight: 400;
+    font-size: 27pt; line-height: 1.04; letter-spacing: -0.01em;
+    color: var(--bone); margin-top: 9px;
+  }
+  .standfirst {
+    font-size: 11pt; line-height: 1.42; color: var(--fog);
+    margin-top: 11px; max-width: 150mm;
+  }
+  .standfirst em { color: var(--bone); font-style: normal; }
+
+  /* Definition rows */
+  .rows { margin-top: 9mm; }
+  .row {
+    display: grid; grid-template-columns: 36mm 1fr; gap: 9mm;
+    padding: 4.4mm 0; border-top: 1px solid var(--line);
+  }
+  .row:first-child { border-top: 1px solid var(--line-strong); }
+  .label {
+    font-family: 'Chakra Petch', monospace; font-size: 8pt; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.14em; color: var(--blood);
+    padding-top: 3px;
+  }
+  .label .num {
+    display: block; font-family: 'Russo One', sans-serif; font-size: 12pt;
+    color: var(--bone); margin-bottom: 5px; letter-spacing: 0;
+  }
+  .content { font-size: 9.7pt; line-height: 1.5; color: rgba(241,237,228,0.84); }
+  .content p + p { margin-top: 5px; }
+  .content strong { color: var(--bone); font-weight: 600; }
+  .content ul { list-style: none; }
+  .content li { position: relative; padding-left: 15px; margin-top: 3.5px; }
+  .content li::before { content: ''; position: absolute; left: 0; top: 8px; width: 7px; height: 1.5px; background: var(--blood); }
+
+  /* Footer */
+  .foot {
+    margin-top: auto; padding-top: 6mm; border-top: 1px solid var(--line-strong);
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-family: 'Chakra Petch', monospace; font-size: 7pt;
+    text-transform: uppercase; letter-spacing: 0.2em; color: var(--fog);
+  }
+  .foot .accent { color: var(--blood); }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="topbar"></div>
+    <div class="glow"></div>
+
+    <header class="masthead">
+      <div class="wordmark">DU&nbsp;LOGO&nbsp;À&nbsp;LA&nbsp;SCÈNE</div>
+      <div class="meta">
+        Livre blanc · Identité visuelle esport<br />
+        Annexe 01 / 02 — Réf. DLS·NP·2026
+      </div>
+    </header>
+
+    <div class="eyebrow">Note de présentation</div>
+    <h1>Note de présentation<br />du livre blanc</h1>
+    <p class="standfirst">
+      <em>« Du logo à la scène »</em> : décrypter et concevoir l'identité
+      visuelle d'une équipe esport.
+    </p>
+
+    <div class="rows">
+      <div class="row">
+        <div class="label"><span class="num">01</span>Auteur &amp; cadre</div>
+        <div class="content">
+          Quentin Louis, étudiant en Master 2 Digital Design &amp; Creative
+          Technologies à l'ESD Bordeaux. Cinq ans de design dont quatre en
+          alternance, dix ans de pratique de League of Legends. Un projet né de
+          la rencontre de trois passions : le design, le jeu vidéo et l'esport.
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label"><span class="num">02</span>Le constat</div>
+        <div class="content">
+          Il existe très peu de ressources sérieuses, en français, sur
+          l'identité visuelle des équipes esport. Pourtant l'enjeu n'est plus
+          marginal : 15,4 millions de consommateurs esport en France, en
+          croissance de 18 % en deux ans. Sur le terrain, deux mondes coexistent :
+          une poignée d'équipes à l'identité réfléchie, et une majorité qui
+          improvise. La différence tient à une chose, une méthode.
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label"><span class="num">03</span>L'objet</div>
+        <div class="content">
+          Le premier livre blanc en français à proposer une méthodologie
+          applicable d'identité visuelle esport. Il s'appuie sur six cas d'étude
+          actualisés en 2026 (Karmine Corp, T1, G2 Esports, Fnatic, NAVI, Team
+          Vitality) et sur une équipe fictive, HUNTERS, conçue de zéro pour
+          démontrer la méthode en pratique, du brief au système complet.
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label"><span class="num">04</span>La promesse</div>
+        <div class="content">
+          Ni un catalogue, ni une analyse marketing : un manuel d'action. À la
+          fin de la lecture, le lecteur comprend comment se construit une
+          identité visuelle d'équipe esport et dispose de la méthode pour lancer
+          la sienne dans la bonne direction.
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label"><span class="num">05</span>Cibles</div>
+        <div class="content">
+          <ul>
+            <li>Le curieux d'esport et de design, qui repart avec un regard neuf sur les logos et jerseys croisés chaque semaine.</li>
+            <li>Le designer, qui trouve une bibliographie rare en français et une méthode transposable à ses projets.</li>
+            <li>Le dirigeant de structure, qui obtient le cadre stratégique avant de briefer un designer.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label"><span class="num">06</span>Format</div>
+        <div class="content">
+          Un long-read web responsive, pensé pour la lecture à l'écran
+          (≈ 25 min). Le site <strong>est</strong> le livre blanc dans son
+          intégralité : pas de version papier, pas de résumé. Six chapitres qui
+          s'enchaînent, chacun fermé sur une méthode applicable.
+        </div>
+      </div>
+    </div>
+
+    <footer class="foot">
+      <span>Quentin Louis · ESD Bordeaux · 2026</span>
+      <span class="accent">livre-blanc-esport.vercel.app</span>
+    </footer>
+  </div>
+</body>
+</html>

@@ -194,8 +194,7 @@ function CTABlock() {
       <p className="text-fog max-w-xl text-sm md:text-base mb-8">
         Ce site <strong className="text-bone">est</strong> le livre blanc, dans
         son intégralité. Pas de version papier, pas de résumé : tout est ici.
-        S&apos;il t&apos;a servi, partage-le, ou regarde comment il a été pensé
-        et diffusé.
+        S&apos;il t&apos;a servi, partage-le.
       </p>
       <div className="flex flex-wrap gap-3 font-display text-sm tracking-widest">
         <a
@@ -217,16 +216,10 @@ function CTABlock() {
           </svg>
         </a>
         <a
-          href="/note-presentation"
+          href="mailto:quentin.louis97400@gmail.com"
           className="inline-flex items-center px-6 py-4 border border-bone/20 text-bone hover:border-blood hover:text-blood transition-colors"
         >
-          NOTE DE PRÉSENTATION
-        </a>
-        <a
-          href="/note-strategie"
-          className="inline-flex items-center px-6 py-4 border border-bone/20 text-bone hover:border-blood hover:text-blood transition-colors"
-        >
-          STRATÉGIE DE DIFFUSION
+          ME CONTACTER
         </a>
       </div>
     </motion.div>

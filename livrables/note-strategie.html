@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Note de synthèse — Stratégie inbound — Du logo à la scène</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  @page { size: A4; margin: 0; }
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  :root {
+    --ink: #0c0c0e;
+    --bone: #f1ede4;
+    --fog: #8f8980;
+    --blood: #d11f27;
+    --line: rgba(241,237,228,0.13);
+    --line-strong: rgba(241,237,228,0.32);
+  }
+  html, body { background: var(--ink); }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--bone);
+    width: 210mm;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    position: relative;
+    width: 210mm;
+    height: 297mm;
+    padding: 14mm 18mm 10mm;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .topbar { position: absolute; top: 0; left: 0; right: 0; height: 3mm; background: var(--blood); }
+  .glow {
+    position: absolute; top: -30mm; left: 50%; transform: translateX(-50%);
+    width: 160mm; height: 80mm; pointer-events: none;
+    background: radial-gradient(ellipse at center, rgba(209,31,39,0.16) 0%, transparent 70%);
+  }
+
+  .masthead {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    border-bottom: 1px solid var(--line-strong); padding-bottom: 7px;
+  }
+  .wordmark { font-family: 'Russo One', sans-serif; font-size: 11pt; letter-spacing: 0.05em; color: var(--bone); }
+  .masthead .meta {
+    font-family: 'Chakra Petch', monospace; font-size: 7pt; text-transform: uppercase;
+    letter-spacing: 0.22em; color: var(--fog); text-align: right; line-height: 1.7;
+  }
+
+  .eyebrow {
+    display: flex; align-items: center; gap: 9px; margin-top: 8mm;
+    font-family: 'Chakra Petch', monospace; font-size: 8pt; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.3em; color: var(--blood);
+  }
+  .eyebrow::before { content: ''; width: 24px; height: 2px; background: var(--blood); display: inline-block; }
+  h1 {
+    font-family: 'Russo One', sans-serif; font-weight: 400;
+    font-size: 21pt; line-height: 1.05; letter-spacing: -0.01em;
+    color: var(--bone); margin-top: 7px;
+  }
+  .standfirst {
+    font-size: 10pt; line-height: 1.38; color: var(--fog);
+    margin-top: 7px; max-width: 155mm;
+  }
+
+  .rows { margin-top: 5mm; }
+  .row {
+    display: grid; grid-template-columns: 33mm 1fr; gap: 7mm;
+    padding: 2.7mm 0; border-top: 1px solid var(--line);
+  }
+  .row:first-child { border-top: 1px solid var(--line-strong); }
+  .label {
+    font-family: 'Chakra Petch', monospace; font-size: 7.6pt; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.12em; color: var(--blood);
+    padding-top: 3px;
+  }
+  .label .num {
+    display: block; font-family: 'Russo One', sans-serif; font-size: 10.5pt;
+    color: var(--bone); margin-bottom: 3px; letter-spacing: 0;
+  }
+  .content { font-size: 8.9pt; line-height: 1.42; color: rgba(241,237,228,0.84); }
+  .content p + p { margin-top: 3.5px; }
+  .content strong { color: var(--bone); font-weight: 600; }
+  .content ul { list-style: none; }
+  .content li { position: relative; padding-left: 14px; margin-top: 2.5px; }
+  .content li::before { content: ''; position: absolute; left: 0; top: 7px; width: 6px; height: 1.5px; background: var(--blood); }
+  code {
+    font-family: 'Chakra Petch', monospace; font-size: 8pt;
+    background: rgba(241,237,228,0.07); border: 1px solid var(--line);
+    border-radius: 3px; padding: 0.5px 4px; color: var(--bone);
+  }
+
+  .foot {
+    margin-top: auto; padding-top: 5mm; border-top: 1px solid var(--line-strong);
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-family: 'Chakra Petch', monospace; font-size: 7pt;
+    text-transform: uppercase; letter-spacing: 0.2em; color: var(--fog);
+  }
+  .foot .accent { color: var(--blood); }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="topbar"></div>
+    <div class="glow"></div>
+
+    <header class="masthead">
+      <div class="wordmark">DU&nbsp;LOGO&nbsp;À&nbsp;LA&nbsp;SCÈNE</div>
+      <div class="meta">
+        Livre blanc · Identité visuelle esport<br />
+        Annexe 02 / 02 — Réf. DLS·SI·2026
+      </div>
+    </header>
+
+    <div class="eyebrow">Note de synthèse · Stratégie inbound</div>
+    <h1>Note de synthèse de<br />la stratégie inbound</h1>
+    <p class="standfirst">
+      Plan de diffusion du livre blanc : cible, objectifs, canaux, timing,
+      conversion, mesure et indicateurs.
+    </p>
+
+    <div class="rows">
+      <div class="row">
+        <div class="label"><span class="num">01</span>Cible</div>
+        <div class="content">
+          Communauté esport francophone de 18 à 35 ans, joueurs et spectateurs
+          sensibles au design des équipes. En second cercle : designers juniors
+          en quête de méthode, et dirigeants de petites structures (Tier 3). À
+          titre personnel, la cible sert aussi à démontrer une expertise au
+          croisement design + esport (recruteurs, studios, agences).
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label"><span class="num">02</span>Objectifs</div>
+        <div class="content">
+          <p><strong>Objectif global : 120 vues du site</strong> sur la fenêtre de lancement, toutes plateformes confondues. Le livre se lisant en ligne, on compte des vues et des lecteurs, pas des téléchargements.</p>
+          <p><strong>Par canal :</strong> socle qualifié (≈ 3 lectures via Twitter / X, ≈ 10 via LinkedIn) ; le gros du volume vient des chats Twitch. <strong>Qualitatif :</strong> crédibilité de l'auteur, contacts qualifiés, pièce de portfolio.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label"><span class="num">03</span>Canaux</div>
+        <div class="content">
+          <ul>
+            <li><strong>Twitter / X :</strong> canal natif de la communauté esport FR, pour l'engagement organique autour des cas d'étude.</li>
+            <li><strong>LinkedIn :</strong> canal professionnel, pour recruteurs, agences et dirigeants, sur un angle méthode.</li>
+            <li><strong>Chats Twitch (Kameto, OTP / Solary, Gentle Mates / M8…) :</strong> le canal le plus volumineux, mais le plus délicat (voir conversion).</li>
+            <li>En appui : bouche-à-oreille du réseau ESD Bordeaux et des contacts esport.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label"><span class="num">04</span>Timing</div>
+        <div class="content">
+          Diffusion prévue en <strong>juillet</strong>, en phase avec une période
+          esport active (segments d'été des ligues), quand l'attention de la
+          communauté est forte.
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label"><span class="num">05</span>Conversion</div>
+        <div class="content">
+          <p>Pas de téléchargement ni de formulaire : le site est la landing et le livre. Seul appel à l'action : <strong>« Lire le livre blanc »</strong>.</p>
+          <ul>
+            <li><strong>Twitter / X :</strong> entrée par l'émotion. « Pourquoi le K bleu de la Karmine Corp te reste en tête ? »</li>
+            <li><strong>LinkedIn :</strong> entrée par la méthode. « Comment se construit, étape par étape, l'identité d'une équipe esport. »</li>
+            <li><strong>Chat Twitch :</strong> message court, lien court, posté au bon moment (jersey, logo, rebranding à l'écran), jamais en spam.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label"><span class="num">06</span>Mesure &amp; outils</div>
+        <div class="content">
+          <p><strong>Vercel Web Analytics</strong> (gratuit, sans cookie ni bandeau RGPD) : vues, pages, sources de trafic, pays, appareils, en temps réel. Attribution par canal via paramètres <strong>UTM</strong> :</p>
+          <ul>
+            <li>Twitter <code>?utm_source=twitter&amp;utm_medium=social</code></li>
+            <li>LinkedIn <code>?utm_source=linkedin&amp;utm_medium=social</code></li>
+            <li>Twitch <code>?utm_source=twitch&amp;utm_medium=chat</code></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label"><span class="num">07</span>KPI</div>
+        <div class="content">
+          <ul>
+            <li>Vues totales sur la période (objectif : 120).</li>
+            <li>Vues et lecteurs par source (utm_source : twitter, linkedin, twitch).</li>
+            <li>Taux de clic sur le lien depuis chaque publication.</li>
+            <li>Profondeur de lecture et temps passé sur le long-read.</li>
+            <li>Impressions et engagement par post ; contacts entrants.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer class="foot">
+      <span>Quentin Louis · ESD Bordeaux · 2026</span>
+      <span class="accent">livre-blanc-esport.vercel.app</span>
+    </footer>
+  </div>
+</body>
+</html>
