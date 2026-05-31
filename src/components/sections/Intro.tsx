@@ -201,7 +201,7 @@ function AuthorPresentation() {
         </span>
       </div>
       <h3 className="font-display text-2xl md:text-3xl text-bone mb-5 leading-tight">
-        Quentin <span className="text-[var(--color-blood)]">Louis</span>
+        Quentin <span className="text-[var(--color-blood)]">LOUIS</span>
       </h3>
       <div className="prose-reading max-w-2xl">
         <p>
