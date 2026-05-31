@@ -412,19 +412,18 @@ export function Chapter6() {
             <li>un système 360 qui se décline cohéremment.</li>
           </ul>
           <p>
-            Ce n&apos;est pas un logo simple. Mais ce n&apos;est pas un logo
-            paresseux. Chaque trait a une intention, chaque pointe une fonction.
-            Le rouge sur noir aurait pu être générique, mais la griffure le
-            rend reconnaissable. Le double H transforme un logo de griffure en
-            logo d&apos;équipe identifiable.
+            Le logo n&apos;est pas simple, mais il n&apos;est jamais gratuit :
+            chaque trait a une intention, chaque pointe une fonction. Le rouge
+            sur noir aurait pu se fondre dans la masse ; la texture de griffure
+            le rend reconnaissable, et le double H ancre l&apos;équipe dans le
+            symbole.
           </p>
         </Prose>
 
         <PullQuote accent="blood">
-          Si HUNTERS, équipe inexistante construite en quelques jours avec une
-          méthode, peut produire un système plus cohérent qu&apos;une équipe
-          réelle sans méthode,{" "}
-          <span className="text-fog">alors la méthode vaut.</span>
+          Une équipe qui n&apos;existe pas, mais dont l&apos;identité tient
+          parce qu&apos;elle suit une méthode.{" "}
+          <span className="text-fog">C&apos;est tout l&apos;enjeu.</span>
         </PullQuote>
 
         <Prose>
