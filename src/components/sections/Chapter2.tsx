@@ -30,8 +30,8 @@ export function Chapter2() {
       subtitle="C'est la première chose que ton fan rencontre. Si le logo rate, tout le reste rame derrière."
     >
       <Lead>
-        Réussir un logo, ce n&apos;est pas une question de goût, et ce
-        n&apos;est pas non plus une question d&apos;être simple à tout prix.
+        Réussir un logo n&apos;est pas une question de goût, ni de simplicité à
+        tout prix.
       </Lead>
       <Prose>
         <p>
@@ -208,8 +208,7 @@ export function Chapter2() {
           n&apos;est tombé dans le même piège.
         </p>
         <p>
-          Ce piège, c&apos;est <strong>le logo agressif générique</strong>. Tu
-          le vois dans toutes les équipes Tier 3, dans les rebrands sans
+          On le voit partout dans les équipes Tier 3, dans les rebrands sans
           budget, dans les nouvelles structures qui veulent faire compétitif
           sans avoir réfléchi à ce qu&apos;elles racontent.
         </p>

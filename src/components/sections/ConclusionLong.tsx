@@ -75,8 +75,8 @@ export function ConclusionLong() {
           une communauté digitale plutôt qu&apos;à un public local, gagne à
           appliquer la grammaire de l&apos;esport.{" "}
           <strong>
-            Ce qu&apos;il a inventé en quinze ans va devenir la norme pour
-            beaucoup d&apos;autres secteurs dans les dix prochaines années.
+            Ce que l&apos;esport a inventé en quinze ans va devenir la norme
+            pour beaucoup d&apos;autres secteurs dans les dix prochaines années.
           </strong>
         </p>
         <p>
