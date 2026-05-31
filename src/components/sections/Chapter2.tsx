@@ -52,6 +52,7 @@ export function Chapter2() {
         caption="Trois lignes anguleuses, géométriques, et c'est tout. Le K se redessine de mémoire en cinq secondes."
         accent="bone"
         invertWhite
+        glow="rgba(50,120,255,0.42)"
       />
 
       <Prose>
@@ -96,6 +97,7 @@ export function Chapter2() {
         kicker="T1 · 2019"
         caption="Couche visible : un T élégant. Couche initiée : vingt ans d'archives SK Telecom."
         accent="t1"
+        glow="rgba(226,1,45,0.42)"
       />
 
       <Prose>
@@ -153,6 +155,7 @@ export function Chapter2() {
         kicker="G2 Esports · 2014"
         caption="Samurai stylisé avec cicatrice de bataille diagonale. Métaphore tenue sur dix ans dans tout l'écosystème de marque."
         accent="g2"
+        glow="rgba(244,241,234,0.28)"
       />
 
       <Prose>
@@ -272,6 +275,7 @@ function LogoFigure({
   accent = "bone",
   invertWhite = false,
   lightBg = false,
+  glow = "rgba(200,29,37,0.4)",
 }: {
   src: string;
   alt: string;
@@ -281,6 +285,8 @@ function LogoFigure({
   invertWhite?: boolean;
   /** Wrap the logo in a cream plate so dark/colored logos stay visible on the dark site. */
   lightBg?: boolean;
+  /** Halo colour — should match the logo's own primary colour. rgba string. */
+  glow?: string;
 }) {
   const accentBorder = {
     blood: "border-blood/20",
@@ -294,8 +300,10 @@ function LogoFigure({
     g2: "bg-bone",
     bone: "bg-bone",
   }[accent];
-  // Uniform red halo behind every logo (matches the single-accent system).
-  const redGlow = "drop-shadow(0 0 32px rgba(200,29,37,0.4))";
+  // Halo matched to each logo's own primary colour (passed via `glow`).
+  const logoGlow = `drop-shadow(0 0 32px ${glow})`;
+  // Build a softer bloom colour from the same rgba (lower its alpha a touch).
+  const bloom = glow.replace(/0?\.\d+\)$/, "0.22)");
   return (
     <motion.figure
       initial={{ opacity: 0, y: 24 }}
@@ -305,13 +313,12 @@ function LogoFigure({
       whileHover={{ y: -5 }}
       className={`group my-10 md:-mx-12 bg-ink-2 border ${accentBorder} p-8 md:p-12 flex flex-col items-center relative overflow-hidden`}
     >
-      {/* Ambient red halo bloom inside the card */}
+      {/* Ambient halo bloom matched to the logo colour */}
       <span
         aria-hidden
         className="pointer-events-none absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full opacity-40 group-hover:opacity-70 transition-opacity duration-500"
         style={{
-          background:
-            "radial-gradient(circle, rgba(200,29,37,0.25) 0%, transparent 70%)",
+          background: `radial-gradient(circle, ${bloom} 0%, transparent 70%)`,
         }}
       />
       <div className="relative flex items-center gap-3 mb-8 self-start">
@@ -334,8 +341,8 @@ function LogoFigure({
           className="relative w-[180px] h-[180px] md:w-[240px] md:h-[240px] mb-8 transition-transform duration-500 group-hover:scale-[1.04]"
           style={{
             filter: invertWhite
-              ? `brightness(0) invert(1) ${redGlow}`
-              : redGlow,
+              ? `brightness(0) invert(1) ${logoGlow}`
+              : logoGlow,
           }}
         >
           <Image src={src} alt={alt} fill sizes="240px" className="object-contain" />

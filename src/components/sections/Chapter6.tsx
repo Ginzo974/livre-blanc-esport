@@ -361,6 +361,27 @@ export function Chapter6() {
             <em>si la meute l&apos;appelle.</em>
           </p>
         </Prose>
+
+        <div className="my-10 md:-mx-12 grid grid-cols-1 md:grid-cols-2 gap-px bg-blood/20">
+          <ImageCard
+            src="/images/31-hoodie.png"
+            alt="Hoodie HUNTERS porté en événement esport"
+            kicker="Merch · Hoodie"
+            caption="Hoodie noir, logo rouge brodé côté cœur. Porté en tribune comme en ville."
+            accent="blood"
+            aspect="4/5"
+          />
+          <ImageCard
+            src="/images/30-casquette.png"
+            alt="Casquette HUNTERS — logo rouge brodé"
+            kicker="Merch · Casquette"
+            caption="Casquette noire minimaliste, logo rouge brodé. Sobre, premium, collector."
+            accent="blood"
+            aspect="4/5"
+            fit="contain"
+            frame="light"
+          />
+        </div>
       </div>
 
       {/* Team shot, full-bleed climax : "voici la meute" */}

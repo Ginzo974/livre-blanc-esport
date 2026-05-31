@@ -31,7 +31,7 @@ export function Navbar() {
           <span>~ 25 min de lecture</span>
         </div>
         <a
-          href="#conclusion"
+          href="#pdf"
           className="font-display text-xs tracking-widest text-bone border border-bone/20 px-4 py-2 hover:bg-blood hover:border-blood transition-colors"
         >
           PDF
