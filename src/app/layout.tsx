@@ -50,6 +50,7 @@ const overused = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://du-logo-a-la-scene.vercel.app"),
   title: "Du logo à la scène — Livre Blanc",
   description:
     "Décrypter et concevoir l'identité visuelle d'une équipe esport. Six cas d'étude, une méthode applicable, une équipe fictive : HUNTERS.",

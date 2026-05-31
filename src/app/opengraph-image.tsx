@@ -93,7 +93,7 @@ export default async function Image() {
           <div>6 CAS D&apos;ÉTUDE · 1 MÉTHODE · HUNTERS</div>
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             <div style={{ width: "12px", height: "12px", background: "#c81d25" }} />
-            <div style={{ color: "#f4f1ea" }}>livre-blanc-esport</div>
+            <div style={{ color: "#f4f1ea" }}>du-logo-a-la-scene</div>
           </div>
         </div>
 
