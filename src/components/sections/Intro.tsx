@@ -206,7 +206,7 @@ function AuthorPresentation() {
       <div className="prose-reading max-w-2xl">
         <p>
           Passionné de jeux vidéo depuis tout petit, j&apos;ai découvert{" "}
-          <strong>League of Legends en 2016</strong>{" "}— et je n&apos;ai jamais
+          <strong>League of Legends en 2016</strong>,{" "}et je n&apos;ai jamais
           vraiment lâché la scène esport depuis. Pas observée de loin : vécue de
           l&apos;intérieur.
         </p>
@@ -214,8 +214,8 @@ function AuthorPresentation() {
           Côté métier, <strong>cinq ans dans le design</strong>, dont quatre
           en alternance. Au fil des années, j&apos;ai construit une patte
           graphique qui me ressemble, et appris à analyser comme à créer des
-          logos qui fonctionnent. Je ne prétends pas tout maîtriser — ce métier
-          s&apos;apprend en continu — mais j&apos;ai de quoi en parler.
+          logos qui fonctionnent. Je ne prétends pas tout maîtriser, ce métier
+          s&apos;apprend en continu, mais j&apos;ai de quoi en parler.
         </p>
         <p>
           Ce livre blanc est né de la rencontre de mes passions :{" "}
@@ -236,7 +236,7 @@ const STATS = [
   { value: 15.4, suffix: "M", label: "Consommateurs esport en France", decimals: 1 },
   { value: 18, suffix: "%", label: "Croissance en 2 ans" },
   { value: 7.1, suffix: "M", label: "Suivent les compétitions / mois", decimals: 1 },
-  { value: 120000, suffix: "", label: "Spectateurs LFL — 28 jan. 2026" },
+  { value: 120000, suffix: "", label: "Spectateurs LFL, 28 jan. 2026" },
 ];
 
 function StatsInline() {

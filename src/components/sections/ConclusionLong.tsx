@@ -101,8 +101,8 @@ export function ConclusionLong() {
           d&apos;une passion personnelle que je traîne depuis dix ans.
         </p>
         <p>
-          Aux six équipes analysées dans ces pages — Karmine Corp, T1, Fnatic,
-          Team Vitality, NAVI, Gentle Mates — pour avoir construit des
+          Aux six équipes analysées dans ces pages, Karmine Corp, T1, Fnatic,
+          Team Vitality, NAVI, Gentle Mates, pour avoir construit des
           identités dont on peut vraiment apprendre quelque chose.
         </p>
         <p>

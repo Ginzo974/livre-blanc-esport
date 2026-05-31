@@ -155,7 +155,7 @@ export function Chapter1() {
         <div className="relative w-16 h-16 md:w-20 md:h-20 shrink-0">
           <Image
             src="/images/10-logo-cloud9.png"
-            alt="Logo Cloud9 — nuage à trois spirales"
+            alt="Logo Cloud9 · nuage à trois spirales"
             fill
             sizes="80px"
             className="object-contain"
@@ -166,7 +166,7 @@ export function Chapter1() {
             Référence · 2013
           </div>
           <p className="text-sm text-bone/85 leading-snug">
-            Le nuage à trois spirales de Cloud9 — pensé pour rester lisible
+            Le nuage à trois spirales de Cloud9, pensé pour rester lisible
             à 24 px dans un overlay broadcast, treize ans avant que ça devienne
             un standard.
           </p>

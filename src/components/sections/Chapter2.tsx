@@ -46,7 +46,7 @@ export function Chapter2() {
 
       <LogoFigure
         src="/images/04-kc-noir.png"
-        alt="Le K de Karmine Corp — version monochrome"
+        alt="Le K de Karmine Corp · version monochrome"
         kicker="Karmine Corp · 2020"
         caption="Trois lignes anguleuses, géométriques, et c'est tout. Le K se redessine de mémoire en cinq secondes."
         accent="bone"
@@ -91,7 +91,7 @@ export function Chapter2() {
 
       <LogoFigure
         src="/images/05-logo-t1.webp"
-        alt="Logo T1 — le T avec l'aile dissimulée, héritage Wings of Happiness"
+        alt="Logo T1 · le T avec l'aile dissimulée, héritage Wings of Happiness"
         kicker="T1 · 2019"
         caption="Couche visible : un T élégant. Couche initiée : vingt ans d'archives SK Telecom."
         accent="t1"
@@ -132,7 +132,7 @@ export function Chapter2() {
         <p>
           T1 démontre une approche que peu d&apos;équipes osent.{" "}
           <strong>Le minimalisme chargé d&apos;archives.</strong>{" "}Le palmarès
-          de T1 — six titres Worlds, dont les deux derniers en 2024 et 2025 —
+          de T1, six titres Worlds, dont les deux derniers en 2024 et 2025,
           légitime ce logo qui semble simple mais qui porte un legs.
         </p>
       </Prose>
@@ -148,7 +148,7 @@ export function Chapter2() {
 
       <LogoFigure
         src="/images/06-logo-g2.webp"
-        alt="Logo G2 Esports — samurai cicatrisé"
+        alt="Logo G2 Esports · samurai cicatrisé"
         kicker="G2 Esports · 2014"
         caption="Samurai stylisé avec cicatrice de bataille diagonale. Métaphore tenue sur dix ans dans tout l'écosystème de marque."
         accent="g2"

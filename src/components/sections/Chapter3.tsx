@@ -62,7 +62,7 @@ export function Chapter3() {
         primary={{ hex: "#ff6700", label: "Fnatic Orange" }}
         secondary={{ hex: "#0a0a0a", label: "Noir signature" }}
         logo="/images/07-logo-fnatic.png"
-        logoAlt="Logo Fnatic — orange iconique"
+        logoAlt="Logo Fnatic · orange iconique"
       />
       <Prose>
         <p>
@@ -178,7 +178,7 @@ export function Chapter3() {
         primary={{ hex: "#ffe600", label: "NAVI Yellow" }}
         secondary={{ hex: "#0a0a0a", label: "Black combat" }}
         logo="/images/08-logo-navi.png"
-        logoAlt="Logo NAVI — Natus Vincere"
+        logoAlt="Logo NAVI · Natus Vincere"
       />
       <Prose>
         <p>
@@ -417,7 +417,7 @@ function KCSplitDuo() {
       transition={{ duration: 0.8 }}
       className="my-12 md:-mx-12 grid grid-cols-1 md:grid-cols-2 gap-px bg-bone/10"
     >
-      {/* LEC main team — rouge */}
+      {/* LEC main team, rouge */}
       <figure className="relative bg-ink-2 overflow-hidden group">
         <div className="relative aspect-[16/10]">
           <Image
@@ -449,7 +449,7 @@ function KCSplitDuo() {
         </figcaption>
       </figure>
 
-      {/* KCB academy — bleu */}
+      {/* KCB academy, bleu */}
       <figure className="relative bg-ink-2 overflow-hidden group">
         <div className="relative aspect-[16/10]">
           <Image

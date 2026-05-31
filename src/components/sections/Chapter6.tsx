@@ -99,7 +99,7 @@ export function Chapter6() {
             />
           </div>
           <p className="mt-6 text-lg md:text-xl text-bone/80 leading-snug max-w-2xl">
-            Une équipe que j&apos;invente — pas pour exister demain, mais pour
+            Une équipe que j&apos;invente, pas pour exister demain, mais pour
             démontrer qu&apos;une identité d&apos;équipe esport peut se
             construire avec discipline, étape par étape, sans rien copier des
             autres.
@@ -143,7 +143,7 @@ export function Chapter6() {
             <li>
               <strong>Positionnement :</strong>{" "}l&apos;esport vu comme une
               meute, pas comme un alignement d&apos;individus. HUNTERS assume
-              une esthétique prédatrice — pas pour faire peur, pour exprimer
+              une esthétique prédatrice, pas pour faire peur, pour exprimer
               que le collectif est plus fort que la somme des joueurs.
             </li>
             <li>
@@ -178,7 +178,7 @@ export function Chapter6() {
             type de double lecture que l&apos;aile cachée dans le T de T1, mais
             dans un autre style. Dans les espaces vides entre la lance centrale
             et les pointes latérales, on peut deviner{" "}
-            <strong>des yeux de chasseur</strong>{" "}— pas frontaux, pas
+            <strong>des yeux de chasseur</strong>,{" "}pas frontaux, pas
             explicites, plutôt suggérés par les espaces noirs entre les
             éléments rouges. <em>Le logo te regarde autant que tu le regardes.</em>
           </p>
@@ -223,7 +223,7 @@ export function Chapter6() {
             <strong>Rouge sang</strong>{" "}comme couleur primaire. Pas un rouge
             corporate, pas un rouge ketchup. Un rouge dense qui évoque la trace
             laissée par la griffure, la marque du prédateur. Le rouge est codé
-            « ennemi » dans le moteur de LoL — et HUNTERS l&apos;assume.{" "}
+            « ennemi » dans le moteur de LoL, et HUNTERS l&apos;assume.{" "}
             <em>L&apos;équipe se présente comme l&apos;adversaire à craindre.</em>
           </p>
           <p>
@@ -258,7 +258,7 @@ export function Chapter6() {
             <strong>Quantix</strong>{" "}porte le logo et les titres. Une
             sans-serif aux angles vifs et aux terminaisons coupées net : ses
             verticales tendues prolongent l&apos;effet griffure du logo. C&apos;est
-            la voix forte de la marque — celle qu&apos;on lit avec le souffle
+            la voix forte de la marque, celle qu&apos;on lit avec le souffle
             court.
           </p>
           <p>
@@ -294,7 +294,7 @@ export function Chapter6() {
           <p>
             Noir dominant, HUNTERS et logo en rouge sang sur le torse. Numéro
             et handle du joueur dans le haut du dos, également en rouge. Un{" "}
-            <strong>patch meute</strong>{" "}discret sur la manche gauche — symbole
+            <strong>patch meute</strong>{" "}discret sur la manche gauche, symbole
             de l&apos;appartenance collective, pas du joueur individuel. Coupe
             contemporaine, ni trop ample ni trop sportif, inspirée de la
             collaboration Fulllife de KC en termes de matière et de
@@ -305,7 +305,7 @@ export function Chapter6() {
         <div className="my-10 md:-mx-12 grid grid-cols-1 md:grid-cols-2 gap-px bg-blood/20">
           <ImageCard
             src="/images/29-hunters-jersey-product.png"
-            alt="Jersey HUNTERS 2026 — vue produit"
+            alt="Jersey HUNTERS 2026 · vue produit"
             kicker="Jersey · Produit"
             caption="Noir dominant, griffure rouge sang, logo brodé. Le loup hurlant en filigrane."
             accent="blood"
@@ -364,7 +364,7 @@ export function Chapter6() {
         </Prose>
       </div>
 
-      {/* Team shot — full-bleed climax : "voici la meute" */}
+      {/* Team shot, full-bleed climax : "voici la meute" */}
       <motion.figure
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -375,7 +375,7 @@ export function Chapter6() {
         <div className="relative aspect-[16/9] md:aspect-[21/9] w-full overflow-hidden">
           <Image
             src="/images/26-hunters-team.png"
-            alt="L'équipe HUNTERS au complet — la meute"
+            alt="L'équipe HUNTERS au complet · la meute"
             fill
             sizes="100vw"
             className="object-cover"
@@ -450,7 +450,7 @@ function HuntersLogoSVG() {
       <div className="relative w-full" style={{ aspectRatio: "665 / 832" }}>
         <Image
           src="/images/logo-hunters/hunters-rouge-crop.png"
-          alt="Logo HUNTERS — trois lances ascendantes encadrées par des griffures formant un double H"
+          alt="Logo HUNTERS · trois lances ascendantes encadrées par des griffures formant un double H"
           fill
           sizes="(min-width: 768px) 240px, 200px"
           className="object-contain"
@@ -536,7 +536,7 @@ function FontSpecimen() {
           Le collectif est plus fort que la somme des individus.
         </p>
         <p className="font-overused text-fog text-sm tracking-wide">
-          abcdefghijklmnopqrstuvwxyz — 0123456789 — &amp; ! ?
+          abcdefghijklmnopqrstuvwxyz · 0123456789 · &amp; ! ?
         </p>
       </div>
     </motion.div>
@@ -553,7 +553,7 @@ function SocialTemplates() {
       className="my-10 md:-mx-12 grid grid-cols-1 md:grid-cols-3 gap-3"
     >
       <Template kicker="ANNONCE" title="LA MEUTE CHASSE CE SOIR" sub="vs. T1 · 21:00 CET" />
-      <Template kicker="SCORE" title="3 — 1" sub="HUNTERS vs. KARMINE" big />
+      <Template kicker="SCORE" title="3 - 1" sub="HUNTERS vs. KARMINE" big />
       <Template kicker="JOUEUR" title="VIPER" sub="ADC · Top fragger" />
     </motion.div>
   );

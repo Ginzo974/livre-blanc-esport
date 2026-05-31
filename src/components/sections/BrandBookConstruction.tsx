@@ -37,18 +37,18 @@ export function BrandBookConstruction() {
             01&nbsp;/&nbsp;Logo Construction
           </div>
           <div className="font-mono text-[0.7rem] md:text-xs tracking-[0.2em] opacity-70">
-            v1.0 — 2026
+            v1.0 · 2026
           </div>
         </header>
 
         {/* MAIN GRID */}
         <div className="mt-8 md:mt-12 grid grid-cols-12 gap-8 md:gap-12">
-          {/* CONSTRUCTION — LEFT */}
+          {/* CONSTRUCTION, LEFT */}
           <div className="col-span-12 lg:col-span-8">
             <ConstructionFigure />
           </div>
 
-          {/* PANELS — RIGHT */}
+          {/* PANELS, RIGHT */}
           <aside className="col-span-12 lg:col-span-4 flex flex-col gap-10">
             <AnatomyPanel />
             <PalettePanel />
@@ -62,7 +62,7 @@ export function BrandBookConstruction() {
             © 2026 HUNTERS Esports / Design System
           </span>
           <span className="font-mono text-[0.65rem] md:text-xs tracking-[0.25em] uppercase opacity-50">
-            Plate 01 — Construction
+            Plate 01 · Construction
           </span>
         </footer>
       </div>
@@ -132,7 +132,7 @@ function ConstructionFigure() {
             fill="url(#bbg-grid)"
           />
 
-          {/* Outer construction circles — centered on grid center, NOT on viewBox center */}
+          {/* Outer construction circles, centered on grid center, NOT on viewBox center */}
           <circle
             cx={center}
             cy={cy}
@@ -484,7 +484,7 @@ function HighlightOverlay({
           <Image src="/images/logo-hunters/hunters-rouge.png" alt="" fill sizes="120px" className="object-contain" />
         </div>
         <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full">
-          {/* Two H regions framed wider — they encompass the lateral lance +
+          {/* Two H regions framed wider, they encompass the lateral lance +
               its diagonal extension. Dashed stroke + tiny corner ticks. */}
           <g fill="none" stroke="#0a0a0a" strokeOpacity="0.85" strokeWidth="0.6" strokeDasharray="2 1.2">
             <rect x="6" y="18" width="36" height="62" rx="0.5" />
@@ -523,7 +523,7 @@ function HighlightOverlay({
       </>
     );
   }
-  // negative — counter-forms suggérées dans les espaces entre les lances
+  // negative, counter-forms suggérées dans les espaces entre les lances
   return (
     <>
       <div className="absolute inset-0">
@@ -532,7 +532,7 @@ function HighlightOverlay({
       <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full">
         {/* Dotted "eye" markers placed in the small negative triangular gaps
             between the central lance and the lateral structures (upper portion).
-            No diagonal pointer lines — they were misleading. */}
+            No diagonal pointer lines, they were misleading. */}
         <g fill="none" stroke="#0a0a0a" strokeOpacity="0.85" strokeWidth="0.7" strokeDasharray="1 1">
           <ellipse cx="40" cy="42" rx="3" ry="2.2" />
           <ellipse cx="60" cy="42" rx="3" ry="2.2" />
@@ -642,7 +642,7 @@ function TypographyPanel() {
         Corps de texte
       </div>
       <p className="font-overused text-sm leading-relaxed opacity-80">
-        La meute chasse ensemble — abcdefghijklmnopqrstuvwxyz 0123456789
+        La meute chasse ensemble · abcdefghijklmnopqrstuvwxyz 0123456789
       </p>
     </div>
   );

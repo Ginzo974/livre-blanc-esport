@@ -29,7 +29,7 @@ const APPS: App[] = [
     product: "KC App",
     accent: "#3a7bff",
     philo: "Companion pragmatique",
-    desc: "Suivi multi-jeux du Blue Wall, prochain match en un coup d'œil, dernières vidéos, boutique intégrée. Pas de blockchain, pas d'esbroufe — un outil qui sert le fan au quotidien.",
+    desc: "Suivi multi-jeux du Blue Wall, prochain match en un coup d'œil, dernières vidéos, boutique intégrée. Pas de blockchain, pas d'esbroufe, un outil qui sert le fan au quotidien.",
     tags: ["Calendrier", "Résultats live", "Boutique", "KWordle"],
     shots: [
       "/images/20-app-kc-accueil.png",
@@ -132,30 +132,30 @@ function PhoneGallery({
   const [hero, second, third] = shots;
   return (
     <div className="relative mx-auto w-full max-w-[420px] aspect-[4/3] flex items-center justify-center">
-      {/* Tertiary phone — far back, left */}
+      {/* Tertiary phone, far back, left */}
       {third && (
         <Phone
           src={third}
-          alt={`${alt} — écran 3`}
+          alt={`${alt}, écran 3`}
           accent={accent}
           className="absolute left-[6%] top-1/2 -translate-y-1/2 w-[34%] rotate-[-9deg] opacity-70 z-0"
           dim
         />
       )}
-      {/* Secondary phone — back, right */}
+      {/* Secondary phone, back, right */}
       {second && (
         <Phone
           src={second}
-          alt={`${alt} — écran 2`}
+          alt={`${alt}, écran 2`}
           accent={accent}
           className="absolute right-[6%] top-1/2 -translate-y-1/2 w-[34%] rotate-[9deg] opacity-70 z-0"
           dim
         />
       )}
-      {/* Hero phone — front, center */}
+      {/* Hero phone, front, center */}
       <Phone
         src={hero}
-        alt={`${alt} — écran principal`}
+        alt={`${alt}, écran principal`}
         accent={accent}
         className="relative w-[42%] z-10"
       />

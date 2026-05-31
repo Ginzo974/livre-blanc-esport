@@ -77,7 +77,7 @@ export function ActBreakHunters() {
         </g>
       </svg>
 
-      {/* Scanline overlay — broadcast feel */}
+      {/* Scanline overlay, broadcast feel */}
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.04] mix-blend-overlay"
         style={{
@@ -97,7 +97,7 @@ export function ActBreakHunters() {
         aria-hidden
       />
 
-      {/* Content — even vertical rhythm via a single gap */}
+      {/* Content, even vertical rhythm via a single gap */}
       <div className="relative z-10 min-h-[100svh] flex flex-col justify-center items-center px-6 pt-36 pb-24 md:pt-44 md:pb-28 gap-10 md:gap-12">
         {/* Kicker */}
         <motion.div
@@ -126,7 +126,7 @@ export function ActBreakHunters() {
           <div className="relative w-full" style={{ aspectRatio: "665 / 832" }}>
             <Image
               src="/images/logo-hunters/hunters-rouge-crop.png"
-              alt="Logo HUNTERS — lance et griffure"
+              alt="Logo HUNTERS · lance et griffure"
               fill
               priority
               sizes="(min-width: 768px) 190px, 150px"
@@ -135,7 +135,7 @@ export function ActBreakHunters() {
           </div>
         </motion.div>
 
-        {/* Wordmark — real HUNTERS typo under the logo */}
+        {/* Wordmark, real HUNTERS typo under the logo */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}

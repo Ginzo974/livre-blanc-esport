@@ -161,7 +161,7 @@ export function Chapter4() {
         <p>
           Le broadcast est l&apos;événement principal d&apos;une équipe esport.
           Overlays, commentateurs en cam, animations de score, transitions,
-          écrans de pause —{" "}
+          écrans de pause,{" "}
           <em>
             tout ce qui est entre les actions est aussi important que les
             actions elles-mêmes.
@@ -191,13 +191,13 @@ export function Chapter4() {
           l&apos;esport. Vitality a ouvert la voie avec V.Hive, une app de
           gamification sur blockchain. Mais ce sont aujourd&apos;hui{" "}
           <strong>deux clubs français</strong>{" "}qui structurent le mieux le
-          terrain — avec deux philosophies opposées.
+          terrain, avec deux philosophies opposées.
         </p>
         <p>
           <strong>Karmine Corp</strong>{" "}mise sur le companion pragmatique.
           Prochain match du Blue Wall en un coup d&apos;œil, résultats
           multi-jeux, dernières vidéos, boutique intégrée, mini-jeu KWordle.
-          Pas de blockchain, pas d&apos;esbroufe — un outil qui sert le fan au
+          Pas de blockchain, pas d&apos;esbroufe, un outil qui sert le fan au
           quotidien. <em>Ça marche.</em>
         </p>
         <p>
@@ -420,7 +420,7 @@ function BroadcastShot() {
         <div className="flex items-start gap-3">
           <span className="block h-1.5 w-1.5 mt-1.5 shrink-0 bg-bone" />
           <p className="text-sm text-bone/85 leading-snug">
-            Overlay LEC en match — kill feed, scoreboard, cam joueurs.
+            Overlay LEC en match, kill feed, scoreboard, cam joueurs.
             Chaque pixel entre deux actions est un point de contact marque.
           </p>
         </div>
@@ -446,7 +446,7 @@ function ArenaShot() {
       <div className="relative aspect-[21/9]">
         <Image
           src="/images/16-adidas-arena-kc.jpg"
-          alt="Adidas Arena Paris — LEC Summer Roadtrip Karmine Corp"
+          alt="Adidas Arena Paris · LEC Summer Roadtrip Karmine Corp"
           fill
           sizes="(min-width: 768px) 80vw, 100vw"
           className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
