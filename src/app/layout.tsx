@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Russo_One, Chakra_Petch, Inter } from "next/font/google";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { LenisProvider } from "@/components/LenisProvider";
 
@@ -72,6 +73,7 @@ export default function RootLayout({
     >
       <body className="font-body bg-ink text-bone antialiased">
         <LenisProvider>{children}</LenisProvider>
+        <Analytics />
       </body>
     </html>
   );
