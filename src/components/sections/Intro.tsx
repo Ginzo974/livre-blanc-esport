@@ -205,10 +205,12 @@ function AuthorPresentation() {
       </h3>
       <div className="prose-reading max-w-2xl">
         <p>
-          Passionné de jeux vidéo depuis tout petit, j&apos;ai découvert{" "}
-          <strong>League of Legends en 2016</strong>,{" "}et je n&apos;ai jamais
-          vraiment lâché la scène esport depuis. Pas observée de loin : vécue de
-          l&apos;intérieur.
+          J&apos;ai 25 ans, je suis{" "}
+          <strong>en dernière année de master en design graphique</strong>, et
+          avant tout passionné de jeux vidéo depuis mes 6 ans. J&apos;ai
+          découvert <strong>League of Legends en 2016</strong>,{" "}et je
+          n&apos;ai jamais vraiment lâché la scène esport depuis. Pas observée de
+          loin : vécue de l&apos;intérieur.
         </p>
         <p>
           Côté métier, <strong>cinq ans dans le design</strong>, dont quatre
