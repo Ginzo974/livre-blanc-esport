@@ -1,10 +1,18 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 
 export const alt = "Du logo à la scène — Livre Blanc · Identité visuelle esport";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
+  const [russo, chakra, chakraSemi] = await Promise.all([
+    readFile(join(process.cwd(), "assets/RussoOne-Regular.ttf")),
+    readFile(join(process.cwd(), "assets/ChakraPetch-Regular.ttf")),
+    readFile(join(process.cwd(), "assets/ChakraPetch-SemiBold.ttf")),
+  ]);
+
   return new ImageResponse(
     (
       <div
@@ -16,9 +24,10 @@ export default async function Image() {
           justifyContent: "space-between",
           padding: "80px",
           background:
-            "radial-gradient(ellipse 60% 50% at 30% 50%, rgba(0,54,167,0.4) 0%, transparent 70%), #0a0a0a",
+            "radial-gradient(ellipse 60% 55% at 28% 50%, rgba(200,29,37,0.34) 0%, transparent 70%), #0a0a0a",
           color: "#f4f1ea",
           position: "relative",
+          fontFamily: "Chakra Petch",
         }}
       >
         {/* Top kicker */}
@@ -33,19 +42,18 @@ export default async function Image() {
             fontWeight: 600,
           }}
         >
-          <div style={{ width: "60px", height: "2px", background: "#4d8eff" }} />
+          <div style={{ width: "60px", height: "2px", background: "#d11f27" }} />
           <div>LIVRE BLANC</div>
         </div>
 
         {/* Main title */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
           <div
             style={{
-              fontSize: "118px",
-              lineHeight: 1,
-              letterSpacing: "-3px",
+              fontFamily: "Russo One",
+              fontSize: "100px",
+              lineHeight: 1.02,
               color: "#f4f1ea",
-              fontWeight: 800,
               display: "flex",
             }}
           >
@@ -53,11 +61,10 @@ export default async function Image() {
           </div>
           <div
             style={{
-              fontSize: "118px",
-              lineHeight: 1,
-              letterSpacing: "-3px",
-              color: "#4d8eff",
-              fontWeight: 800,
+              fontFamily: "Russo One",
+              fontSize: "100px",
+              lineHeight: 1.02,
+              color: "#e0242d",
               display: "flex",
             }}
           >
@@ -65,11 +72,10 @@ export default async function Image() {
           </div>
           <div
             style={{
-              marginTop: "30px",
+              marginTop: "34px",
               fontSize: "28px",
               color: "#b5b5b5",
-              maxWidth: "880px",
-              letterSpacing: "0.5px",
+              maxWidth: "820px",
               fontWeight: 400,
               display: "flex",
             }}
@@ -85,15 +91,15 @@ export default async function Image() {
             justifyContent: "space-between",
             alignItems: "center",
             fontSize: "20px",
-            letterSpacing: "4px",
+            letterSpacing: "3px",
             color: "#8a8a8a",
             fontWeight: 600,
           }}
         >
           <div>6 CAS D&apos;ÉTUDE · 1 MÉTHODE · HUNTERS</div>
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-            <div style={{ width: "12px", height: "12px", background: "#c81d25" }} />
-            <div style={{ color: "#f4f1ea" }}>du-logo-a-la-scene</div>
+            <div style={{ width: "12px", height: "12px", background: "#d11f27" }} />
+            <div style={{ color: "#f4f1ea" }}>du-logo-a-la-scene.vercel.app</div>
           </div>
         </div>
 
@@ -101,21 +107,28 @@ export default async function Image() {
         <div
           style={{
             position: "absolute",
-            right: "60px",
+            right: "70px",
             top: "50%",
             transform: "translateY(-50%)",
             display: "flex",
-            fontSize: "420px",
-            color: "#0036a7",
-            opacity: 0.18,
+            fontFamily: "Russo One",
+            fontSize: "440px",
+            color: "#c81d25",
+            opacity: 0.15,
             lineHeight: 0.8,
-            fontWeight: 900,
           }}
         >
           K
         </div>
       </div>
     ),
-    { ...size }
+    {
+      ...size,
+      fonts: [
+        { name: "Russo One", data: russo, style: "normal", weight: 400 },
+        { name: "Chakra Petch", data: chakra, style: "normal", weight: 400 },
+        { name: "Chakra Petch", data: chakraSemi, style: "normal", weight: 600 },
+      ],
+    }
   );
 }
