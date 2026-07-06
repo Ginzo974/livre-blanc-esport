@@ -51,6 +51,7 @@ export function Chapter1() {
           caption="50 000 personnes physiquement présentes. Le logo lu à trente mètres. Un siècle de codes éprouvés."
           accent="blood"
           aspect="16/10"
+          quality={90}
         />
       </div>
 

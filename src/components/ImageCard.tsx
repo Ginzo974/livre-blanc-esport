@@ -25,6 +25,8 @@ type Props = {
   fit?: "cover" | "contain";
   /** Inner frame background — "dark" (default) or "light" (for product shots on white). */
   frame?: "dark" | "light";
+  /** next/image quality (must be whitelisted in next.config images.qualities). */
+  quality?: number;
   className?: string;
 };
 
@@ -58,6 +60,7 @@ export function ImageCard({
   fill,
   fit = "cover",
   frame = "dark",
+  quality,
   className = "",
 }: Props) {
   const a = ACCENT_MAP[accent];
@@ -135,6 +138,7 @@ export function ImageCard({
             src={src}
             alt={alt}
             fill
+            quality={quality}
             sizes="(min-width: 1024px) 50vw, 100vw"
             className={`${fitClass} ${hoverScale}`}
           />
@@ -144,6 +148,7 @@ export function ImageCard({
             alt={alt}
             width={width ?? 1600}
             height={height ?? 1000}
+            quality={quality}
             sizes="(min-width: 1024px) 50vw, 100vw"
             className={`h-full w-full ${fitClass} ${hoverScale}`}
           />

@@ -49,6 +49,10 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   // Retire l'en-tête « X-Powered-By: Next.js » (moins d'info donnée à un attaquant).
   poweredByHeader: false,
+  // Autorise une qualité d'image plus élevée (Next 16 limite à [75] par défaut).
+  images: {
+    qualities: [75, 90],
+  },
   turbopack: {
     root: path.resolve(__dirname),
   },

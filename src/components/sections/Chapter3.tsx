@@ -424,6 +424,7 @@ function KCSplitDuo() {
             src="/images/18-kc-roster-rouge.avif"
             alt="Roster LEC Karmine Corp 2026 en jerseys rouges"
             fill
+            quality={90}
             sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
           />
@@ -456,6 +457,7 @@ function KCSplitDuo() {
             src="/images/19-kc-roster-bleu.jpg"
             alt="Roster KCB Karmine Corp Blue 2026 en jerseys bleus"
             fill
+            quality={90}
             sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
           />
