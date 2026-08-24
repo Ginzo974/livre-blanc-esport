@@ -20,9 +20,9 @@
   --color-navi-yellow: #ffe600;
   --color-vita-yellow: #ffd200;
 
-  --font-display: var(--font-russo);
-  --font-body: var(--font-inter);
-  --font-ui: var(--font-chakra);
+  --font-display: var(--font-clash);
+  --font-body: var(--font-satoshi);
+  --font-ui: var(--font-space-mono);
   --font-hunter: var(--font-quantix);
 
   --shadow-glow-blood: 0 0 60px -10px rgba(200, 29, 37, 0.5);
@@ -52,7 +52,8 @@ html, body {
 
 .font-display {
   font-family: var(--font-display), system-ui, sans-serif;
-  letter-spacing: 0.01em;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .font-body {
@@ -125,7 +126,7 @@ html, body {
   color: var(--color-bone);
 }
 .prose-reading code {
-  font-family: var(--font-chakra), ui-monospace, monospace;
+  font-family: var(--font-ui), ui-monospace, monospace;
   font-size: 0.85em;
   color: var(--color-bone);
   background: rgba(244, 241, 234, 0.07);

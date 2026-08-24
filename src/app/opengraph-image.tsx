@@ -7,10 +7,11 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
-  const [russo, chakra, chakraSemi] = await Promise.all([
-    readFile(join(process.cwd(), "assets/RussoOne-Regular.ttf")),
-    readFile(join(process.cwd(), "assets/ChakraPetch-Regular.ttf")),
-    readFile(join(process.cwd(), "assets/ChakraPetch-SemiBold.ttf")),
+  const [clash, satoshi, satoshiBold, mono] = await Promise.all([
+    readFile(join(process.cwd(), "assets/ClashDisplay-Semibold.ttf")),
+    readFile(join(process.cwd(), "assets/Satoshi-Regular.ttf")),
+    readFile(join(process.cwd(), "assets/Satoshi-Bold.ttf")),
+    readFile(join(process.cwd(), "assets/SpaceMono-Regular.ttf")),
   ]);
 
   return new ImageResponse(
@@ -27,7 +28,7 @@ export default async function Image() {
             "radial-gradient(ellipse 60% 55% at 28% 50%, rgba(200,29,37,0.34) 0%, transparent 70%), #0a0a0a",
           color: "#f4f1ea",
           position: "relative",
-          fontFamily: "Chakra Petch",
+          fontFamily: "Satoshi",
         }}
       >
         {/* Top kicker */}
@@ -35,24 +36,26 @@ export default async function Image() {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "24px",
-            fontSize: "20px",
-            letterSpacing: "8px",
-            color: "#8a8a8a",
-            fontWeight: 600,
+            gap: "22px",
+            fontFamily: "Space Mono",
+            fontSize: "19px",
+            letterSpacing: "6px",
+            color: "#8f8980",
           }}
         >
-          <div style={{ width: "60px", height: "2px", background: "#d11f27" }} />
+          <div style={{ width: "56px", height: "2px", background: "#d11f27" }} />
           <div>LIVRE BLANC</div>
         </div>
 
         {/* Main title */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
           <div
             style={{
-              fontFamily: "Russo One",
-              fontSize: "100px",
+              fontFamily: "Clash Display",
+              fontWeight: 600,
+              fontSize: "92px",
               lineHeight: 1.02,
+              letterSpacing: "-2px",
               color: "#f4f1ea",
               display: "flex",
             }}
@@ -61,9 +64,11 @@ export default async function Image() {
           </div>
           <div
             style={{
-              fontFamily: "Russo One",
-              fontSize: "100px",
+              fontFamily: "Clash Display",
+              fontWeight: 600,
+              fontSize: "92px",
               lineHeight: 1.02,
+              letterSpacing: "-2px",
               color: "#e0242d",
               display: "flex",
             }}
@@ -73,10 +78,11 @@ export default async function Image() {
           <div
             style={{
               marginTop: "34px",
-              fontSize: "28px",
+              fontFamily: "Satoshi",
+              fontSize: "29px",
+              lineHeight: 1.35,
               color: "#b5b5b5",
               maxWidth: "820px",
-              fontWeight: 400,
               display: "flex",
             }}
           >
@@ -90,10 +96,10 @@ export default async function Image() {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            fontSize: "20px",
-            letterSpacing: "3px",
-            color: "#8a8a8a",
-            fontWeight: 600,
+            fontFamily: "Space Mono",
+            fontSize: "16px",
+            letterSpacing: "2px",
+            color: "#8f8980",
           }}
         >
           <div>6 CAS D&apos;ÉTUDE · 1 MÉTHODE · HUNTERS</div>
@@ -111,7 +117,8 @@ export default async function Image() {
             top: "50%",
             transform: "translateY(-50%)",
             display: "flex",
-            fontFamily: "Russo One",
+            fontFamily: "Clash Display",
+            fontWeight: 600,
             fontSize: "440px",
             color: "#c81d25",
             opacity: 0.15,
@@ -125,9 +132,10 @@ export default async function Image() {
     {
       ...size,
       fonts: [
-        { name: "Russo One", data: russo, style: "normal", weight: 400 },
-        { name: "Chakra Petch", data: chakra, style: "normal", weight: 400 },
-        { name: "Chakra Petch", data: chakraSemi, style: "normal", weight: 600 },
+        { name: "Clash Display", data: clash, style: "normal", weight: 600 },
+        { name: "Satoshi", data: satoshi, style: "normal", weight: 400 },
+        { name: "Satoshi", data: satoshiBold, style: "normal", weight: 700 },
+        { name: "Space Mono", data: mono, style: "normal", weight: 400 },
       ],
     }
   );

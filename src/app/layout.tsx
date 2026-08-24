@@ -1,28 +1,38 @@
 import type { Metadata } from "next";
-import { Russo_One, Chakra_Petch, Inter } from "next/font/google";
+import { Space_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { LenisProvider } from "@/components/LenisProvider";
 
-const russo = Russo_One({
-  variable: "--font-russo",
-  subsets: ["latin"],
-  weight: "400",
+// Clash Display — police de titrage (display), grotesque géométrique moderne
+const clash = localFont({
+  variable: "--font-clash",
   display: "swap",
+  src: [
+    { path: "./fonts/ClashDisplay-Regular.ttf", weight: "400", style: "normal" },
+    { path: "./fonts/ClashDisplay-Medium.ttf", weight: "500", style: "normal" },
+    { path: "./fonts/ClashDisplay-Semibold.ttf", weight: "600", style: "normal" },
+    { path: "./fonts/ClashDisplay-Bold.ttf", weight: "700", style: "normal" },
+  ],
 });
 
-const chakra = Chakra_Petch({
-  variable: "--font-chakra",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+// Satoshi — police de corps (body), grotesque contemporain très lisible
+const satoshi = localFont({
+  variable: "--font-satoshi",
   display: "swap",
+  src: [
+    { path: "./fonts/Satoshi-Regular.ttf", weight: "400", style: "normal" },
+    { path: "./fonts/Satoshi-Medium.ttf", weight: "500", style: "normal" },
+    { path: "./fonts/Satoshi-Bold.ttf", weight: "700", style: "normal" },
+  ],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+// Space Mono — police des labels / kickers (touche technique éditoriale)
+const spaceMono = Space_Mono({
+  variable: "--font-space-mono",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "700"],
   display: "swap",
 });
 
@@ -70,7 +80,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${russo.variable} ${chakra.variable} ${inter.variable} ${quantix.variable} ${overused.variable}`}
+      className={`${clash.variable} ${satoshi.variable} ${spaceMono.variable} ${quantix.variable} ${overused.variable}`}
     >
       <body className="font-body bg-ink text-bone antialiased">
         <LenisProvider>{children}</LenisProvider>
