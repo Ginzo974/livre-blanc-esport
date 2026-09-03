@@ -2,8 +2,12 @@ import type { Metadata } from "next";
 import { Space_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { LenisProvider } from "@/components/LenisProvider";
+
+// Identifiant de mesure Google Analytics 4. Vide = GA non chargé.
+const GA_ID = "G-YB7VD2QTRP";
 
 // Clash Display — police de titrage (display), grotesque géométrique moderne
 const clash = localFont({
@@ -86,6 +90,7 @@ export default function RootLayout({
         <LenisProvider>{children}</LenisProvider>
         <Analytics />
       </body>
+      {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
     </html>
   );
 }
